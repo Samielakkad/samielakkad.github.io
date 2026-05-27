@@ -4,7 +4,7 @@
 
 Tsinghua SIGS AI master's. **ex-Baidu ERNIE evaluator (百度文心导师)**. Winner of the **Tsinghua AIID Yearly Competition** (NetDragon partner track). **3rd Prize** at the 2025 Baidu ERNIE Hackathon (RedFOX, top 3 of 23 finalists). Founder of **jak.ma**, a live Moroccan home-services marketplace. NPU CS undergrad with a 74-page thesis on adaptive multi-objective optimization.
 
-📩 elakkadsami00@gmail.com · [linkedin](https://www.linkedin.com/in/samielakkad) · [github](https://github.com/Samielakkad) · [🤗 huggingface](https://huggingface.co/samielakkad1)
+📩 sam25@mails.tsinghua.edu.cn · [linkedin](https://www.linkedin.com/in/samielakkad) · [github](https://github.com/Samielakkad) · [🤗 huggingface](https://huggingface.co/samielakkad1)
 
 ---
 
@@ -163,7 +163,7 @@ The five dimensions:
 
 AI Product Manager roles at **NetDragon, Tencent, Huawei, Baidu, Ping An, Rokid**. Especially **AI + Education**, **AI hardware**, **multi-agent retrieval systems**. Open to relocation across mainland China. Longer arc: G42 / Microsoft UAE → Australia.
 
-📩 **elakkadsami00@gmail.com**
+📩 **sam25@mails.tsinghua.edu.cn**
 
 ---
 
