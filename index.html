@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sami El Akkad — AI Product Manager</title>
-<meta name="description" content="AI Product Manager. Tsinghua SIGS. Paid Baidu ERNIE mentor (百度文心导师). Winner of the Tsinghua AIID Yearly Competition. Building AI products that ship across China and Morocco." />
-<meta property="og:title" content="Sami El Akkad — AI Product Manager" />
-<meta property="og:description" content="Tsinghua SIGS · Baidu ERNIE Mentor · AIID Yearly Competition Winner · Founder jak.ma" />
-<meta property="og:image" content="https://github.com/Samielakkad.png" />
+<title>Sami El Akkad — Applied AI Product Manager</title>
+<meta name="description" content="Applied AI Product Manager. Tsinghua SIGS. ex-Baidu ERNIE evaluator (文心导师). Winner of the Tsinghua AIID Yearly Competition. 3rd Prize Baidu ERNIE Hackathon. Founder of jak.ma." />
+<meta property="og:title" content="Sami El Akkad — Applied AI Product Manager" />
+<meta property="og:description" content="Tsinghua SIGS · ex-Baidu ERNIE evaluator · AIID Yearly Winner · 3rd Prize Baidu ERNIE Hackathon · Founder jak.ma" />
+<meta property="og:image" content="https://samielakkad.github.io/assets/cover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>" />
 <script src="https://cdn.tailwindcss.com"></script>
@@ -18,24 +18,11 @@
   .accent { color: var(--accent); }
   .accent-bg { background-color: var(--accent); }
   .accent-border { border-color: var(--accent); }
-  .gradient-hero {
-    background:
-      radial-gradient(1200px 600px at 80% -10%, rgba(196,30,58,0.10), transparent 60%),
-      radial-gradient(900px 500px at -10% 30%, rgba(196,30,58,0.06), transparent 60%),
-      linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-  }
-  .gradient-dark {
-    background: linear-gradient(180deg, #0a0a0a 0%, #171717 100%);
-  }
+  .gradient-hero { background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%); }
+  .gradient-dark { background: linear-gradient(180deg, #0a0a0a 0%, #171717 100%); }
   .grid-divider > * + * { border-top: 1px solid #e5e7eb; }
   @media (min-width: 768px) {
     .grid-divider > * + * { border-top: none; border-left: 1px solid #e5e7eb; }
-  }
-  .grid-divider-3 > *:nth-child(n+4) { border-top: 1px solid #e5e7eb; }
-  @media (min-width: 768px) {
-    .grid-divider-3 > * { border-left: 1px solid #e5e7eb; }
-    .grid-divider-3 > *:nth-child(3n+1) { border-left: none; }
-    .grid-divider-3 > *:nth-child(n+4) { border-top: 1px solid #e5e7eb; }
   }
   .fade-up { animation: fadeUp 0.7s ease-out backwards; }
   @keyframes fadeUp { from { opacity:0; transform: translateY(12px);} to { opacity:1; transform: translateY(0);} }
@@ -46,6 +33,8 @@
   .pill-light { background: #fafafa; color: #404040; border: 1px solid #e5e5e5; }
   .pill-accent { background: rgba(196,30,58,0.08); color: var(--accent); border: 1px solid rgba(196,30,58,0.2); }
   .num { font-feature-settings: 'tnum'; }
+  .cover-img { background-image: url('assets/cover.jpg'); background-size: cover; background-position: center; }
+  .scroll-fade-edge { mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent); }
 </style>
 </head>
 <body class="bg-white text-neutral-900 antialiased">
@@ -56,9 +45,10 @@
     <a href="#top" class="font-semibold">Sami El Akkad</a>
     <div class="hidden md:flex gap-6 text-neutral-600">
       <a href="#stack" class="hover:text-neutral-900">Credentials</a>
-      <a href="#projects" class="hover:text-neutral-900">Projects</a>
+      <a href="#featured" class="hover:text-neutral-900">Featured</a>
       <a href="#experience" class="hover:text-neutral-900">Experience</a>
-      <a href="#all-repos" class="hover:text-neutral-900">All repos</a>
+      <a href="#repos" class="hover:text-neutral-900">All Repos</a>
+      <a href="#education" class="hover:text-neutral-900">Education</a>
       <a href="#contact" class="hover:text-neutral-900">Contact</a>
     </div>
     <a href="mailto:elakkadsami00@gmail.com" class="px-3 py-1.5 bg-neutral-900 text-white rounded text-xs hover:bg-neutral-700">Get in touch</a>
@@ -78,15 +68,14 @@
           <span>open to work</span>
         </div>
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02]">
-          AI Product Manager<br/>
-          <span class="accent">building products</span><br/>
-          <span class="text-neutral-700">that actually ship.</span>
+          Applied AI<br/>
+          <span class="accent">Product Manager.</span><br/>
+          <span class="text-neutral-700">Build. Ship. Repeat.</span>
         </h1>
         <p class="mt-8 text-base md:text-xl text-neutral-600 max-w-2xl leading-relaxed">
-          Tsinghua SIGS AI master's. Paid <strong class="text-neutral-900">百度文心导师 (Baidu ERNIE mentor)</strong>.
+          Tsinghua SIGS AI master's. <strong class="text-neutral-900">ex-Baidu ERNIE evaluator (文心导师)</strong>.
           Winner of the <strong class="text-neutral-900">Tsinghua AIID Yearly Competition</strong> on the NetDragon partner track.
-          Founder of <strong class="text-neutral-900">jak.ma</strong> — a live Moroccan home-services marketplace.
-          NPU CS undergrad with a 74-page thesis on adaptive multi-objective optimization.
+          <strong class="text-neutral-900">3rd Prize</strong> at the 2025 Baidu ERNIE Hackathon. Founder of <strong class="text-neutral-900">jak.ma</strong> — a live Moroccan home-services marketplace. NPU CS undergrad with a 74-page thesis on adaptive multi-objective optimization.
         </p>
         <div class="mt-10 flex flex-wrap gap-3">
           <a href="mailto:elakkadsami00@gmail.com" class="px-5 py-3 accent-bg text-white rounded-md font-medium hover:opacity-90 transition">elakkadsami00@gmail.com</a>
@@ -99,7 +88,7 @@
         </div>
         <div class="mt-10 flex flex-wrap gap-2">
           <span class="pill pill-dark">Tsinghua SIGS</span>
-          <span class="pill pill-accent">Baidu ERNIE Mentor</span>
+          <span class="pill pill-accent">ex-Baidu ERNIE</span>
           <span class="pill pill-light">AIID Yearly Winner</span>
           <span class="pill pill-light">NPU CS · B.Eng. 2025</span>
           <span class="pill pill-light">CSC Scholar</span>
@@ -112,30 +101,37 @@
       </div>
     </div>
   </div>
+
+  <!-- Cover banner -->
+  <div class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
+      <img src="assets/cover.jpg" alt="applied ai · product · Tsinghua SIGS · ex-Baidu ERNIE evaluator" class="w-full h-auto" />
+    </div>
+  </div>
 </header>
 
 <!-- STATS BAR -->
 <section class="border-y border-neutral-200 bg-neutral-50">
-  <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-    <div>
-      <div class="text-3xl md:text-4xl font-bold accent num">¥11K</div>
-      <div class="text-xs text-neutral-600 mt-1">paid by Baidu ERNIE</div>
-    </div>
-    <div>
-      <div class="text-3xl md:text-4xl font-bold accent num">0.025%</div>
-      <div class="text-xs text-neutral-600 mt-1">ERNIE Hackathon finalist (top 23/900+)</div>
-    </div>
+  <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
     <div>
       <div class="text-3xl md:text-4xl font-bold accent num">#1</div>
       <div class="text-xs text-neutral-600 mt-1">Tsinghua AIID Yearly Competition</div>
     </div>
     <div>
+      <div class="text-3xl md:text-4xl font-bold accent num">Top 3 / 23</div>
+      <div class="text-xs text-neutral-600 mt-1">Baidu ERNIE Hackathon finalists (170+ submissions)</div>
+    </div>
+    <div>
       <div class="text-3xl md:text-4xl font-bold accent num">74</div>
-      <div class="text-xs text-neutral-600 mt-1">page undergrad thesis</div>
+      <div class="text-xs text-neutral-600 mt-1">page undergrad thesis · Friedman rank 1.25</div>
     </div>
     <div>
       <div class="text-3xl md:text-4xl font-bold accent num">1,862</div>
-      <div class="text-xs text-neutral-600 mt-1">workers on jak.ma</div>
+      <div class="text-xs text-neutral-600 mt-1">workers live on jak.ma · 15 Moroccan cities</div>
+    </div>
+    <div>
+      <div class="text-3xl md:text-4xl font-bold accent num">5</div>
+      <div class="text-xs text-neutral-600 mt-1">languages · Arabic · Darija · EN · FR · 中文</div>
     </div>
   </div>
 </section>
@@ -155,41 +151,51 @@
     <div class="grid md:grid-cols-3 border border-neutral-200 rounded-xl bg-white grid-divider overflow-hidden shadow-sm">
 
       <div class="p-8">
-        <div class="text-xs mono accent uppercase tracking-wider mb-3">01 · paid expert work</div>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="assets/logo-baidu.jpg" alt="Baidu" class="w-10 h-10 rounded object-cover" />
+          <div class="text-xs mono accent uppercase tracking-wider">01 · paid contract</div>
+        </div>
         <h3 class="text-2xl font-bold mb-2">Baidu ERNIE Mentor</h3>
-        <p class="text-xs text-neutral-500 mb-4 mono">百度文心导师 · Oct 2025–</p>
+        <p class="text-xs text-neutral-500 mb-4 mono">百度文心导师 · Oct 2025 – Dec 2025</p>
         <p class="text-sm text-neutral-700 leading-relaxed mb-4">
-          Paid contract role on Baidu's flagship LLM (文心一言). ~¥11,160 earned across four engagements.
-          Plus <strong>3rd Prize</strong> in the 2025 ERNIE Hackathon — AI Hardware track, RedFOX —
-          top 23 of 900+ teams (~top 0.025%).
+          Paid contract role on Baidu's flagship LLM (文心一言).
+          Data construction, evaluation rubric design, production prompts.
+          Plus <strong>3rd Prize / 三等奖</strong> in the 2025 ERNIE Hackathon — AI Hardware track,
+          <strong>RedFOX</strong> — top 3 of 23 finalists (170+ submissions).
         </p>
         <div class="flex flex-wrap gap-1.5">
           <span class="pill pill-light">data-construction lead</span>
           <span class="pill pill-light">eval rubric design</span>
-          <span class="pill pill-light">prompt engineering</span>
+          <span class="pill pill-light">ERNIE-4.5 prompts</span>
         </div>
       </div>
 
       <div class="p-8">
-        <div class="text-xs mono accent uppercase tracking-wider mb-3">02 · tsinghua signal</div>
-        <h3 class="text-2xl font-bold mb-2">Tsinghua AIID</h3>
+        <div class="flex items-center gap-3 mb-3">
+          <img src="assets/logo-tsinghua.jpg" alt="Tsinghua" class="w-10 h-10 rounded object-cover" />
+          <div class="text-xs mono accent uppercase tracking-wider">02 · tsinghua signal</div>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Tsinghua AIID Winner</h3>
         <p class="text-xs text-neutral-500 mb-4 mono">清华大学 AIID · 2025</p>
         <p class="text-sm text-neutral-700 leading-relaxed mb-4">
           <strong>Yearly Competition Winner</strong> — Sovereign School OS, NetDragon partner track.
           K-12 AI-native edtech, 3 portals × 64 views, built solo.
-          + <strong>Best Documentation</strong> at the AIID Hackathon (AI-Explorers team).
+          Also competed in the AIID Hackathon (AI-Explorers team — Sami / Chutirat / Camellia).
         </p>
         <div class="flex flex-wrap gap-1.5">
           <span class="pill pill-light">yearly competition winner</span>
-          <span class="pill pill-light">best documentation</span>
           <span class="pill pill-light">solo build</span>
+          <span class="pill pill-light">NetDragon partner track</span>
         </div>
       </div>
 
       <div class="p-8">
-        <div class="text-xs mono accent uppercase tracking-wider mb-3">03 · employer pipeline</div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded bg-neutral-900 text-white font-bold flex items-center justify-center text-sm">网龙</div>
+          <div class="text-xs mono accent uppercase tracking-wider">03 · employer pipeline</div>
+        </div>
         <h3 class="text-2xl font-bold mb-2">NetDragon Targeting</h3>
-        <p class="text-xs text-neutral-500 mb-4 mono">网龙网络 · Fuzhou 福州 · Dec 2025</p>
+        <p class="text-xs text-neutral-500 mb-4 mono">网龙网络 · 福州 Fuzhou · Dec 2025</p>
         <p class="text-sm text-neutral-700 leading-relaxed mb-4">
           NetDragon Websoft — Fortune-China AI + Education leader, AIID partner.
           SSO was built for their stack. AIID Visiting Study (Fuzhou, Dec 2025) opens the channel.
@@ -219,44 +225,74 @@
       <div class="bg-white border border-neutral-200 rounded-lg p-5">
         <div class="text-2xl mb-2">🥉</div>
         <div class="font-bold">Baidu ERNIE Hackathon — 3rd Prize (三等奖)</div>
-        <div class="text-xs text-neutral-600 mt-1">AI Hardware Track · RedFOX · top 23/900+ teams · 2025</div>
-      </div>
-      <div class="bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="text-2xl mb-2">📑</div>
-        <div class="font-bold">Best Documentation — AIID Hackathon</div>
-        <div class="text-xs text-neutral-600 mt-1">AI-Explorers team · Tsinghua AIID · 2025</div>
+        <div class="text-xs text-neutral-600 mt-1">AI Hardware Track · RedFOX · top 3/23 finalists · 2025</div>
       </div>
       <div class="bg-white border border-neutral-200 rounded-lg p-5">
         <div class="text-2xl mb-2">🎨</div>
         <div class="font-bold">Best Design — Sinothrive AI</div>
-        <div class="text-xs text-neutral-600 mt-1">Tsinghua course project · Dec 2025</div>
+        <div class="text-xs text-neutral-600 mt-1">Tsinghua course project · 6-member team · Dec 2025</div>
       </div>
       <div class="bg-white border border-neutral-200 rounded-lg p-5">
         <div class="text-2xl mb-2">🎓</div>
-        <div class="font-bold">CSC Scholar (中国政府奖学金)</div>
+        <div class="font-bold">CSC Scholar — 中国政府奖学金</div>
         <div class="text-xs text-neutral-600 mt-1">Full scholarship · Tsinghua SIGS · 2025</div>
       </div>
       <div class="bg-white border border-neutral-200 rounded-lg p-5">
         <div class="text-2xl mb-2">💼</div>
-        <div class="font-bold">Paid 文心导师 (ERNIE Mentor)</div>
-        <div class="text-xs text-neutral-600 mt-1">Baidu · ~¥11,160 · 2025–2026</div>
+        <div class="font-bold">百度文心导师 — Baidu ERNIE Mentor</div>
+        <div class="text-xs text-neutral-600 mt-1">Paid contract · 2025–2026</div>
+      </div>
+      <div class="bg-white border border-neutral-200 rounded-lg p-5">
+        <div class="text-2xl mb-2">📜</div>
+        <div class="font-bold">Two official Baidu certificates</div>
+        <div class="text-xs text-neutral-600 mt-1">ERNIE Mentor Program · 2025</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FEATURED PROJECTS -->
-<section id="projects" class="py-20 md:py-28">
+<section id="featured" class="py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-6">
     <div class="max-w-2xl mb-12">
       <div class="text-xs mono accent uppercase tracking-wider mb-3">featured projects</div>
       <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Things I built<br/>and shipped.</h2>
       <p class="mt-4 text-neutral-600 leading-relaxed">
-        Production code, research, and methodology — all open-source except jak.ma's private engine.
+        Production code, research, and methodology — across two markets, two languages, and four product categories.
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- jak.ma -->
+      <a href="https://github.com/Samielakkad/jak-ma-engine" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden md:col-span-2">
+        <div class="aspect-[3/1] bg-neutral-100 overflow-hidden">
+          <img src="assets/jakma-feature.jpg" alt="jak.ma platform overview" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6 md:p-8">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-accent">live in production</span>
+            <span class="pill pill-light">founder</span>
+            <span class="text-xs text-neutral-500 mono">live since Apr 9 2026</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-3">jak.ma / brikoul.ma</h3>
+          <p class="text-sm md:text-base text-neutral-700 leading-relaxed">
+            Zero-commission anti-<em>shnaq</em> home-services marketplace, Morocco-focused, Darija-first.
+            <strong>1,862 workers</strong> · 12 categories · 15 cities · live on Vercel + Mongo Atlas + Google Maps.
+            Multi-provider LLM routing under the hood. <strong>Categorical Mongo retrieval (not vector RAG)</strong>,
+            verifier-gated two-pass grounding, Grok-3-mini in production (chosen over GPT-4o / Claude on cost).
+            Anti-commission monetization: featured listings, verified badges, local-business ads, WhatsApp Business SaaS.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="pill pill-light">JavaScript · Node · Mongo Atlas</span>
+            <span class="pill pill-light">grok-3-mini</span>
+            <span class="pill pill-light">verifier-gated</span>
+            <span class="pill pill-light">Darija-native search</span>
+            <span class="pill pill-light">geospatial routing</span>
+            <span class="pill pill-light">PWA</span>
+          </div>
+        </div>
+      </a>
 
       <!-- SSO -->
       <a href="https://github.com/Samielakkad/SSO-final" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
@@ -282,26 +318,31 @@
         </div>
       </a>
 
-      <!-- jak.ma engine -->
-      <a href="https://github.com/Samielakkad/jak-ma-engine" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-neutral-100 overflow-hidden">
-          <img src="https://opengraph.githubassets.com/1/Samielakkad/jak-ma-engine" alt="jak.ma engine" class="w-full h-full object-cover" loading="lazy" />
+      <!-- RedFOX / ernie-evaluation -->
+      <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-amber-50 via-white to-rose-100 overflow-hidden flex items-center justify-center">
+          <div class="text-center p-6">
+            <div class="text-5xl mb-2">🥉</div>
+            <div class="text-2xl font-bold accent">RedFOX</div>
+            <div class="mt-2 text-xs mono text-neutral-500">3rd Prize · Baidu ERNIE Hackathon 2025</div>
+            <div class="mt-1 text-xs mono text-neutral-500">top 3 of 23 finalists · 170+ submissions</div>
+          </div>
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-2">
-            <span class="pill pill-accent">live in production</span>
-            <span class="text-xs text-neutral-500 mono">2026</span>
+            <span class="pill pill-accent">Baidu ERNIE · 3rd Prize</span>
+            <span class="text-xs text-neutral-500 mono">2025</span>
           </div>
-          <h3 class="text-xl font-bold mb-2">jak.ma engine</h3>
+          <h3 class="text-xl font-bold mb-2">RedFOX · ernie-evaluation-notes</h3>
           <p class="text-sm text-neutral-700 leading-relaxed">
-            Public engineering mirror of jak.ma's brain. Multi-provider LLM routing, tool-calling,
-            verifier-gated two-pass grounded retrieval over a categorical Mongo index (not vector RAG).
-            Grok-3-mini in production — chosen on cost vs Claude/GPT-4o.
+            ERNIE-4.5-powered children's AI hardware device. Voice-first, age-appropriate, parental-controlled.
+            Repo bundles RedFOX with methodology notes from the Baidu ERNIE Mentor Program — 5-dim evaluation
+            rubric, prompt calibration, production-prompt patterns.
           </p>
           <div class="mt-4 flex flex-wrap gap-1.5">
-            <span class="pill pill-light">JavaScript</span>
-            <span class="pill pill-light">multi-provider routing</span>
-            <span class="pill pill-light">verifier-gated</span>
+            <span class="pill pill-light">ERNIE-4.5</span>
+            <span class="pill pill-light">AI hardware</span>
+            <span class="pill pill-light">voice-first</span>
           </div>
         </div>
       </a>
@@ -311,7 +352,7 @@
         <div class="aspect-[16/9] bg-gradient-to-br from-rose-50 via-white to-rose-100 overflow-hidden flex items-center justify-center">
           <div class="text-center p-6">
             <div class="text-4xl font-bold accent">ADCMOplus</div>
-            <div class="mt-2 text-xs mono text-neutral-500">Friedman rank 1.25 / 5</div>
+            <div class="mt-2 text-xs mono text-neutral-500">Friedman rank 1.25 / 5 comparators</div>
             <div class="mt-1 text-xs mono text-neutral-500">74 pages · MATLAB R2024B</div>
           </div>
         </div>
@@ -324,62 +365,13 @@
           <p class="text-sm text-neutral-700 leading-relaxed">
             Novel evolutionary algorithm that <strong>classifies environmental changes</strong>
             (objective / constraint / combined) before responding. Friedman rank 1.25 vs 5 SOTA
-            comparators. Dominates on constraint preservation and diversity. Maps onto LLM serving,
-            RLHF, agent orchestration.
+            comparators (PBDMO 2.33, SGEA 3.08, MOEA/D-DE 3.92, DNSGA-II 4.42). Dominates on
+            constraint preservation and diversity. README maps it onto LLM serving, RLHF, agent orchestration.
           </p>
           <div class="mt-4 flex flex-wrap gap-1.5">
             <span class="pill pill-light">MATLAB</span>
             <span class="pill pill-light">multi-objective</span>
             <span class="pill pill-light">change classification</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- RedFOX / ernie-evaluation -->
-      <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-neutral-100 overflow-hidden">
-          <img src="https://opengraph.githubassets.com/1/Samielakkad/ernie-evaluation-notes" alt="ERNIE evaluation notes" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="pill pill-accent">Baidu ERNIE 3rd Prize</span>
-            <span class="text-xs text-neutral-500 mono">2025</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">ernie-evaluation-notes · RedFOX</h3>
-          <p class="text-sm text-neutral-700 leading-relaxed">
-            Methodology notes from the Baidu ERNIE Mentor Program — 5-dim evaluation rubric, prompt
-            calibration. Includes RedFOX, the ERNIE-4.5-powered children's AI hardware device that
-            reached 3rd Prize / top 0.025% in the 2025 ERNIE Hackathon (AI Hardware Track).
-          </p>
-          <div class="mt-4 flex flex-wrap gap-1.5">
-            <span class="pill pill-light">Baidu ERNIE-4.5</span>
-            <span class="pill pill-light">5-dim eval rubric</span>
-            <span class="pill pill-light">AI hardware</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- pm-frameworks-darija -->
-      <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-neutral-100 overflow-hidden">
-          <img src="https://opengraph.githubassets.com/1/Samielakkad/pm-frameworks-darija" alt="pm-frameworks-darija" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="pill pill-accent">methodology</span>
-            <span class="text-xs text-neutral-500 mono">2025</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">pm-frameworks-darija</h3>
-          <p class="text-sm text-neutral-700 leading-relaxed">
-            Five-file methodology brand for shipping LLM products in low-resource markets:
-            <em>pricing-taxonomy</em>, <em>evaluation-rubric</em>, <em>calibration-protocol</em>,
-            <em>verifier-philosophy</em>, <em>multimodal-decision</em>. The rubric layer behind
-            jak.ma, ERNIE work, and SSO.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-1.5">
-            <span class="pill pill-light">PM frameworks</span>
-            <span class="pill pill-light">low-resource markets</span>
-            <span class="pill pill-light">verifier-gated</span>
           </div>
         </div>
       </a>
@@ -398,16 +390,126 @@
           <p class="text-sm text-neutral-700 leading-relaxed">
             Productizes Moroccan Moudawana inheritance law + Conservation Foncière land registry.
             Awl & Radd, Manasakhah, Plan de Partage with GPS vertices, Soulte calculations,
-            weighted-value engine (péréquation). ~7M households TAM, MAD 2K–8K notary capture.
+            weighted-value engine (péréquation). ~7M Moroccan households TAM, MAD 2K–8K notary capture.
+            React + Vite + TS · Supabase · Google Maps + Turf.js · jsPDF.
           </p>
           <div class="mt-4 flex flex-wrap gap-1.5">
-            <span class="pill pill-light">React + Vite + TS</span>
-            <span class="pill pill-light">Supabase</span>
-            <span class="pill pill-light">Google Maps + Turf.js</span>
+            <span class="pill pill-light">legal-tech</span>
+            <span class="pill pill-light">React + TS</span>
+            <span class="pill pill-light">geospatial</span>
           </div>
         </div>
       </a>
 
+      <!-- HSK Master AI -->
+      <a href="https://github.com/Samielakkad/hsk-master-ai" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-red-50 via-white to-orange-100 overflow-hidden flex items-center justify-center">
+          <div class="text-center p-6">
+            <div class="text-5xl mb-2">汉</div>
+            <div class="text-2xl font-bold">HSK Master AI</div>
+            <div class="mt-2 text-xs mono text-neutral-500">40M+ annual exam attempts globally</div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-accent">edtech</span>
+            <span class="text-xs text-neutral-500 mono">2025</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">HSK Master AI</h3>
+          <p class="text-sm text-neutral-700 leading-relaxed">
+            Productized the HSK 3.0 retake cycle into a learning loop. Personalized vocabulary spaced-repetition,
+            level-aware error patterns, adaptive mock exams. Born from Sami's own HSK 4 prep — direct dogfooding.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="pill pill-light">edtech</span>
+            <span class="pill pill-light">spaced repetition</span>
+            <span class="pill pill-light">HSK 3.0</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Sinothrive -->
+      <div class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-blue-50 via-white to-indigo-100 overflow-hidden flex items-center justify-center">
+          <div class="text-center p-6">
+            <div class="text-5xl mb-2">🎨</div>
+            <div class="text-2xl font-bold">Sinothrive AI</div>
+            <div class="mt-2 text-xs mono text-neutral-500">Best Design · Tsinghua course project</div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-accent">Best Design Award</span>
+            <span class="text-xs text-neutral-500 mono">2025 · Tsinghua</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Sinothrive AI</h3>
+          <p class="text-sm text-neutral-700 leading-relaxed">
+            AI assistant for international students applying to study in China. Tsinghua course project,
+            6-member team. Won <strong>Best Design Award</strong> Dec 2025.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="pill pill-light">edtech</span>
+            <span class="pill pill-light">team project</span>
+            <span class="pill pill-light">RAG</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- pm-frameworks-darija -->
+      <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden md:col-span-2">
+        <div class="aspect-[3/1] bg-neutral-100 overflow-hidden">
+          <img src="https://opengraph.githubassets.com/1/Samielakkad/pm-frameworks-darija" alt="pm-frameworks-darija" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6 md:p-8">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill pill-accent">methodology</span>
+            <span class="text-xs text-neutral-500 mono">2025</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">pm-frameworks-darija · 5-Dim Eval Suite</h3>
+          <p class="text-sm md:text-base text-neutral-700 leading-relaxed">
+            Five-file methodology brand for shipping LLM products in low-resource markets:
+            <em>pricing-taxonomy</em> · <em>evaluation-rubric</em> · <em>calibration-protocol</em> ·
+            <em>verifier-philosophy</em> · <em>multimodal-decision</em>. The rubric layer behind every project here —
+            invented at DOPEDCLUB, formalised at Baidu ERNIE, runs in production at jak.ma.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="pill pill-light">PM frameworks</span>
+            <span class="pill pill-light">low-resource markets</span>
+            <span class="pill pill-light">verifier-gated retrieval</span>
+            <span class="pill pill-light">eval design</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- TSINGHUA SECTION -->
+<section class="bg-neutral-50 border-y border-neutral-200 py-20">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="text-xs mono accent uppercase tracking-wider mb-3">currently · 清华大学</div>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Tsinghua SIGS · Shenzhen.</h2>
+      <p class="text-neutral-700 leading-relaxed mb-4">
+        AI Master's at Tsinghua's Shenzhen International Graduate School. CSC (Chinese Government) full scholarship.
+        Working on Framework 2 of my thesis — extending jak.ma's verifier-gated retrieval into a learned classifier,
+        bridging the undergrad ADCMOplus algorithm with production LLM serving.
+      </p>
+      <div class="grid grid-cols-2 gap-3 mt-6">
+        <div class="bg-white border border-neutral-200 rounded p-4">
+          <div class="text-2xl font-bold accent">#1 in Asia</div>
+          <div class="text-xs text-neutral-600 mt-1">Tsinghua University · US News 2024–25</div>
+        </div>
+        <div class="bg-white border border-neutral-200 rounded p-4">
+          <div class="text-2xl font-bold accent">#1 in AI</div>
+          <div class="text-xs text-neutral-600 mt-1">Tsinghua · global ranking</div>
+        </div>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <img src="assets/tsinghua-event.jpg" alt="Sami at Tsinghua SIGS New Year event 2026" class="rounded-xl shadow-lg w-full" loading="lazy" />
+      <img src="assets/tsinghua-rank.jpg" alt="Tsinghua University rankings — #1 in Asia, #16 globally" class="rounded-xl shadow-lg w-full" loading="lazy" />
     </div>
   </div>
 </section>
@@ -419,7 +521,7 @@
       <div class="text-xs mono uppercase tracking-wider mb-3" style="color:#ff6b81">experience · 工作经历</div>
       <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Eighteen months,<br/>four roles,<br/>one thread.</h2>
       <p class="mt-4 text-neutral-400 leading-relaxed">
-        Junior AI engineer → applied AI-PM → manufacturing ML → paid Baidu mentor.
+        Junior AI engineer → applied AI-PM → manufacturing ML → paid Baidu evaluator.
         The thread is the 5-dim evaluation methodology — invented at DOPEDCLUB, carried into every role since.
       </p>
     </div>
@@ -428,26 +530,27 @@
 
       <div class="relative">
         <div class="absolute -left-[35px] md:-left-[51px] top-1 w-3 h-3 rounded-full accent-bg ring-4 ring-neutral-900"></div>
-        <div class="text-xs mono text-neutral-400">Oct 2025 – Present · Shenzhen</div>
+        <div class="text-xs mono text-neutral-400">Oct 2025 – Dec 2025 · Shenzhen</div>
         <h3 class="text-2xl font-bold mt-1">Baidu ERNIE Mentor (Contract)</h3>
-        <div class="text-sm text-neutral-300 mt-1">百度 · 文心导师 · Wenxin Mentor</div>
+        <div class="text-sm text-neutral-300 mt-1">百度 · 文心导师 · Wenxin Mentor · two official Baidu certificates</div>
         <p class="mt-3 text-neutral-300 leading-relaxed max-w-2xl">
           Paid expert on Baidu's flagship LLM (文心一言 / ERNIE). Data construction, evaluation
-          rubric design, production prompts. ~¥11,160 earned. Built <strong>RedFOX</strong> on
-          the side — children's AI hardware on ERNIE-4.5, took 3rd Prize / top 0.025% in the 2025
-          ERNIE Hackathon.
+          rubric design, production prompts. Built <strong>RedFOX</strong> on the side — children's
+          AI hardware on ERNIE-4.5, took <strong>3rd Prize / top 3 of 23 finalists</strong> in the 2025
+          ERNIE Hackathon (AI Hardware track, 170+ submissions).
         </p>
       </div>
 
       <div class="relative">
         <div class="absolute -left-[35px] md:-left-[51px] top-1 w-3 h-3 rounded-full accent-bg ring-4 ring-neutral-900"></div>
         <div class="text-xs mono text-neutral-400">May 2025 – Jul 2025 · Hebei</div>
-        <h3 class="text-2xl font-bold mt-1">Hebei Chinaust Plastics — IT Engineer (AI & Robotics)</h3>
+        <h3 class="text-2xl font-bold mt-1">Hebei Chinaust Plastics — Systems Manufacturing IT Engineer (AI & Robotics)</h3>
         <p class="mt-3 text-neutral-300 leading-relaxed max-w-2xl">
           ML-driven predictive maintenance across 3 production lines.
           <strong>+12% production accuracy, −18% downtime.</strong> 120K+ sensor records data pipeline.
-          Digital-twin simulations cut product test cycles from 2 weeks to 4 days. Authored a
-          Morocco-expansion feasibility study (~30% logistics savings).
+          MES + ERP rollout. Digital-twin simulations cut product test cycles from <strong>2 weeks to 4 days</strong>.
+          Authored <strong>Morocco-expansion feasibility study (~30% logistics savings)</strong> — Chinaust is planning
+          a Morocco operation; I helped scope it.
         </p>
       </div>
 
@@ -456,22 +559,22 @@
         <div class="text-xs mono text-neutral-400">Sep 2024 – Feb 2025 · Casablanca (Hybrid)</div>
         <h3 class="text-2xl font-bold mt-1">DOPEDCLUB — Applied AI Product Manager</h3>
         <p class="mt-3 text-neutral-300 leading-relaxed max-w-2xl">
-          GenAI for client visual deliverables. Built a 12-item checklist/SOP across 20+ recurring
-          client briefs. <strong>Designed the 5-criteria evaluation framework</strong> that became
-          the signature rubric reused at Baidu ERNIE and as the jak.ma verifier.
-          Longest-duration formal AI-PM role.
+          Creative studio using GenAI for client visual deliverables.
+          12-item checklist/SOP across 20+ recurring client briefs.
+          <strong>Designed the 5-criteria evaluation framework</strong> that became the signature rubric
+          reused at Baidu ERNIE and as the jak.ma verifier. Longest-duration formal AI-PM role.
         </p>
       </div>
 
       <div class="relative">
         <div class="absolute -left-[35px] md:-left-[51px] top-1 w-3 h-3 rounded-full accent-bg ring-4 ring-neutral-900"></div>
-        <div class="text-xs mono text-neutral-400">Jun 2024 – Sep 2024 · Zhengzhou-Kaifeng</div>
+        <div class="text-xs mono text-neutral-400">Jun 2024 – Sep 2024 · Zhengzhou-Kaifeng Metropolitan Area</div>
         <h3 class="text-2xl font-bold mt-1">Neusoft — Artificial Intelligence Intern</h3>
         <p class="mt-3 text-neutral-300 leading-relaxed max-w-2xl">
           Object detection for autonomous-driving R&D (<strong>~98% precision</strong>).
           Segmentation pipelines for healthcare + e-commerce — <strong>−45% preprocessing, −30%
           training time</strong>. Identity-verification model evaluation supporting internal
-          Alipay / WeChat Pay integration tests.
+          Alipay / WeChat Pay integration test sets.
         </p>
       </div>
 
@@ -479,97 +582,127 @@
   </div>
 </section>
 
-<!-- ALL REPOS -->
-<section id="all-repos" class="py-20 md:py-28">
+<!-- ALL REPOS — CATEGORIZED -->
+<section id="repos" class="py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex items-end justify-between mb-12">
       <div>
-        <div class="text-xs mono accent uppercase tracking-wider mb-3">open-source · 12 repos</div>
+        <div class="text-xs mono accent uppercase tracking-wider mb-3">open-source · 12 repos · categorized</div>
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Every public repo.</h2>
       </div>
       <a href="https://github.com/Samielakkad?tab=repositories" class="hidden md:inline-block text-sm text-neutral-600 hover:text-neutral-900">on github →</a>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-      <a href="https://github.com/Samielakkad/SSO-final" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">SSO-final</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">TypeScript · 2025</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Sovereign School OS — production submission for the Tsinghua AIID Yearly Competition. K-12 AI-native edtech.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/jak-ma-engine" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">jak-ma-engine</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">JavaScript · 2026</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Public engineering mirror of jak.ma — multi-provider LLM routing, tool-calling, verifier-gated retrieval.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/jak-ma-case-study" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">jak-ma-case-study</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2026</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Production case study — verifier-gated retrieval in a Moroccan service marketplace.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/jak-ma-eval-suite" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">jak-ma-eval-suite</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">Python · 2026</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Evaluation methodology and 5-dim rubric for jak.ma's two-pass grounded retrieval.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">pm-frameworks-darija</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2025</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Reusable PM frameworks for shipping LLM products in low-resource markets.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">ernie-evaluation-notes</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2025</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Methodology notes + 5-dim eval rubric from the Baidu ERNIE Mentor Program. Includes RedFOX.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/tsinghua-aiid-2025-team-docs" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">tsinghua-aiid-2025-team-docs</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">TypeScript · 2025</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">AI-Explorers team documentation site for the Tsinghua AIID Hackathon — Best Documentation winner.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/mirath-morocco" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">mirath-morocco</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">TypeScript · 2026</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Productized Moudawana inheritance + Conservation Foncière land registry solver.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/hsk-master-ai" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">hsk-master-ai</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">Web · 2025</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Productized HSK 3.0 retake cycle. 40M+ annual exam attempts globally.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/darija-nlp-resources" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">darija-nlp-resources</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2025</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">Curated corpora, papers, and tools for Moroccan Arabic (Darija) NLP.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/thesis-adcmoplus" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">thesis-adcmoplus</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">MATLAB · 2025 · private</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">NPU undergrad thesis — 74-page algorithm + PM-framed README on modern AI applications.</p>
-      </a>
-
-      <a href="https://github.com/Samielakkad/samielakkad.github.io" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
-        <div class="font-bold text-sm mb-1">samielakkad.github.io</div>
-        <div class="text-xs text-neutral-500 mb-3 mono">HTML · 2026</div>
-        <p class="text-xs text-neutral-700 leading-relaxed">This site. Single static page, Tailwind via CDN, no build step, deployed via GitHub Pages.</p>
-      </a>
-
+    <!-- AI Products & Apps -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="text-xs mono accent uppercase tracking-wider">01 · AI Products & Apps</div>
+        <div class="flex-1 h-px bg-neutral-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="https://github.com/Samielakkad/SSO-final" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">SSO-final</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">TypeScript · 2025 · AIID winner</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Sovereign School OS — Tsinghua AIID Yearly Competition production submission. K-12 AI-native edtech.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/jak-ma-engine" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">jak-ma-engine</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">JavaScript · 2026 · live</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Public engineering mirror of jak.ma — multi-provider LLM routing, tool-calling, verifier-gated retrieval.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/mirath-morocco" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">mirath-morocco</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">TypeScript · 2026 · legal-tech</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Productized Moudawana inheritance + Conservation Foncière land registry solver.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/hsk-master-ai" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">hsk-master-ai</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">Web · 2025 · edtech</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Productized HSK 3.0 retake cycle. 40M+ annual exam attempts globally.</p>
+        </a>
+      </div>
     </div>
+
+    <!-- Methodology & PM Frameworks -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="text-xs mono accent uppercase tracking-wider">02 · Methodology & PM Frameworks</div>
+        <div class="flex-1 h-px bg-neutral-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">pm-frameworks-darija</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2025</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Reusable PM frameworks for shipping LLM products in low-resource markets.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/jak-ma-case-study" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">jak-ma-case-study</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2026</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Production case study — verifier-gated retrieval in a Moroccan service marketplace.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/jak-ma-eval-suite" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">jak-ma-eval-suite</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">Python · 2026</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">5-dim evaluation rubric for jak.ma's two-pass grounded retrieval.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">ernie-evaluation-notes</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2025</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Methodology notes + 5-dim rubric from the Baidu ERNIE Mentor Program. Includes RedFOX.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Research & Resources -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="text-xs mono accent uppercase tracking-wider">03 · Research & Resources</div>
+        <div class="flex-1 h-px bg-neutral-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="https://github.com/Samielakkad/thesis-adcmoplus" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">thesis-adcmoplus</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">MATLAB · 2025 · private</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">NPU undergrad thesis — 74-page algorithm + PM-framed README on modern AI applications.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/darija-nlp-resources" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">darija-nlp-resources</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2025</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Curated corpora, papers, and tools for Moroccan Arabic (Darija) NLP.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Public Showcases & Meta -->
+    <div>
+      <div class="flex items-center gap-3 mb-5">
+        <div class="text-xs mono accent uppercase tracking-wider">04 · Public Showcases & Meta</div>
+        <div class="flex-1 h-px bg-neutral-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="https://github.com/Samielakkad/tsinghua-aiid-2025-team-docs" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">tsinghua-aiid-2025-team-docs</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">TypeScript · 2025</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">AI-Explorers team documentation site for the Tsinghua AIID Hackathon.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/samielakkad.github.io" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">samielakkad.github.io</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">HTML · 2026</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">This site. Single static page, Tailwind via CDN, no build step. Deployed via GitHub Pages.</p>
+        </a>
+        <a href="https://github.com/Samielakkad/Samielakkad" class="project-card block bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="font-bold text-sm mb-1">Samielakkad (profile)</div>
+          <div class="text-xs text-neutral-500 mb-3 mono">Markdown · 2026</div>
+          <p class="text-xs text-neutral-700 leading-relaxed">Config files for the GitHub profile landing.</p>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- EDUCATION + METHOD -->
-<section class="bg-neutral-50 border-y border-neutral-200 py-20 md:py-28">
+<section id="education" class="bg-neutral-50 border-y border-neutral-200 py-20 md:py-28">
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
 
     <div>
@@ -577,19 +710,36 @@
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">Background.</h2>
 
       <div class="space-y-6">
-        <div class="bg-white border border-neutral-200 rounded-lg p-5">
-          <div class="text-xs mono text-neutral-500">2025 — Present</div>
-          <div class="font-bold mt-1">Tsinghua SIGS — AI Master's</div>
-          <div class="text-sm text-neutral-700">清华大学深圳国际研究生院 · Shenzhen · CSC Scholar</div>
+        <div class="bg-white border border-neutral-200 rounded-lg p-5 flex items-start gap-4">
+          <img src="assets/logo-tsinghua.jpg" alt="Tsinghua" class="w-12 h-12 rounded object-cover flex-shrink-0" />
+          <div>
+            <div class="text-xs mono text-neutral-500">2025 — Present · Shenzhen 深圳</div>
+            <div class="font-bold mt-1">Tsinghua SIGS — AI Master's</div>
+            <div class="text-sm text-neutral-700">清华大学深圳国际研究生院 · CSC Government Scholar · #1 in Asia (US News 2024–25)</div>
+          </div>
         </div>
         <div class="bg-white border border-neutral-200 rounded-lg p-5">
-          <div class="text-xs mono text-neutral-500">2021 — 2025</div>
+          <div class="text-xs mono text-neutral-500">2021 — 2025 · Xi'an 西安</div>
           <div class="font-bold mt-1">Northwestern Polytechnical University — B.Eng. CS</div>
-          <div class="text-sm text-neutral-700">西北工业大学 · Xi'an · Thesis defended May 2025</div>
+          <div class="text-sm text-neutral-700">西北工业大学 · Thesis defended May 2025 · 74-page ADCMOplus algorithm</div>
         </div>
         <div class="bg-white border border-neutral-200 rounded-lg p-5">
           <div class="text-xs mono text-neutral-500">languages</div>
-          <div class="text-sm text-neutral-700 mt-1">Arabic (native) · Darija (native) · English (fluent) · French (fluent) · Mandarin 中文 (HSK 4)</div>
+          <div class="text-sm text-neutral-700 mt-2 space-y-1">
+            <div><strong>Arabic</strong> · native</div>
+            <div><strong>Darija (Moroccan Arabic)</strong> · native</div>
+            <div><strong>English</strong> · fluent</div>
+            <div><strong>French</strong> · fluent</div>
+            <div><strong>Mandarin 中文</strong> · HSK 4</div>
+          </div>
+        </div>
+        <div class="bg-white border border-neutral-200 rounded-lg p-5">
+          <div class="text-xs mono text-neutral-500">also</div>
+          <div class="text-sm text-neutral-700 mt-2 space-y-1">
+            <div>· <strong>Tsinghua SIGS New Year Meet</strong> participant — 文明互鉴 · 新年相逢 · 2026</div>
+            <div>· <strong>NPU Computer Science cohort</strong> — Xi'an campus 2021–25</div>
+            <div>· <strong>Volunteer translation</strong> — Arabic ↔ Mandarin ↔ French at Tsinghua events</div>
+          </div>
         </div>
       </div>
     </div>
@@ -606,29 +756,34 @@
         </p>
         <p class="text-neutral-700 leading-relaxed">
           My signature methodology — <strong>5-dim evaluation rubric + verifier-gated retrieval</strong> — recurs
-          across every project here. It started at DOPEDCLUB, got formalised at Baidu ERNIE, and now runs in
-          production at jak.ma.
+          across every project here. It started at DOPEDCLUB (Casablanca), got formalised at Baidu ERNIE (Shenzhen),
+          and now runs in production at jak.ma (Morocco).
         </p>
         <div class="grid grid-cols-2 gap-3 mt-6">
           <div class="bg-white border border-neutral-200 rounded p-4">
             <div class="text-xs mono accent">01</div>
             <div class="text-sm font-semibold mt-1">pricing taxonomy</div>
+            <div class="text-xs text-neutral-600 mt-1">what to charge for · what to bundle</div>
           </div>
           <div class="bg-white border border-neutral-200 rounded p-4">
             <div class="text-xs mono accent">02</div>
             <div class="text-sm font-semibold mt-1">evaluation rubric</div>
+            <div class="text-xs text-neutral-600 mt-1">what "good" means for the model</div>
           </div>
           <div class="bg-white border border-neutral-200 rounded p-4">
             <div class="text-xs mono accent">03</div>
             <div class="text-sm font-semibold mt-1">calibration protocol</div>
+            <div class="text-xs text-neutral-600 mt-1">keep the rubric stable across runs</div>
           </div>
           <div class="bg-white border border-neutral-200 rounded p-4">
             <div class="text-xs mono accent">04</div>
             <div class="text-sm font-semibold mt-1">verifier philosophy</div>
+            <div class="text-xs text-neutral-600 mt-1">what to enforce in code vs trust the model</div>
           </div>
           <div class="bg-white border border-neutral-200 rounded p-4 col-span-2">
             <div class="text-xs mono accent">05</div>
             <div class="text-sm font-semibold mt-1">multimodal decision</div>
+            <div class="text-xs text-neutral-600 mt-1">when to escalate to vision, audio, or a human</div>
           </div>
         </div>
       </div>
@@ -655,15 +810,20 @@
         <a href="mailto:elakkadsami00@gmail.com" class="px-6 py-3 accent-bg text-white rounded-md font-medium hover:opacity-90 transition">elakkadsami00@gmail.com</a>
         <a href="https://www.linkedin.com/in/samielakkad" class="px-6 py-3 border border-neutral-300 rounded-md font-medium hover:border-neutral-900 transition">linkedin.com/in/samielakkad</a>
         <a href="https://github.com/Samielakkad" class="px-6 py-3 border border-neutral-300 rounded-md font-medium hover:border-neutral-900 transition">github.com/Samielakkad</a>
+        <a href="https://huggingface.co/samielakkad1" class="px-6 py-3 border border-neutral-300 rounded-md font-medium hover:border-neutral-900 transition">🤗 huggingface.co/samielakkad1</a>
       </div>
-      <div class="mt-8 pt-8 border-t border-neutral-200 grid sm:grid-cols-2 gap-4 text-sm text-neutral-600">
+      <div class="mt-8 pt-8 border-t border-neutral-200 grid sm:grid-cols-3 gap-4 text-sm text-neutral-600">
         <div>
           <div class="mono text-xs accent uppercase">based in</div>
-          <div class="mt-1">Shenzhen · 深圳 · open to relocation</div>
+          <div class="mt-1">Shenzhen · 深圳</div>
         </div>
         <div>
           <div class="mono text-xs accent uppercase">availability</div>
-          <div class="mt-1">Graduating Tsinghua SIGS · open to internships now</div>
+          <div class="mt-1">Tsinghua SIGS · open to internships now</div>
+        </div>
+        <div>
+          <div class="mono text-xs accent uppercase">visa status</div>
+          <div class="mt-1">CSC scholar · in-country</div>
         </div>
       </div>
     </div>
@@ -672,11 +832,12 @@
 
 <footer class="border-t border-neutral-200 bg-neutral-50">
   <div class="max-w-6xl mx-auto px-6 py-10 flex flex-wrap justify-between gap-4 text-xs mono text-neutral-500">
-    <span>© sami el akkad · shenzhen · 2026</span>
+    <span>© sami el akkad · shenzhen 深圳 · 2026</span>
     <div class="flex gap-4">
       <a href="https://github.com/Samielakkad" class="hover:text-neutral-900">github</a>
       <a href="https://www.linkedin.com/in/samielakkad" class="hover:text-neutral-900">linkedin</a>
       <a href="https://huggingface.co/samielakkad1" class="hover:text-neutral-900">huggingface</a>
+      <a href="https://jak.ma" class="hover:text-neutral-900">jak.ma</a>
       <a href="mailto:elakkadsami00@gmail.com" class="hover:text-neutral-900">email</a>
     </div>
   </div>
