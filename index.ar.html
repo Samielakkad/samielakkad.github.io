@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>سامي الأقاد — مدير منتجات الذكاء الاصطناعي</title>
+<meta name="description" content="سامي الأقاد — مدير منتجات الذكاء الاصطناعي. ماجستير الذكاء الاصطناعي في تسينغهوا SIGS. مرشد بايدو ERNIE سابق. الفائز بالمسابقة السنوية لـ AIID. مؤسس jak.ma." />
+<meta property="og:title" content="سامي الأقاد — مدير منتجات الذكاء الاصطناعي" />
+<meta property="og:description" content="ماجستير الذكاء الاصطناعي في جامعة تسينغهوا · حاصل على منحة الحكومة الصينية · معدل تراكمي 3.9/4.0" />
+<meta property="og:image" content="https://samielakkad.github.io/assets/me.jpg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>س</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: #c41e3a; --tsinghua: #660874; --baidu: #2932e1; }
+  body { font-family: 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, sans-serif; }
+  .heading { font-family: 'Cairo', 'Tajawal', sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; direction: ltr; display: inline-block; }
+  .accent { color: var(--accent); }
+  .accent-bg { background-color: var(--accent); }
+  .accent-border { border-color: var(--accent); }
+  .tsinghua { color: var(--tsinghua); }
+  .tsinghua-bg { background-color: var(--tsinghua); }
+  .tsinghua-border { border-color: var(--tsinghua); }
+  .gradient-hero { background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%); }
+  .gradient-dark { background: linear-gradient(180deg, #0a0a0a 0%, #171717 100%); }
+  .gradient-tsinghua { background: linear-gradient(135deg, #4a0a55 0%, #660874 50%, #7e1c8a 100%); }
+  .gradient-baidu { background: linear-gradient(135deg, #1b1f9e 0%, #2932e1 50%, #4453ee 100%); }
+  .gradient-soft-tsinghua { background:
+    radial-gradient(900px 400px at 20% -10%, rgba(102,8,116,0.10), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #faf8fb 100%); }
+  .pill { display:inline-flex; align-items:center; gap: 6px; padding: 4px 10px; border-radius: 9999px; font-size: 12px; line-height: 1; font-weight: 500; }
+  .pill-light { background: #fafafa; color: #404040; border: 1px solid #e5e5e5; }
+  .pill-accent { background: rgba(196,30,58,0.08); color: var(--accent); border: 1px solid rgba(196,30,58,0.2); }
+  .pill-tsinghua { background: rgba(102,8,116,0.1); color: var(--tsinghua); border: 1px solid rgba(102,8,116,0.2); }
+  .pill-baidu { background: rgba(41,50,225,0.08); color: var(--baidu); border: 1px solid rgba(41,50,225,0.2); }
+  .top-accent { height: 4px; background: linear-gradient(90deg, var(--tsinghua) 0%, var(--accent) 100%); }
+  .project-card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .project-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -10px rgba(0,0,0,0.18); border-color: #d4d4d4; }
+  ::selection { background: rgba(102,8,116,0.22); color: #0a0a0a; }
+  .num { font-feature-settings: 'tnum'; }
+  /* RTL list bullets visible */
+  .rtl-list { list-style-position: inside; }
+</style>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+
+<div class="top-accent"></div>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between text-sm">
+    <a href="#top" class="font-semibold heading">سامي الأقاد</a>
+    <div class="hidden md:flex gap-6 text-neutral-600">
+      <a href="#pillars" class="hover:tsinghua transition">تسينغهوا + بايدو</a>
+      <a href="#about" class="hover:text-neutral-900">عني</a>
+      <a href="#projects" class="hover:text-neutral-900">المشاريع</a>
+      <a href="#experience" class="hover:text-neutral-900">الخبرة</a>
+      <a href="#contact" class="hover:text-neutral-900">تواصل</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="text-xs mono text-neutral-600 hover:text-neutral-900">English</a>
+      <a href="mailto:sam25@mails.tsinghua.edu.cn" class="px-3 py-1.5 bg-neutral-900 text-white rounded text-xs hover:bg-neutral-700">تواصل معي</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="gradient-hero">
+  <div class="max-w-6xl mx-auto px-6 pt-10 pb-12 md:pt-14 md:pb-16">
+    <div class="grid md:grid-cols-[1.5fr_1fr] gap-10 items-center">
+      <div>
+        <div class="flex items-baseline gap-3 text-xs text-neutral-500 mb-4">
+          <span>شنجن · 深圳</span>
+          <span>·</span>
+          <span>منفتح على فرص العمل</span>
+        </div>
+        <h1 class="heading text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15]">
+          سامي الأقاد.<br/>
+          <span class="accent">مدير منتجات الذكاء الاصطناعي</span><br/>
+          <span class="text-neutral-700">التطبيقي.</span>
+        </h1>
+        <p class="mt-5 text-base md:text-lg text-neutral-600 max-w-2xl leading-relaxed">
+          <strong class="text-neutral-900">مغربي.</strong>
+          <strong class="tsinghua">ماجستير الذكاء الاصطناعي</strong> في <strong class="tsinghua">جامعة تسينغهوا SIGS</strong>
+          (حاصل على <strong class="tsinghua">منحة الحكومة الصينية</strong> · معدل تراكمي 3.9/4.0) ·
+          بكالوريوس علوم الحاسوب من <strong class="text-neutral-900">جامعة نورث ويسترن للتكنولوجيا (NPU)</strong> ·
+          <strong class="text-neutral-900">مرشد بايدو ERNIE</strong> (文心导师 · أكتوبر–ديسمبر 2025) ·
+          <strong class="tsinghua">الفائز بمسابقة AIID السنوية</strong> ·
+          مؤسس <strong class="text-neutral-900">jak.ma</strong>.
+        </p>
+
+        <!-- Languages line -->
+        <div class="mt-4 text-sm text-neutral-700 leading-loose">
+          <span class="mono text-xs text-neutral-500 ml-1">يتحدث ·</span>
+          <strong>العربية</strong> <span class="text-neutral-400">لغة أم</span> ·
+          <strong>الدارجة المغربية</strong> <span class="text-neutral-400">لغة أم</span> ·
+          <strong>الإنجليزية</strong> <span class="text-neutral-400">بطلاقة</span> ·
+          <strong>الفرنسية</strong> <span class="text-neutral-400">بطلاقة</span> ·
+          <strong>الماندرين 中文</strong> <span class="text-neutral-400">HSK 4 · 90/100</span>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          <a href="mailto:sam25@mails.tsinghua.edu.cn" class="px-4 py-2 accent-bg text-white rounded-md text-sm font-medium hover:opacity-90 transition">sam25@mails.tsinghua.edu.cn</a>
+          <a href="https://github.com/Samielakkad" class="px-4 py-2 bg-neutral-900 text-white rounded-md text-sm font-medium hover:bg-neutral-700 transition">GitHub</a>
+          <a href="https://www.linkedin.com/in/samielakkad" class="px-4 py-2 border border-neutral-300 rounded-md text-sm font-medium hover:border-neutral-900 transition">LinkedIn</a>
+          <a href="https://huggingface.co/spaces/samielakkad1/jakma-darija-chat" target="_blank" rel="noopener" class="px-4 py-2 border border-neutral-300 rounded-md text-sm font-medium hover:border-neutral-900 transition">🤗 عرض مباشر</a>
+        </div>
+      </div>
+      <div>
+        <img src="assets/me.jpg" alt="سامي الأقاد" class="w-56 h-72 md:w-full md:max-w-[280px] mx-auto rounded-2xl object-cover shadow-2xl ring-1 ring-neutral-200" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<section class="border-y border-neutral-200 bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+    <div>
+      <div class="text-2xl md:text-3xl font-bold tsinghua num leading-none">#1</div>
+      <div class="text-[12px] text-neutral-600 mt-1">الفائز بمسابقة تسينغهوا AIID السنوية</div>
+    </div>
+    <div>
+      <div class="text-2xl md:text-3xl font-bold num leading-none" style="color:var(--baidu)">الجائزة 3</div>
+      <div class="text-[12px] text-neutral-600 mt-1">هاكاثون بايدو ERNIE · 3 من 23 · ~5,900 مطور</div>
+    </div>
+    <div>
+      <div class="text-2xl md:text-3xl font-bold accent num leading-none">74</div>
+      <div class="text-[12px] text-neutral-600 mt-1">صفحة في أطروحة البكالوريوس · رتبة فريدمان 1.25</div>
+    </div>
+    <div>
+      <div class="text-2xl md:text-3xl font-bold accent num leading-none">1,862</div>
+      <div class="text-[12px] text-neutral-600 mt-1">عامل على jak.ma في 15 مدينة</div>
+    </div>
+    <div>
+      <div class="text-2xl md:text-3xl font-bold tsinghua num leading-none">3.9/4.0</div>
+      <div class="text-[12px] text-neutral-600 mt-1">معدل تراكمي · تسينغهوا · منحة CSC</div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO PILLARS -->
+<section id="pillars" class="bg-neutral-50 py-10 md:py-14 border-b border-neutral-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-7">
+      <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">سؤال · من أين تأتي المصداقية؟</div>
+      <h2 class="heading text-2xl md:text-4xl font-bold tracking-tight">تسينغهوا · بايدو · ركيزتان.</h2>
+      <p class="mt-2 text-base text-neutral-700">
+        <strong class="text-neutral-900">اثنان من أكبر الأسماء في الصين.</strong>
+        أفضل جامعة صينية × أفضل مختبر صيني للذكاء الاصطناعي — مزيج يصعب على معظم المرشحين الحصول عليه.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <!-- TSINGHUA -->
+      <div class="rounded-xl overflow-hidden shadow-lg gradient-tsinghua text-white p-6 flex flex-col">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <div class="text-[11px] mono uppercase tracking-wider opacity-80 mb-1">المؤسسة · 学校</div>
+            <h3 class="heading text-xl md:text-2xl font-bold leading-tight">جامعة تسينغهوا SIGS</h3>
+            <div class="text-xs opacity-90 mt-1">清华大学深圳国际研究生院</div>
+          </div>
+          <img src="assets/logo-tsinghua.jpg" alt="Tsinghua" class="w-12 h-12 rounded-lg object-cover bg-white p-1 flex-shrink-0" />
+        </div>
+        <div class="space-y-2 mb-4 text-sm">
+          <div class="flex items-baseline gap-3">
+            <span class="text-xl">🥇</span>
+            <div>
+              <div class="font-semibold leading-tight">الفائز بمسابقة AIID السنوية</div>
+              <div class="text-[12px] opacity-80">Sovereign School OS · بالشراكة مع NetDragon · 2025</div>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="text-xl">🎓</span>
+            <div>
+              <div class="font-semibold leading-tight">منحة الحكومة الصينية · معدل 3.9/4.0</div>
+              <div class="text-[12px] opacity-80">中国政府奖学金 — منحة كاملة</div>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="text-xl font-bold">#1</span>
+            <div>
+              <div class="font-semibold leading-tight">في آسيا</div>
+              <div class="text-[12px] opacity-80">تسينغهوا · US News 2024–25</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-auto pt-3 border-t border-white/20 text-[11px] opacity-90">
+          ماجستير الذكاء الاصطناعي · AI+X مسار التصميم الابتكاري · شنجن · 2025 – حتى الآن
+        </div>
+      </div>
+
+      <!-- BAIDU -->
+      <div class="rounded-xl overflow-hidden shadow-lg gradient-baidu text-white p-6 flex flex-col">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <div class="text-[11px] mono uppercase tracking-wider opacity-80 mb-1">برنامج المرشدين · 项目</div>
+            <h3 class="heading text-xl md:text-2xl font-bold leading-tight">بايدو ERNIE</h3>
+            <div class="text-xs opacity-90 mt-1">百度文心导师 · Wenxin Mentor</div>
+          </div>
+          <img src="assets/logo-baidu.jpg" alt="Baidu" class="w-12 h-12 rounded-lg object-cover bg-white p-1 flex-shrink-0" />
+        </div>
+        <div class="space-y-2 mb-4 text-sm">
+          <div class="flex items-baseline gap-3">
+            <span class="text-xl">🥉</span>
+            <div>
+              <div class="font-semibold leading-tight">الجائزة الثالثة · هاكاثون ERNIE 2025</div>
+              <div class="text-[12px] opacity-80">RedFox · مسار العتاد · 3 من 23 نهائياً · 170+ مشاركة · ~5,900 مطور</div>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="text-xl">💼</span>
+            <div>
+              <div class="font-semibold leading-tight">عقد مدفوع كخبير</div>
+              <div class="text-[12px] opacity-80">اختبار الـ prompts · مقياس التقييم متعدد الأبعاد · قرارات الإصدار</div>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="text-xl">📜</span>
+            <div>
+              <div class="font-semibold leading-tight">شهادتان رسميتان من بايدو</div>
+              <div class="text-[12px] opacity-80">برنامج مرشدي ERNIE · 2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-auto pt-3 border-t border-white/20 text-[11px] opacity-90">
+          ERNIE / 文心一言 · شنجن · أكتوبر–ديسمبر 2025
+        </div>
+      </div>
+    </div>
+
+    <!-- NetDragon -->
+    <div class="mt-5 bg-white rounded-xl border border-neutral-200 p-4 flex items-center gap-4 shadow-sm">
+      <div class="w-11 h-11 rounded-lg bg-neutral-900 text-white font-bold flex items-center justify-center text-sm flex-shrink-0">网龙</div>
+      <div class="flex-1">
+        <div class="text-[11px] mono accent uppercase tracking-wider">الإشارة الثالثة · قناة التوظيف</div>
+        <div class="text-sm font-bold mt-0.5">NetDragon Websoft (网龙网络) — قناة توظيف فوتشو</div>
+        <p class="text-xs text-neutral-600 mt-1">
+          شركة Fortune-China في مجال الذكاء الاصطناعي والتعليم · شريك AIID. تم بناء Sovereign School OS لتقنياتهم. زيارة دراسية AIID في فوتشو (ديسمبر 2025) تفتح القناة.
+        </p>
+      </div>
+    </div>
+
+    <!-- More credentials row -->
+    <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="bg-white rounded-lg border border-neutral-200 p-3 flex items-start gap-3">
+        <div class="text-2xl">🥇</div>
+        <div>
+          <div class="text-[11px] mono tsinghua uppercase tracking-wider">منحة دراسية</div>
+          <div class="text-[13px] font-bold leading-tight mt-0.5">منحة رئيس NPU · الجائزة الكاملة</div>
+          <div class="text-[12px] text-neutral-600 mt-0.5">إعفاء كامل من الرسوم + 15,000 يوان شهرياً</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg border border-neutral-200 p-3 flex items-start gap-3">
+        <div class="text-2xl">⚡</div>
+        <div>
+          <div class="text-[11px] mono tsinghua uppercase tracking-wider">مسار نخبة</div>
+          <div class="text-[13px] font-bold leading-tight mt-0.5">برنامج AI+X للنخبة</div>
+          <div class="text-[12px] text-neutral-600 mt-0.5">تسينغهوا SIGS</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg border border-neutral-200 p-3 flex items-start gap-3">
+        <div class="text-2xl">🎓</div>
+        <div>
+          <div class="text-[11px] mono accent uppercase tracking-wider">اللغة الصينية</div>
+          <div class="text-[13px] font-bold leading-tight mt-0.5">HSK 4 · 90/100</div>
+          <div class="text-[12px] text-neutral-600 mt-0.5">موثق من NPU</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg border border-neutral-200 p-3 flex items-start gap-3">
+        <div class="text-2xl">📐</div>
+        <div>
+          <div class="text-[11px] mono accent uppercase tracking-wider">منهجية</div>
+          <div class="text-[13px] font-bold leading-tight mt-0.5">إطار التقييم 5-أبعاد</div>
+          <div class="text-[12px] text-neutral-600 mt-0.5">DOPEDCLUB → بايدو → jak.ma</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / MANIFESTO -->
+<section id="about" class="py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-xs mono accent uppercase tracking-wider mb-3">سؤال · لماذا أبني بهذه الطريقة؟</div>
+    <h2 class="heading text-2xl md:text-4xl font-bold tracking-tight">لماذا أبني بهذه الطريقة.</h2>
+    <blockquote class="mt-5 border-r-4 accent-border bg-rose-50/50 rounded-l-lg p-5 md:p-6">
+      <p class="text-base md:text-xl text-neutral-800 leading-loose">
+        "معظم منتجات الذكاء الاصطناعي تتعامل مع اللغات منخفضة الموارد والأسواق الناشئة كأن الإنجليزية أولاً ثم تُترجم فوقها.
+        <strong class="text-neutral-900">أعتقد أن هذا تجريد خاطئ</strong>،
+        والأنظمة التي أبنيها تحاول إثبات ذلك."
+      </p>
+    </blockquote>
+    <p class="mt-5 text-base text-neutral-700 leading-loose">
+      طريقة تفكيري في منتجات الذكاء الاصطناعي جاءت من أطروحة البكالوريوس في NPU
+      (<strong class="text-neutral-900">ADCMOplus</strong> · مع <strong class="text-neutral-900">البروفيسور لين لي</strong>) حول التحسين متعدد الأهداف الديناميكي المقيد.
+      منتجات الذكاء الاصطناعي نادراً ما تنتهي إلى مقياس واحد — أنت تقايض بين الزمن، التكلفة، الدقة، والإنصاف،
+      و<strong class="text-neutral-900">الإجابة الصادقة هي جبهة باريتو، وليست فائزاً واحداً</strong>.
+      آلية التحقق ذات الست نقاط في jak.ma هي نفس المنطق مطبقاً في وقت التشغيل.
+    </p>
+    <p class="mt-4 text-base text-neutral-700 leading-loose">
+      عملياً، أعمل بـ <strong class="text-neutral-900">العربية، الدارجة، الفرنسية، الإنجليزية، والصينية الوظيفية</strong> —
+      مما يعني القدرة على نقل المنتجات إلى منطقة الشرق الأوسط وشمال أفريقيا، العمل داخل بيئة تقنية صينية، وربط الاثنين دون تكلفة الترجمة المعتادة.
+    </p>
+  </div>
+</section>
+
+<!-- TSINGHUA TWEETS -->
+<section id="story" class="py-12 md:py-16 gradient-soft-tsinghua">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-7">
+      <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">سؤال · من نشر عني رسمياً؟</div>
+      <h2 class="heading text-2xl md:text-4xl font-bold tracking-tight">جامعة تسينغهوا الرسمية.</h2>
+      <p class="mt-2 text-base text-neutral-700">
+        تم اختياري ضمن سلسلة <strong>#MyChinaStory + #TsinghuaRen</strong> الرسمية من جامعة تسينغهوا.
+        نُشر على
+        <a href="https://www.instagram.com/p/DU5inihEmE0/" class="tsinghua underline" target="_blank" rel="noopener">@tsinghua.sigsadm</a>
+        وعلى الحساب الرسمي للجامعة <strong>@Tsinghua_Uni</strong> · فبراير 2026.
+      </p>
+    </div>
+
+    <blockquote class="border-r-4 tsinghua-border bg-white rounded-l-lg p-5 mb-6 shadow-sm">
+      <p class="text-base md:text-lg text-neutral-800 leading-loose">
+        "من خلال دراساته وعمله في مشاريع الذكاء الاصطناعي، بما في ذلك مشاركته في <strong>منظومة بايدو ERNIE</strong>،
+        اكتسب رؤية مباشرة لما يصفه بـ <strong>'بيئة تقنية سريعة الإيقاع، تركز على التنفيذ، والتكرار السريع، والتأثير الواقعي.'</strong>"
+      </p>
+      <footer class="mt-3 text-xs text-neutral-500 mono">— Tsinghua SIGS · #MyChinaStory · فبراير 2026</footer>
+    </blockquote>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <figure class="project-card">
+        <img src="assets/tsinghua-story-2.jpg" alt="قصة طالب تسينغهوا" class="rounded-lg shadow-lg w-full" loading="lazy" />
+        <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">شنجن · منظومة الابتكار</figcaption>
+      </figure>
+      <figure class="project-card">
+        <img src="assets/tsinghua-story-3.jpg" alt="لحظة فاصلة" class="rounded-lg shadow-lg w-full" loading="lazy" />
+        <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">اللحظة الفاصلة · AIID + Tencent + NetDragon + Baidu</figcaption>
+      </figure>
+      <figure class="project-card">
+        <img src="assets/tsinghua-story-6.jpg" alt="النصيحة" class="rounded-lg shadow-lg w-full" loading="lazy" />
+        <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">نصيحة · الانخراط العالمي يسرّع النمو</figcaption>
+      </figure>
+    </div>
+
+    <!-- Tsinghua_Uni tweets -->
+    <div class="mt-10 pt-8 border-t border-neutral-200">
+      <div class="mb-5">
+        <div class="text-[11px] mono tsinghua uppercase tracking-wider mb-1">كما نُشر أيضاً</div>
+        <h3 class="heading text-xl md:text-2xl font-bold">@Tsinghua_Uni · الحساب الرسمي الموثق.</h3>
+        <p class="text-sm text-neutral-600 mt-1">ليس فقط SIGS — تم اختياري على <strong>الحساب الرئيسي الموثق لجامعة تسينغهوا</strong> على Twitter.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <figure class="project-card">
+          <img src="assets/tsinghua-tweet-openfiesta.jpg" alt="تغريدة تسينغهوا — Tsinghua OpenFIESTA" class="rounded-lg shadow-lg w-full" loading="lazy" />
+          <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">في Tsinghua OpenFIESTA · بيئة تقنية سريعة الإيقاع</figcaption>
+        </figure>
+        <figure class="project-card">
+          <img src="assets/tsinghua-tweet-culture.jpg" alt="تغريدة تسينغهوا — ثلاث ثقافات مهمة واحدة" class="rounded-lg shadow-lg w-full" loading="lazy" />
+          <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">ثلاث ثقافات · مهمة واحدة · العام الصيني الجديد</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI+X PROGRAM -->
+<section id="aix" class="py-12 md:py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-7">
+      <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">سؤال · ما هو تخصصي؟</div>
+      <h2 class="heading text-2xl md:text-4xl font-bold tracking-tight">برنامج AI+X · التصميم الابتكاري.</h2>
+      <p class="mt-2 text-base text-neutral-700"><strong class="tsinghua">تسينغهوا SIGS · AI+X.</strong> أربعة مجالات أساسية مطبقة على عشرة قطاعات، مع شركاء الصناعة الذين يوظفون الخريجين فعلياً.</p>
+    </div>
+
+    <div class="rounded-2xl border border-neutral-200 bg-gradient-to-br from-white via-rose-50/30 to-white p-6 md:p-10 shadow-sm">
+      <div class="text-center mb-6">
+        <div class="text-[11px] mono accent uppercase tracking-wider mb-2">المجالات الأساسية · 核心方向</div>
+        <h3 class="heading text-lg font-bold">الركائز الأربع</h3>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#dc2626,#ef4444)">
+          <div class="text-xs mono opacity-80 mb-1">01</div>
+          <div class="font-bold text-sm leading-tight">الشبكة الذكية<br/>الآلية</div>
+        </div>
+        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#2932e1,#4453ee)">
+          <div class="text-xs mono opacity-80 mb-1">02</div>
+          <div class="font-bold text-sm leading-tight">الخوارزميات<br/>الأساسية</div>
+        </div>
+        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#0891b2,#06b6d4)">
+          <div class="text-xs mono opacity-80 mb-1">03</div>
+          <div class="font-bold text-sm leading-tight">الاتصالات<br/>الإلكترونية</div>
+        </div>
+        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#ca8a04,#eab308)">
+          <div class="text-xs mono opacity-80 mb-1">04</div>
+          <div class="font-bold text-sm leading-tight">تقنية<br/>الحاسوب</div>
+        </div>
+      </div>
+
+      <div class="text-center mb-4">
+        <div class="text-[11px] mono accent uppercase tracking-wider mb-2">التطبيقات · AI+X 赋能应用</div>
+        <h3 class="heading text-lg font-bold">عشرة قطاعات تطبيقية</h3>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-2 mb-8 text-center">
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🏭 التصنيع</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">💰 المال والأعمال</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🚦 النقل الذكي</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🩺 الرعاية الصحية</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🏙️ المدينة الذكية</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">📊 ذكاء الأعمال</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🌊 المحيط الذكي</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🌐 الشبكات الذكية</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🥽 الميتافيرس</div>
+        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">📡 البرمجيات والعتاد</div>
+      </div>
+
+      <div class="text-center mb-3">
+        <div class="text-[11px] mono accent uppercase tracking-wider mb-2">شركاء الصناعة · 行业伙伴</div>
+        <h3 class="heading text-lg font-bold">من يوظف خريجي AI+X</h3>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[13px] text-neutral-700 font-medium">
+        <span>UBTECH 优必选</span><span class="text-neutral-300">·</span>
+        <span>Huawei 华为</span><span class="text-neutral-300">·</span>
+        <span>ByteDance 字节跳动</span><span class="text-neutral-300">·</span>
+        <span>Tencent 腾讯</span><span class="text-neutral-300">·</span>
+        <span>Ping An 平安科技</span><span class="text-neutral-300">·</span>
+        <span>SenseTime 商汤</span><span class="text-neutral-300">·</span>
+        <span>Meituan 美团</span><span class="text-neutral-300">·</span>
+        <span>Alibaba Cloud 阿里云</span><span class="text-neutral-300">·</span>
+        <span>Sangfor 深信服</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section id="projects" class="bg-neutral-50 border-y border-neutral-200 py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-7">
+      <div class="text-xs mono accent uppercase tracking-wider mb-1">سؤال · ما الذي بنيته فعلياً؟</div>
+      <h2 class="heading text-2xl md:text-4xl font-bold tracking-tight">ما الذي بنيته فعلياً.</h2>
+      <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">ستة منتجات ذكاء اصطناعي.</strong> سوق إلكتروني حي · الفائز بمسابقة AIID · جهاز فائز بجائزة بايدو · أطروحة 74 صفحة · جائزة أفضل تصميم · مساحة Hugging Face حية.</p>
+    </div>
+
+    <!-- jak.ma full -->
+    <a href="https://github.com/Samielakkad/jak-ma-engine" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden mb-4">
+      <div class="grid md:grid-cols-[1.4fr_1fr]">
+        <div class="aspect-[16/9] md:aspect-auto bg-neutral-100 overflow-hidden">
+          <img src="assets/jakma-feature.jpg" alt="jak.ma" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="pill pill-accent">حي في الإنتاج</span>
+            <span class="pill pill-light">المؤسس</span>
+          </div>
+          <h3 class="heading text-xl font-bold mb-2">jak.ma · سوق إلكتروني للخدمات المنزلية المغربية</h3>
+          <p class="text-sm text-neutral-700 leading-loose">
+            بدون عمولة، ضد شناقة، بالدارجة. <strong>1,862 عامل · 15 مدينة · 3,400 استعلام يومياً · 1,100 مستخدم نشط</strong>.
+            معمارية ذات تمريرتين · تحقق سداسي قبل الوصول للمستخدم · <strong>p50 ≈ 1.2 ثانية · ≈ 0.0008 دولار للاستعلام</strong>.
+            استطلاع ميداني لـ 200 عامل · تجاوز sabab.ma بأربعة أضعاف.
+          </p>
+        </div>
+      </div>
+    </a>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <a href="https://github.com/Samielakkad/SSO-final" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-neutral-100 overflow-hidden">
+          <img src="https://opengraph.githubassets.com/1/Samielakkad/SSO-final" alt="SSO" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2 flex-wrap"><span class="pill pill-tsinghua">🥇 الفائز AIID</span><span class="text-[11px] text-neutral-500 mono">2025</span></div>
+          <h3 class="heading text-base font-bold mb-1">Sovereign School OS · مع NetDragon</h3>
+          <p class="text-xs text-neutral-700 leading-loose">منصة تعليمية K-12 — تسجيل دخول · دردشة فورية · معلم ذكاء اصطناعي على Wenxin · لوحة أولياء. سيادة بيانات حسب التصميم.</p>
+        </div>
+      </a>
+
+      <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-amber-50 via-white to-rose-100 flex items-center justify-center">
+          <div class="text-center px-3">
+            <div class="text-3xl mb-1">🥉</div>
+            <div class="text-xl font-bold accent">RedFox</div>
+            <div class="mt-1 text-[10px] mono text-neutral-500">الجائزة 3 · هاكاثون ERNIE</div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2 flex-wrap"><span class="pill pill-baidu">🥉 بايدو · جائزة 3</span><span class="text-[11px] text-neutral-500 mono">2025</span></div>
+          <h3 class="heading text-base font-bold mb-1">RedFox · هاكاثون بايدو ERNIE</h3>
+          <p class="text-xs text-neutral-700 leading-loose">جهاز ذكاء اصطناعي للأطفال يعمل بـ Wenxin على Jetson AGX Xavier. <strong>3 من 23 نهائياً · 170+ مشاركة · ~5,900 مطور</strong>. مذكور في الملخص الرسمي.</p>
+        </div>
+      </a>
+
+      <a href="index.html#thesis" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-rose-50 via-white to-rose-100 flex items-center justify-center">
+          <div class="text-center px-3">
+            <div class="text-xl font-bold accent">ADCMOplus</div>
+            <div class="mt-1 text-[10px] mono text-neutral-500">رتبة فريدمان 1.25 · 74 صفحة</div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2 flex-wrap"><span class="pill pill-accent">أطروحة · NPU</span><span class="text-[11px] text-neutral-500 mono">2025</span></div>
+          <h3 class="heading text-base font-bold mb-1">ADCMOplus — تحسين متعدد الأهداف</h3>
+          <p class="text-xs text-neutral-700 leading-loose">خوارزمية أصيلة <strong>تصنف تغيرات البيئة</strong> قبل الاستجابة. رتبة 1.25 مقابل 5 خوارزميات SOTA.</p>
+        </div>
+      </a>
+
+      <div class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-violet-50 via-white to-fuchsia-100 flex items-center justify-center">
+          <div class="text-center px-3">
+            <div class="text-3xl mb-1">🎨</div>
+            <div class="text-base font-bold">Sinothrive AI</div>
+            <div class="mt-1 text-[10px] mono text-neutral-500">أفضل تصميم · تسينغهوا 2025</div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2 flex-wrap"><span class="pill pill-tsinghua">🎨 أفضل تصميم</span><span class="text-[11px] text-neutral-500 mono">2025</span></div>
+          <h3 class="heading text-base font-bold mb-1">Sinothrive AI</h3>
+          <p class="text-xs text-neutral-700 leading-loose">مساعد ذكاء اصطناعي للطلاب الدوليين المتقدمين للدراسة في الصين. مشروع تسينغهوا · فريق من 6 · ديسمبر 2025.</p>
+        </div>
+      </div>
+
+      <a href="https://huggingface.co/spaces/samielakkad1/jakma-darija-chat" target="_blank" rel="noopener" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-yellow-50 via-white to-orange-100 flex items-center justify-center">
+          <div class="text-center px-3">
+            <div class="text-3xl mb-1">🤗</div>
+            <div class="text-base font-bold">jakma-darija-chat</div>
+            <div class="mt-1 text-[10px] mono text-neutral-500">حي على Hugging Face</div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2 flex-wrap"><span class="pill pill-accent">🤗 عرض حي</span><span class="text-[11px] text-neutral-500 mono">2026</span></div>
+          <h3 class="heading text-base font-bold mb-1">دردشة الدارجة على Hugging Face</h3>
+          <p class="text-xs text-neutral-700 leading-loose">عرض تفاعلي بالدارجة لـ jak.ma — معمارية الإنتاج في مساحة عامة قابلة للتشغيل في المتصفح.</p>
+        </div>
+      </a>
+
+      <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-blue-50 via-white to-indigo-100 flex items-center justify-center">
+          <div class="text-center px-3">
+            <div class="text-3xl mb-1">📐</div>
+            <div class="text-base font-bold">5-Dim Eval Suite</div>
+            <div class="mt-1 text-[10px] mono text-neutral-500">أطر مدير المنتجات</div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2 flex-wrap"><span class="pill pill-accent">منهجية</span><span class="text-[11px] text-neutral-500 mono">2025</span></div>
+          <h3 class="heading text-base font-bold mb-1">pm-frameworks-darija</h3>
+          <p class="text-xs text-neutral-700 leading-loose">5 ملفات: التسعير · التقييم · المعايرة · التحقق · القرار متعدد الوسائط. طبقة المقاييس خلف كل المشاريع.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="gradient-dark text-neutral-100 py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-7">
+      <div class="text-xs mono uppercase tracking-wider mb-1" style="color:#ff6b81">سؤال · أين عملت؟</div>
+      <h2 class="heading text-2xl md:text-4xl font-bold tracking-tight">18 شهراً. 4 أدوار. خيط واحد.</h2>
+      <p class="mt-2 text-base text-neutral-300">
+        <strong class="text-white">أربعة أدوار في الذكاء الاصطناعي خلال 18 شهراً.</strong>
+        الخيط: منهجية التقييم متعددة الأبعاد — نشأت في DOPEDCLUB، تأسست في بايدو ERNIE.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-neutral-800/50 border border-neutral-700 rounded-lg p-5">
+        <div class="flex items-baseline justify-between gap-3 flex-wrap mb-2">
+          <div class="text-[11px] mono text-neutral-400">أكتوبر – ديسمبر 2025 · شنجن</div>
+          <span class="text-[11px] mono uppercase tracking-wider" style="color:#ff6b81">عقد مدفوع</span>
+        </div>
+        <h3 class="heading text-lg font-bold leading-tight">بايدو — مرشد ERNIE</h3>
+        <div class="text-xs text-neutral-300 mt-0.5 mb-3">百度 · 文心导师 · Wenxin Mentor</div>
+        <ul class="text-sm text-neutral-300 space-y-1.5 rtl-list pr-5" style="list-style-type: disc;">
+          <li>خبير مدفوع على LLM بايدو الرئيسي (文心一言 / ERNIE)</li>
+          <li><strong>اختبار الـ prompts</strong> · مقياس تقييم متعدد الأبعاد · إشارات الجاهزية للإنتاج</li>
+          <li>قدت <strong>قرارات الإصدار على نقاط التحقق المرشحة</strong></li>
+          <li>بنيت <strong>RedFox</strong> · جهاز AI على Wenxin + <strong>Jetson AGX Xavier</strong></li>
+          <li>🥉 <strong>الجائزة الثالثة</strong> · 3 من 23 نهائياً · 170+ مشاركة · ~5,900 مطور</li>
+          <li>شهادتان رسميتان من بايدو</li>
+        </ul>
+      </div>
+
+      <div class="bg-neutral-800/50 border border-neutral-700 rounded-lg p-5">
+        <div class="flex items-baseline justify-between gap-3 flex-wrap mb-2">
+          <div class="text-[11px] mono text-neutral-400">مايو – يوليو 2025 · هيبي</div>
+          <span class="text-[11px] mono uppercase tracking-wider" style="color:#ff6b81">ML صناعي</span>
+        </div>
+        <h3 class="heading text-lg font-bold leading-tight">هيبي تشاينأست — مهندس أنظمة الذكاء الاصطناعي والروبوتات</h3>
+        <ul class="mt-3 text-sm text-neutral-300 space-y-1.5 rtl-list pr-5" style="list-style-type: disc;">
+          <li>صيانة تنبؤية بالتعلم الآلي على <strong>3 خطوط إنتاج</strong></li>
+          <li><strong>+12% دقة · −18% توقف</strong></li>
+          <li>خط بيانات على <strong>120 ألف سجل مستشعرات</strong></li>
+          <li>توائم رقمية قلصت دورات الاختبار من <strong>أسبوعين إلى 4 أيام</strong></li>
+          <li>دراسة جدوى التوسع في المغرب (<strong>~30% توفير لوجستي</strong>)</li>
+        </ul>
+      </div>
+
+      <div class="bg-neutral-800/50 border border-neutral-700 rounded-lg p-5">
+        <div class="flex items-baseline justify-between gap-3 flex-wrap mb-2">
+          <div class="text-[11px] mono text-neutral-400">سبتمبر 2024 – فبراير 2025 · الدار البيضاء</div>
+          <span class="text-[11px] mono uppercase tracking-wider" style="color:#ff6b81">PM تطبيقي</span>
+        </div>
+        <h3 class="heading text-lg font-bold leading-tight">DOPEDCLUB — مدير منتجات الذكاء الاصطناعي التطبيقي</h3>
+        <ul class="mt-3 text-sm text-neutral-300 space-y-1.5 rtl-list pr-5" style="list-style-type: disc;">
+          <li>استوديو إبداعي يستخدم GenAI لمنتجات العملاء</li>
+          <li><strong>صممت إطار التقييم خماسي المعايير</strong> — أصل المنهجية</li>
+          <li>نفس الإطار أُعيد استخدامه في <strong>بايدو ERNIE</strong> وكـ <strong>محقق jak.ma</strong></li>
+          <li>SOP بـ 12 بنداً على 20+ من ملخصات العملاء المتكررة</li>
+          <li>أطول دور رسمي كـ AI-PM في سيرتي الذاتية</li>
+        </ul>
+      </div>
+
+      <div class="bg-neutral-800/50 border border-neutral-700 rounded-lg p-5">
+        <div class="flex items-baseline justify-between gap-3 flex-wrap mb-2">
+          <div class="text-[11px] mono text-neutral-400">يونيو – سبتمبر 2024 · تشينغتشو</div>
+          <span class="text-[11px] mono uppercase tracking-wider" style="color:#ff6b81">رؤية حاسوبية</span>
+        </div>
+        <h3 class="heading text-lg font-bold leading-tight">Neusoft — متدرب ذكاء اصطناعي</h3>
+        <ul class="mt-3 text-sm text-neutral-300 space-y-1.5 rtl-list pr-5" style="list-style-type: disc;">
+          <li>كشف الأجسام لبحث القيادة الذاتية · <strong>~98% دقة</strong></li>
+          <li>خطوط التجزئة: <strong>−45% معالجة مسبقة · −30% تدريب</strong></li>
+          <li>عمليات نشر في الرعاية الصحية والتجارة الإلكترونية</li>
+          <li><strong>تقييم نموذج التحقق من الهوية</strong> لاختبارات Alipay / WeChat Pay الداخلية</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="border-2 accent-border rounded-2xl p-6 md:p-10">
+      <div class="text-xs mono accent uppercase tracking-wider mb-2">سؤال · عن ماذا أبحث؟</div>
+      <h2 class="heading text-2xl md:text-4xl font-bold tracking-tight mb-2">عن ماذا أبحث؟</h2>
+      <p class="text-lg font-semibold text-neutral-900 mb-4">تدريب أو وظائف خريجين كمدير منتجات ذكاء اصطناعي بدءاً من 2026. تدريب 3 شهور حتى دوام كامل.</p>
+      <p class="text-base text-neutral-700 leading-loose mb-4 max-w-3xl">أربعة أسواق أهتم بها أكثر:</p>
+      <ul class="text-base text-neutral-700 leading-loose mb-6 max-w-3xl space-y-2 pr-5" style="list-style-type: disc;">
+        <li><strong class="text-neutral-900">الشركات الصينية التي تتوسع دولياً (出海)</strong> — ByteDance / TikTok، Tencent International، Alibaba International، Xiaomi، SHEIN، Lenovo.</li>
+        <li><strong class="text-neutral-900">الشركات الأمريكية العاملة في الصين</strong> — Microsoft Research Asia، NVIDIA China، Apple AI Shanghai.</li>
+        <li><strong class="text-neutral-900">منظمات الذكاء الاصطناعي في سنغافورة</strong> — Sea AI Labs، AI Singapore، GovTech، Grab AI، Lazada AI.</li>
+        <li><strong class="text-neutral-900">شركات الذكاء الاصطناعي في الخليج</strong> — G42 · Inception · Microsoft UAE · MBZUAI · TII Falcon · HUMAIN.</li>
+      </ul>
+      <p class="text-base text-neutral-700 leading-loose mb-6 max-w-3xl">
+        القطاعات التي أنجذب إليها: <strong>الذكاء الاصطناعي + التعليم</strong> · <strong>عتاد الذكاء الاصطناعي</strong> ·
+        <strong>الاسترجاع متعدد العملاء</strong> · <strong>الذكاء الاصطناعي للأسواق منخفضة الموارد</strong>
+        (العربية / الدارجة / الصينية / الفرنسية). مقري شنجن، منفتح على الانتقال.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="mailto:sam25@mails.tsinghua.edu.cn" class="px-6 py-3 accent-bg text-white rounded-md font-medium hover:opacity-90 transition">sam25@mails.tsinghua.edu.cn</a>
+        <a href="https://www.linkedin.com/in/samielakkad" class="px-6 py-3 border border-neutral-300 rounded-md font-medium hover:border-neutral-900 transition">LinkedIn</a>
+        <a href="https://github.com/Samielakkad" class="px-6 py-3 border border-neutral-300 rounded-md font-medium hover:border-neutral-900 transition">GitHub</a>
+        <a href="https://huggingface.co/spaces/samielakkad1/jakma-darija-chat" class="px-6 py-3 border border-neutral-300 rounded-md font-medium hover:border-neutral-900 transition">🤗 العرض الحي</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-neutral-50">
+  <div class="top-accent"></div>
+  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap justify-between gap-4 text-xs mono text-neutral-500" dir="ltr">
+    <span>© sami el akkad · shenzhen 深圳 · 2026</span>
+    <div class="flex gap-4">
+      <a href="index.html" class="hover:text-neutral-900">English</a>
+      <a href="https://github.com/Samielakkad" class="hover:text-neutral-900">github</a>
+      <a href="https://www.linkedin.com/in/samielakkad" class="hover:text-neutral-900">linkedin</a>
+      <a href="https://jak.ma" class="hover:text-neutral-900">jak.ma</a>
+      <a href="mailto:sam25@mails.tsinghua.edu.cn" class="hover:text-neutral-900">email</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
