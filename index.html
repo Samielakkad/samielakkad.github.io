@@ -82,7 +82,6 @@
       <a href="#story" class="hover:text-neutral-900">Featured In</a>
       <a href="#projects" class="hover:text-neutral-900">Projects</a>
       <a href="#thesis" class="hover:text-neutral-900">Thesis</a>
-      <a href="#writing" class="hover:text-neutral-900">Writing</a>
       <a href="#experience" class="hover:text-neutral-900">Experience</a>
       <a href="#reading" class="hover:text-neutral-900">Reading</a>
       <a href="#contact" class="hover:text-neutral-900">Contact</a>
@@ -522,69 +521,6 @@
   </div>
 </section>
 
-<!-- SELECTED WRITING -->
-<section id="writing" class="py-12 md:py-16">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="flex items-end justify-between mb-7 flex-wrap gap-3">
-      <div>
-        <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 我写过什么?</div>
-        <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Selected writing.</h2>
-        <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">Three production essays.</strong> Case study, methodology, eval rubric — opinionated and load-bearing.</p>
-      </div>
-      <a href="https://github.com/Samielakkad?tab=repositories" class="text-sm text-neutral-600 hover:text-neutral-900 mono whitespace-nowrap">more on github →</a>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-4">
-
-      <!-- jak-ma-case-study -->
-      <a href="https://github.com/Samielakkad/jak-ma-case-study" class="project-card block bg-white border border-neutral-200 rounded-xl p-5">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">case study · ~6,500 words</div>
-        <h3 class="text-base font-bold mb-2">jak.ma — Production Case Study</h3>
-        <p class="text-[12px] text-neutral-700 leading-snug mb-3">
-          What it actually took to ship verifier-gated retrieval into a Moroccan marketplace.
-          5 decisions, 5 things that broke, the numbers a year in.
-          <strong>p50 1.18s · p99 2.82s · $0.0008/query · 0.7% verifier rejection.</strong>
-        </p>
-        <div class="flex flex-wrap gap-1">
-          <span class="pill pill-light">decisions + tradeoffs</span>
-          <span class="pill pill-light">production metrics</span>
-        </div>
-      </a>
-
-      <!-- pm-frameworks-darija -->
-      <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-xl p-5">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">methodology · 5 files</div>
-        <h3 class="text-base font-bold mb-2">PM Frameworks Darija</h3>
-        <p class="text-[12px] text-neutral-700 leading-snug mb-3">
-          Pricing taxonomy · evaluation rubric (5-dim) · rater calibration to <strong>Krippendorff α ≥ 0.7</strong> ·
-          verifier philosophy · multimodal decision matrix. Stress-tested on 3,400 daily prod queries + Baidu ERNIE program.
-        </p>
-        <div class="flex flex-wrap gap-1">
-          <span class="pill pill-light">low-resource LLM</span>
-          <span class="pill pill-light">CC-BY-4.0</span>
-        </div>
-      </a>
-
-      <!-- ernie-evaluation-notes -->
-      <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-xl p-5">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">eval methodology · Baidu</div>
-        <h3 class="text-base font-bold mb-2">ERNIE Evaluation Notes</h3>
-        <p class="text-[12px] text-neutral-700 leading-snug mb-3">
-          Public methodology from the Baidu ERNIE Mentor Program. 5-dim eval framework
-          (factuality · reasoning · fluency · calibration · safety), adversarial-pair pattern, cross-language calibration,
-          multi-turn drift checks. Feeds release-gating decisions.
-        </p>
-        <div class="flex flex-wrap gap-1">
-          <span class="pill pill-baidu">Baidu provenance</span>
-          <span class="pill pill-light">3rd Prize hackathon</span>
-        </div>
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
 <!-- THESIS INLINE -->
 <section id="thesis" class="py-12 md:py-16 bg-gradient-to-b from-rose-50/40 via-white to-white border-y border-neutral-200">
   <div class="max-w-6xl mx-auto px-6">
@@ -743,13 +679,13 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-lg p-4">
           <div class="font-bold text-[13px] mb-0.5">pm-frameworks-darija</div>
-          <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown</div>
-          <p class="text-[11px] text-neutral-700 leading-snug">PM frameworks for low-resource LLM products.</p>
+          <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown · CC-BY-4.0</div>
+          <p class="text-[11px] text-neutral-700 leading-snug">5 files — pricing · eval rubric · calibration · verifier · multimodal. Rater calibration to <strong>Krippendorff α ≥ 0.7</strong>.</p>
         </a>
         <a href="https://github.com/Samielakkad/jak-ma-case-study" class="project-card block bg-white border border-neutral-200 rounded-lg p-4">
           <div class="font-bold text-[13px] mb-0.5">jak-ma-case-study</div>
-          <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown</div>
-          <p class="text-[11px] text-neutral-700 leading-snug">Production case study — verifier-gated retrieval.</p>
+          <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown · ~6,500 words</div>
+          <p class="text-[11px] text-neutral-700 leading-snug">Production case study — 5 decisions · 5 things that broke · the numbers a year in. Verifier-gated retrieval.</p>
         </a>
         <a href="https://github.com/Samielakkad/jak-ma-eval-suite" class="project-card block bg-white border border-neutral-200 rounded-lg p-4">
           <div class="font-bold text-[13px] mb-0.5">jak-ma-eval-suite</div>
@@ -758,8 +694,8 @@
         </a>
         <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-lg p-4">
           <div class="font-bold text-[13px] mb-0.5">ernie-evaluation-notes</div>
-          <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown · Baidu</div>
-          <p class="text-[11px] text-neutral-700 leading-snug">Baidu ERNIE methodology notes + RedFOX.</p>
+          <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown · Baidu provenance</div>
+          <p class="text-[11px] text-neutral-700 leading-snug">5-dim eval (factuality · reasoning · fluency · calibration · safety) · adversarial-pair pattern · cross-language calibration · multi-turn drift checks. Feeds release-gating.</p>
         </a>
       </div>
     </div>
