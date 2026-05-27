@@ -32,6 +32,13 @@
   .pill-accent { background: rgba(196,30,58,0.08); color: var(--accent); border: 1px solid rgba(196,30,58,0.2); }
   .pill-tsinghua { background: rgba(102,8,116,0.1); color: var(--tsinghua); border: 1px solid rgba(102,8,116,0.2); }
   .pill-baidu { background: rgba(41,50,225,0.08); color: var(--baidu); border: 1px solid rgba(41,50,225,0.2); }
+  .tsinghua { color: var(--tsinghua); }
+  .tsinghua-bg { background-color: var(--tsinghua); }
+  .tsinghua-border { border-color: var(--tsinghua); }
+  .gradient-soft-tsinghua { background:
+    radial-gradient(900px 400px at 80% -10%, rgba(102,8,116,0.10), transparent 60%),
+    radial-gradient(700px 400px at -10% 30%, rgba(102,8,116,0.06), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #faf8fb 100%); }
   .num { font-feature-settings: 'tnum'; }
   .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e5e5, transparent); }
 </style>
@@ -43,7 +50,7 @@
   <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between text-sm">
     <a href="#top" class="font-semibold">Sami El Akkad</a>
     <div class="hidden md:flex gap-6 text-neutral-600">
-      <a href="#pillars" class="hover:text-neutral-900">Tsinghua + Baidu</a>
+      <a href="#pillars" class="hover:tsinghua transition">Tsinghua + Baidu</a>
       <a href="#story" class="hover:text-neutral-900">Featured In</a>
       <a href="#projects" class="hover:text-neutral-900">Projects</a>
       <a href="#experience" class="hover:text-neutral-900">Experience</a>
@@ -68,7 +75,7 @@
           <span class="accent">Applied AI</span> <span class="text-neutral-700">Product Manager.</span>
         </h1>
         <p class="mt-5 text-base md:text-lg text-neutral-600 max-w-2xl leading-relaxed">
-          <strong class="text-neutral-900">Tsinghua SIGS</strong> AI master's ·
+          <strong class="tsinghua">Tsinghua SIGS</strong> AI master's ·
           <strong class="text-neutral-900">ex-Baidu ERNIE evaluator</strong> (文心导师) ·
           <strong class="text-neutral-900">AIID Yearly Competition winner</strong> ·
           founder of <strong class="text-neutral-900">jak.ma</strong>.
@@ -93,11 +100,11 @@
 <section class="border-b border-neutral-200 bg-white">
   <div class="max-w-6xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
     <div>
-      <div class="text-2xl md:text-3xl font-bold accent num leading-none">#1</div>
+      <div class="text-2xl md:text-3xl font-bold tsinghua num leading-none">#1</div>
       <div class="text-[11px] text-neutral-600 mt-1">Tsinghua AIID Yearly</div>
     </div>
     <div>
-      <div class="text-2xl md:text-3xl font-bold accent num leading-none">Top 3 / 23</div>
+      <div class="text-2xl md:text-3xl font-bold num leading-none" style="color:var(--baidu)">Top 3 / 23</div>
       <div class="text-[11px] text-neutral-600 mt-1">Baidu ERNIE Hackathon finalists</div>
     </div>
     <div>
@@ -119,7 +126,7 @@
 <section id="pillars" class="bg-neutral-50 py-10 md:py-14 border-y border-neutral-200">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-7">
-      <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 信誉从何而来?</div>
+      <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">Q · 信誉从何而来?</div>
       <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Where does the credibility come from?</h2>
       <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">Two of China's biggest names.</strong> Tsinghua and Baidu — paired, not just one.</p>
     </div>
@@ -223,11 +230,11 @@
 </section>
 
 <!-- TSINGHUA SIGS STUDENT STORY -->
-<section id="story" class="py-12 md:py-16">
+<section id="story" class="py-12 md:py-16 gradient-soft-tsinghua">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex items-end justify-between mb-7 flex-wrap gap-3">
       <div>
-        <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 谁报道过我?</div>
+        <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">Q · 谁报道过我?</div>
         <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Who has officially featured me?</h2>
         <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">Tsinghua SIGS itself.</strong> Three slides on the <strong>@tsinghua.sigsadm</strong> channel — Baidu ERNIE work, AIID win, advice.</p>
       </div>
@@ -546,7 +553,7 @@
     <!-- 04 -->
     <div>
       <div class="flex items-center gap-3 mb-3">
-        <div class="text-[11px] mono accent uppercase tracking-wider">04 · Public Showcases & Meta</div>
+        <div class="text-[11px] mono tsinghua uppercase tracking-wider">04 · Public Showcases & Meta</div>
         <div class="flex-1 h-px bg-neutral-200"></div>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -576,15 +583,18 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
 
     <div>
-      <div class="text-xs mono accent uppercase tracking-wider mb-2">Q · 我是怎么走到这里的?</div>
+      <div class="text-xs mono tsinghua uppercase tracking-wider mb-2">Q · 我是怎么走到这里的?</div>
       <h2 class="text-2xl md:text-4xl font-bold tracking-tight">How did I get here?</h2>
       <p class="mt-2 mb-5 text-base text-neutral-700"><strong class="text-neutral-900">NPU undergrad → Tsinghua master's.</strong> CSC government scholar. Five languages.</p>
 
       <div class="space-y-3">
-        <div class="bg-white border border-neutral-200 rounded-lg p-4 flex items-start gap-4">
+        <div class="bg-white border border-neutral-200 rounded-lg p-4 flex items-start gap-4 border-l-4 tsinghua-border">
           <img src="assets/logo-tsinghua.jpg" alt="Tsinghua" class="w-12 h-12 rounded object-cover flex-shrink-0" />
-          <div>
-            <div class="text-xs mono text-neutral-500">2025 — Present · Shenzhen</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2">
+              <div class="text-xs mono text-neutral-500">2025 — Present · Shenzhen</div>
+              <span class="pill pill-tsinghua">current</span>
+            </div>
             <div class="font-bold mt-1">Tsinghua SIGS — AI Master's</div>
             <div class="text-sm text-neutral-700">清华大学深圳国际研究生院 · CSC Government Scholar</div>
           </div>
