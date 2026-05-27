@@ -79,6 +79,7 @@
     <a href="#top" class="font-semibold">Sami El Akkad</a>
     <div class="hidden md:flex gap-6 text-neutral-600">
       <a href="#pillars" class="hover:tsinghua transition">Tsinghua + Baidu</a>
+      <a href="#about" class="hover:text-neutral-900">About</a>
       <a href="#story" class="hover:text-neutral-900">Featured In</a>
       <a href="#projects" class="hover:text-neutral-900">Projects</a>
       <a href="#thesis" class="hover:text-neutral-900">Thesis</a>
@@ -105,7 +106,8 @@
           <span class="accent">Applied AI</span> <span class="text-neutral-700">Product Manager.</span>
         </h1>
         <p class="mt-5 text-base md:text-lg text-neutral-600 max-w-2xl leading-relaxed">
-          MSc <strong class="tsinghua">Artificial Intelligence</strong> at <strong class="tsinghua">Tsinghua SIGS</strong> (AI+X · Innovation Design track) ·
+          <strong class="text-neutral-900">Moroccan.</strong>
+          AI MSc at <strong class="tsinghua">Tsinghua SIGS</strong> · <strong class="tsinghua">CSC Scholar · GPA 3.9/4.0</strong> ·
           B.Eng. <strong class="text-neutral-900">Computer Science</strong> from <strong class="text-neutral-900">NPU</strong> ·
           <strong class="text-neutral-900">ex-Baidu ERNIE evaluator</strong> (文心导师) ·
           <strong class="tsinghua">AIID Yearly Competition winner</strong> ·
@@ -148,7 +150,7 @@
     </div>
     <div>
       <div class="text-2xl md:text-3xl font-bold num leading-none" style="color:var(--baidu)">Top 3 / 23</div>
-      <div class="text-[11px] text-neutral-600 mt-1">Baidu ERNIE Hackathon finalists</div>
+      <div class="text-[11px] text-neutral-600 mt-1">Baidu ERNIE Hackathon · 170+ subs · ~5,900 devs</div>
     </div>
     <div>
       <div class="text-2xl md:text-3xl font-bold accent num leading-none">74</div>
@@ -198,7 +200,7 @@
           <div class="flex items-baseline gap-3">
             <span class="text-xl">🎓</span>
             <div>
-              <div class="font-semibold leading-tight">CSC Government Scholar</div>
+              <div class="font-semibold leading-tight">CSC Scholar · GPA 3.9/4.0</div>
               <div class="text-[11px] opacity-80">中国政府奖学金 — full scholarship</div>
             </div>
           </div>
@@ -232,7 +234,7 @@
             <span class="text-xl">🥉</span>
             <div>
               <div class="font-semibold leading-tight">3rd Prize · ERNIE Hackathon 2025</div>
-              <div class="text-[11px] opacity-80">RedFOX · AI Hardware · top 3 of 23 finalists</div>
+              <div class="text-[11px] opacity-80">RedFox · Hardware Track · 23 finalists / 170+ subs / ~5,900 devs</div>
             </div>
           </div>
           <div class="flex items-baseline gap-3">
@@ -308,6 +310,31 @@
   </div>
 </section>
 
+<!-- ABOUT / MANIFESTO -->
+<section id="about" class="py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-xs mono accent uppercase tracking-wider mb-3">Q · 为什么这样建?</div>
+    <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Why I build the way I do.</h2>
+    <blockquote class="mt-5 border-l-4 accent-border bg-rose-50/50 rounded-r-lg p-5 md:p-6">
+      <p class="text-base md:text-xl text-neutral-800 leading-relaxed italic">
+        "Most AI products treat low-resource languages and emerging markets as English-first with a translation layer on top.
+        <strong class="text-neutral-900 not-italic">I think that's the wrong abstraction</strong>, and the systems I build try to prove it."
+      </p>
+    </blockquote>
+    <p class="mt-5 text-base text-neutral-700 leading-relaxed">
+      My way of thinking about AI products came out of my undergrad thesis at NPU
+      (<strong class="text-neutral-900">ADCMOplus</strong> · with <strong class="text-neutral-900">Prof. Lin Li</strong>) on constrained dynamic multi-objective optimization.
+      AI products almost never come down to a single metric — you're trading latency, cost, accuracy, and fairness against each other, and
+      <strong class="text-neutral-900">the honest answer is a Pareto front, not a winner</strong>.
+      The six-check verifier in jak.ma is the same reasoning applied at runtime.
+    </p>
+    <p class="mt-4 text-base text-neutral-700 leading-relaxed">
+      Practically, this means I work in <strong class="text-neutral-900">Arabic, Darija, French, English, and functional Mandarin</strong> —
+      I can ship products into MENA, work inside a Chinese tech stack, and connect the two without the usual translation cost.
+    </p>
+  </div>
+</section>
+
 <!-- TSINGHUA SIGS STUDENT STORY -->
 <section id="story" class="py-12 md:py-16 gradient-soft-tsinghua">
   <div class="max-w-6xl mx-auto px-6">
@@ -374,10 +401,13 @@
           </div>
           <h3 class="text-xl font-bold mb-2">jak.ma · Moroccan home-services marketplace</h3>
           <p class="text-sm text-neutral-700 leading-relaxed">
-            Zero-commission, anti-<em>shnaq</em>, Darija-first. <strong>1,862 workers · 15 cities · 3,400 daily queries · 1,100 DAU</strong>.
-            Two-pass grounded recommendation (<strong>p50 1.18s, p99 2.82s · $0.0008/query</strong>),
-            categorical Mongo retrieval (not vector RAG), Grok-3-mini in production with deterministic verifier (<strong>0.7% rejection rate</strong>).
-            Beats <strong>sabab.ma</strong> (the French-first incumbent) on worker count (4× more), language coverage, and zero-commission model.
+            Zero-commission, anti-<em>shnaq</em>, Darija-first chat marketplace for skilled-trade workers (plumbers, electricians, tilers).
+            <strong>1,862 workers · 15 cities · 3,400 daily queries · 1,100 DAU.</strong>
+            Two-pass architecture: Pass 1 classifies intent + city, Pass 2 generates a constrained response that must clear a
+            <strong>six-check verifier</strong> before reaching the user.
+            <strong>p50 ≈ 1.2s · ≈$0.0008 per query · &lt;1% verifier rejection in production.</strong>
+            The price-band check is built from a <strong>200-worker field survey</strong> — there's no published price reference for Moroccan trades,
+            and an LLM-as-judge would just rubber-stamp the model's biased prior. Beats <strong>sabab.ma</strong> (French-first incumbent) on worker count (4× more).
           </p>
           <div class="mt-3 flex flex-wrap gap-1">
             <span class="pill pill-light">JS · Node · Mongo</span>
@@ -400,10 +430,10 @@
             <span class="pill pill-tsinghua">🥇 AIID Winner</span>
             <span class="text-[11px] text-neutral-500 mono">2025</span>
           </div>
-          <h3 class="text-base font-bold mb-1">Sovereign School OS</h3>
+          <h3 class="text-base font-bold mb-1">Sovereign School OS · with NetDragon</h3>
           <p class="text-[11px] text-neutral-700 leading-snug">
-            K-12 AI-native OS · 3 portals · 64 views · gemini-2.5-pro + imagen-4 + veo-3.1.
-            localStorage-only — FERPA-by-design. Solo build.
+            K-12 edu platform — auth · real-time chat · AI tutoring on <strong>Wenxin (ERNIE)</strong> · parent dashboard.
+            On-prem + sovereign-cloud — <strong>schools own their data by design, not by policy</strong>.
           </p>
         </div>
       </a>
@@ -422,11 +452,12 @@
             <span class="pill pill-baidu">🥉 Baidu · 3rd Prize</span>
             <span class="text-[11px] text-neutral-500 mono">2025</span>
           </div>
-          <h3 class="text-base font-bold mb-1">RedFOX · ernie-evaluation-notes</h3>
+          <h3 class="text-base font-bold mb-1">RedFox · Baidu ERNIE Hackathon</h3>
           <p class="text-[11px] text-neutral-700 leading-snug">
-            ERNIE-4.5 children's AI hardware · voice-first · parental-controlled.
-            <strong>Top 3 of 23 finalists · 900+ submissions.</strong> Featured by PaddlePaddle.
-            4-metric LLM-as-Judge blind A/B: <strong>SFT won 87.5% / 72.5%</strong> on Interactivity / Safety vs ERNIE-4.5-Tiny base.
+            AI hardware companion on <strong>Wenxin (ERNIE) running on a Jetson AGX Xavier</strong>.
+            <strong>Top 3 / 23 finalists · 170+ submissions · ~5,900 registered developers.</strong>
+            Featured in the official Hardware Track recap.
+            LLM-as-Judge blind A/B: <strong>SFT won 87.5% / 72.5%</strong> on Interactivity / Safety vs ERNIE-4.5-Tiny base.
           </p>
         </div>
       </a>
@@ -594,7 +625,7 @@
         <div class="text-xs text-neutral-300 mt-0.5">百度 · 文心导师 · Wenxin Mentor</div>
         <p class="mt-2 text-sm text-neutral-300 leading-relaxed">
           Paid expert on Baidu's flagship LLM (文心一言). <strong>Stress-tested prompts · multi-dim scoring rubric · production-readiness signals · release decisions on candidate checkpoints.</strong>
-          Built <strong>RedFOX</strong> on the side — <strong>3rd Prize / top 3 of 23 finalists from 900+ submissions</strong> at the 2025 ERNIE Hackathon.
+          Built <strong>RedFox</strong> on the side — AI hardware companion on Wenxin running on Jetson AGX Xavier · <strong>3rd Prize · top 3 of 23 finalists · 170+ submissions · ~5,900 registered devs</strong> at the 2025 ERNIE Hackathon. Featured in the official Hardware Track recap.
           Two official Baidu certificates.
         </p>
       </div>
@@ -766,16 +797,16 @@
     <div>
       <div class="text-xs mono accent uppercase tracking-wider mb-2">Q · 我怎么做产品?</div>
       <h2 class="text-2xl md:text-4xl font-bold tracking-tight">How do I think about AI products?</h2>
-      <p class="mt-2 mb-5 text-base text-neutral-700"><strong class="text-neutral-900">Classify the failure mode first.</strong> Then pick the right tool — eval rubric or verifier-gated retrieval.</p>
+      <p class="mt-2 mb-5 text-base text-neutral-700"><strong class="text-neutral-900">The honest answer is a Pareto front, not a winner.</strong> Classify the failure mode first, then pick the right tool.</p>
 
       <p class="text-neutral-700 leading-relaxed mb-4">
-        AI products fail in two ways: <strong>the model is wrong</strong> (caught by eval rubrics + calibration) or
-        <strong>the model is right but the question was framed wrong</strong> (caught by verifier-gated retrieval).
+        AI products almost never come down to a single metric — you're trading latency, cost, accuracy, and fairness against each other.
+        That's the through-line from my undergrad thesis (<strong>ADCMOplus · constrained dynamic multi-objective optimization</strong>) to the runtime architecture of jak.ma.
       </p>
       <p class="text-neutral-700 leading-relaxed mb-6">
         My signature methodology — <strong>5-dim evaluation rubric + verifier-gated retrieval</strong> —
         started at DOPEDCLUB (Casablanca), got formalised at Baidu ERNIE (Shenzhen), and now runs in
-        production at jak.ma (Morocco).
+        production at jak.ma (Morocco) as a <strong>six-check verifier</strong>.
       </p>
       <div class="grid grid-cols-2 gap-2">
         <div class="bg-white border border-neutral-200 rounded p-3">
@@ -875,24 +906,21 @@
     <div class="border-2 accent-border rounded-2xl p-6 md:p-10">
       <div class="text-xs mono accent uppercase tracking-wider mb-2">Q · 我在找什么?</div>
       <h2 class="text-2xl md:text-4xl font-bold tracking-tight mb-2">What am I looking for?</h2>
-      <p class="text-lg font-semibold text-neutral-900 mb-4">Anything that ships real AI products. I keep the door wide.</p>
+      <p class="text-lg font-semibold text-neutral-900 mb-4">AI PM internships or graduate roles starting 2026. Open from a 3-month internship through a full-time start.</p>
       <p class="text-base text-neutral-700 leading-relaxed mb-4 max-w-3xl">
-        Roles I'm open to: <strong>AI Product Manager</strong> · <strong>Applied AI Engineer</strong> ·
-        <strong>AI Research Engineer</strong> · <strong>AI Strategy / Advisory</strong> ·
-        <strong>founding-team / 0→1</strong> · <strong>technical PM at a research lab</strong>.
-        Full-time, internship, or contract — all on the table.
+        Four markets I'm most interested in:
       </p>
-      <p class="text-base text-neutral-700 leading-relaxed mb-4 max-w-3xl">
-        Companies I'd love to work with: <strong>NetDragon · Tencent · Huawei · Baidu · Ping An · Rokid · ByteDance · Alibaba</strong>
-        in China. <strong>G42 · Microsoft UAE · MBZUAI</strong> in the Gulf. <strong>Anthropic · Mistral · DeepMind · Microsoft Research · NVIDIA · Hugging Face</strong>
-        globally. Strong pull toward Chinese big-tech, but truly open to anywhere the work is interesting.
-      </p>
+      <ul class="text-base text-neutral-700 leading-relaxed mb-6 max-w-3xl space-y-2 pl-5 list-disc">
+        <li><strong class="text-neutral-900">Chinese tech going international (出海)</strong> — ByteDance / TikTok, Tencent International, Alibaba International, Xiaomi, SHEIN, Lenovo, Huawei Cloud International.</li>
+        <li><strong class="text-neutral-900">US companies operating in China</strong> — Microsoft Research Asia, NVIDIA China, Apple AI Shanghai.</li>
+        <li><strong class="text-neutral-900">Singapore AI orgs</strong> — Sea AI Labs, AI Singapore, GovTech Singapore, Grab AI, Lazada AI.</li>
+        <li><strong class="text-neutral-900">Gulf AI work</strong> — G42 · Inception · Microsoft UAE · MBZUAI · TII Falcon · HUMAIN.</li>
+      </ul>
       <p class="text-base text-neutral-700 leading-relaxed mb-6 max-w-3xl">
-        Verticals I gravitate to: <strong>AI + Education</strong>, <strong>AI hardware</strong>,
-        <strong>multi-agent retrieval</strong>, <strong>low-resource-market AI</strong> (Arabic / Darija / Mandarin / French),
-        <strong>evaluation & calibration</strong>, <strong>marketplace / matching</strong>.
-        Will gladly take the conversation if it's outside this list — every good problem teaches.
-        Based in Shenzhen, open to relocation. Longer arc points to the UAE then Australia, but no fixed timetable.
+        Verticals I gravitate to: <strong>AI + Education</strong> · <strong>AI hardware</strong> ·
+        <strong>multi-agent retrieval</strong> · <strong>low-resource-market AI</strong> (Arabic / Darija / Mandarin / French) ·
+        <strong>evaluation &amp; calibration</strong> · <strong>marketplace / matching</strong>.
+        Based in Shenzhen, open to relocation.
       </p>
       <div class="flex flex-wrap gap-3">
         <a href="mailto:elakkadsami00@gmail.com" class="px-6 py-3 accent-bg text-white rounded-md font-medium hover:opacity-90 transition">elakkadsami00@gmail.com</a>
