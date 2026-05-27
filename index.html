@@ -953,6 +953,14 @@
     const details = document.querySelector('#thesis details');
     const target = document.getElementById('thesis-content');
     if (!details || !target) return;
+
+    // GitHub-style slug for heading IDs
+    const slugify = (txt) => txt
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')   // strip punctuation
+      .replace(/\s+/g, '-');      // spaces → dashes
+
     let loaded = false;
     const load = () => {
       if (loaded) return;
@@ -960,13 +968,30 @@
       fetch('thesis.md')
         .then(r => r.text())
         .then(md => {
-          const stripped = md.replace(/^#\s+ADCMOplus\s*\n+/, '').replace(/^\*\*Machine Learning-Based[^*]*\*\*\s*\n+/, '');
-          target.innerHTML = marked.parse(stripped);
+          // Strip the duplicated header block (everything before the Table of Contents),
+          // strip the bottom "Private archive" footer.
+          let stripped = md.replace(/^[\s\S]*?(?=##\s+Table of Contents)/, '');
+          stripped = stripped.replace(/\n---\s*\n\s*\*Private archive[\s\S]*$/, '');
+
+          // Render with marked, then post-process to add heading IDs
+          const html = marked.parse(stripped);
+          const tmp = document.createElement('div');
+          tmp.innerHTML = html;
+          tmp.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h => {
+            h.id = slugify(h.textContent);
+          });
+          target.innerHTML = tmp.innerHTML;
+
+          // If page loaded with a deep anchor (e.g. #1-executive-summary), scroll to it
+          if (location.hash && location.hash.length > 1 && location.hash !== '#thesis') {
+            const el = target.querySelector(location.hash);
+            if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+          }
         })
         .catch(err => { target.innerHTML = '<p class="text-sm text-neutral-500">Failed to load thesis content. Try refreshing.</p>'; });
     };
     details.addEventListener('toggle', () => { if (details.open) load(); });
-    // If page is loaded with #thesis-content hash, auto-open
+    // Auto-open if URL hash points to the thesis section
     if (location.hash === '#thesis' || location.hash === '#thesis-content') { details.open = true; load(); }
   })();
 </script>
