@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ADCMOplus — Sami El Akkad's Undergrad Thesis</title>
+<meta name="description" content="ADCMOplus — a novel evolutionary algorithm that classifies environmental changes (objective / constraint / combined) before adapting. Friedman rank 1.25 vs 5 SOTA. Maps onto LLM serving, RLHF, agent orchestration." />
+<meta property="og:title" content="ADCMOplus — Sami El Akkad's Undergrad Thesis" />
+<meta property="og:description" content="Novel evolutionary algorithm for dynamic constrained multi-objective optimization. Friedman rank 1.25 vs 5 SOTA. PM-framed for applications to modern AI." />
+<meta property="og:image" content="https://samielakkad.github.io/assets/me.jpg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  :root { --accent: #c41e3a; --tsinghua: #660874; --baidu: #2932e1; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  .accent { color: var(--accent); }
+  .accent-bg { background-color: var(--accent); }
+  .tsinghua { color: var(--tsinghua); }
+  .top-accent { height: 4px; background: linear-gradient(90deg, var(--tsinghua) 0%, var(--accent) 100%); }
+  ::selection { background: rgba(102,8,116,0.22); color: #0a0a0a; }
+
+  /* Markdown rendering */
+  .md { color: #1f2937; line-height: 1.7; font-size: 16px; }
+  .md h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin-top: 0; margin-bottom: 1rem; line-height: 1.1; }
+  .md h2 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.01em; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e5e7eb; }
+  .md h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.5rem; }
+  .md h4 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  .md p { margin-bottom: 1rem; }
+  .md ul, .md ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+  .md li { margin-bottom: 0.25rem; }
+  .md blockquote { border-left: 4px solid var(--tsinghua); padding: 0.5rem 1rem; margin: 1.5rem 0; background: #faf8fb; color: #4b5563; font-style: italic; border-radius: 0 6px 6px 0; }
+  .md code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.92em; color: #c41e3a; }
+  .md pre { background: #171717; color: #f3f4f6; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+  .md pre code { background: transparent; color: inherit; padding: 0; font-size: 0.85em; }
+  .md a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  .md a:hover { color: var(--tsinghua); }
+  .md table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92em; }
+  .md th, .md td { border: 1px solid #e5e7eb; padding: 0.5rem 0.75rem; text-align: left; }
+  .md th { background: #fafafa; font-weight: 600; }
+  .md hr { border: 0; border-top: 1px solid #e5e7eb; margin: 2.5rem 0; }
+  .md strong { font-weight: 700; color: #0a0a0a; }
+  .md em { font-style: italic; }
+
+  /* Long-form readable width */
+  .reader { max-width: 760px; }
+</style>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+
+<div class="top-accent"></div>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between text-sm">
+    <a href="/" class="font-semibold">← Sami El Akkad</a>
+    <div class="hidden md:flex gap-6 text-neutral-600">
+      <a href="/#pillars" class="hover:text-neutral-900">Tsinghua + Baidu</a>
+      <a href="/#projects" class="hover:text-neutral-900">Projects</a>
+      <a href="/#experience" class="hover:text-neutral-900">Experience</a>
+      <a href="/#contact" class="hover:text-neutral-900">Contact</a>
+    </div>
+    <a href="mailto:elakkadsami00@gmail.com" class="px-3 py-1.5 bg-neutral-900 text-white rounded text-xs hover:bg-neutral-700">Get in touch</a>
+  </div>
+</nav>
+
+<!-- PAPER HEADER -->
+<header class="bg-neutral-50 border-b border-neutral-200">
+  <div class="max-w-3xl mx-auto px-6 py-10">
+    <div class="text-xs mono accent uppercase tracking-wider mb-2">thesis · 本科毕业论文 · NPU · 2025</div>
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05] mb-3">ADCMOplus</h1>
+    <p class="text-lg text-neutral-700">
+      Machine Learning-Based Evolutionary Algorithm for Constrained Dynamic Multi-Objective Optimization.
+    </p>
+    <div class="mt-5 flex flex-wrap gap-2 text-xs">
+      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">EL AKKAD SAMI</span>
+      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">Northwestern Polytechnical University</span>
+      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">Supervisor: Li Lin (李琳)</span>
+      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">Defended May 26, 2025</span>
+      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">74 pages · MATLAB R2024B</span>
+    </div>
+  </div>
+</header>
+
+<!-- README MARKDOWN -->
+<main class="px-6 py-12">
+  <article id="content" class="md reader mx-auto"></article>
+</main>
+
+<footer class="border-t border-neutral-200 bg-neutral-50">
+  <div class="top-accent"></div>
+  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap justify-between gap-4 text-xs mono text-neutral-500">
+    <span>© sami el akkad · shenzhen 深圳 · 2026</span>
+    <div class="flex gap-4">
+      <a href="https://github.com/Samielakkad" class="hover:text-neutral-900">github</a>
+      <a href="https://www.linkedin.com/in/samielakkad" class="hover:text-neutral-900">linkedin</a>
+      <a href="/" class="hover:text-neutral-900">back to portfolio</a>
+      <a href="mailto:elakkadsami00@gmail.com" class="hover:text-neutral-900">email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  fetch('thesis.md')
+    .then(r => r.text())
+    .then(md => {
+      // Strip the first H1 since we already render it in the header
+      const stripped = md.replace(/^#\s+ADCMOplus\s*\n+/, '').replace(/^\*\*Machine Learning-Based[^*]*\*\*\s*\n+/, '');
+      document.getElementById('content').innerHTML = marked.parse(stripped);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML = '<p>Failed to load thesis content: ' + err + '</p>';
+    });
+</script>
+
+</body>
+</html>
