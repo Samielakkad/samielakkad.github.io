@@ -11,6 +11,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>" />
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
   :root { --accent: #c41e3a; --accent-deep: #8b0000; --tsinghua: #660874; --baidu: #2932e1; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
@@ -45,6 +46,27 @@
   ::selection { background: rgba(102,8,116,0.22); color: #0a0a0a; }
   .underline-tsinghua { position: relative; }
   .underline-tsinghua::after { content:''; display:block; width: 56px; height: 3px; background: var(--tsinghua); border-radius: 2px; margin-top: 12px; }
+  /* Inline thesis markdown */
+  .md { color: #1f2937; line-height: 1.7; font-size: 15px; max-width: 760px; margin: 0 auto; }
+  .md h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin: 1.5rem 0 1rem; }
+  .md h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+  .md h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .md h4 { font-size: 1rem; font-weight: 600; margin: 1rem 0 0.4rem; }
+  .md p { margin-bottom: 0.9rem; }
+  .md ul, .md ol { padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  .md li { margin-bottom: 0.2rem; }
+  .md blockquote { border-left: 4px solid var(--tsinghua); padding: 0.5rem 1rem; margin: 1.25rem 0; background: #faf8fb; color: #4b5563; font-style: italic; border-radius: 0 6px 6px 0; }
+  .md code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; color: #c41e3a; }
+  .md pre { background: #171717; color: #f3f4f6; padding: 0.9rem; border-radius: 8px; overflow-x: auto; margin: 0.9rem 0; }
+  .md pre code { background: transparent; color: inherit; padding: 0; font-size: 0.85em; }
+  .md a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  .md a:hover { color: var(--tsinghua); }
+  .md table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.9em; }
+  .md th, .md td { border: 1px solid #e5e7eb; padding: 0.45rem 0.7rem; text-align: left; }
+  .md th { background: #fafafa; font-weight: 600; }
+  .md hr { border: 0; border-top: 1px solid #e5e7eb; margin: 2rem 0; }
+  .md strong { font-weight: 700; color: #0a0a0a; }
+  .md em { font-style: italic; }
 </style>
 </head>
 <body class="bg-white text-neutral-900 antialiased">
@@ -59,6 +81,7 @@
       <a href="#pillars" class="hover:tsinghua transition">Tsinghua + Baidu</a>
       <a href="#story" class="hover:text-neutral-900">Featured In</a>
       <a href="#projects" class="hover:text-neutral-900">Projects</a>
+      <a href="#thesis" class="hover:text-neutral-900">Thesis</a>
       <a href="#writing" class="hover:text-neutral-900">Writing</a>
       <a href="#experience" class="hover:text-neutral-900">Experience</a>
       <a href="#reading" class="hover:text-neutral-900">Reading</a>
@@ -349,7 +372,7 @@
       </a>
 
       <!-- ADCMOplus thesis -->
-      <a href="thesis.html" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+      <a href="#thesis" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
         <div class="aspect-[16/9] bg-gradient-to-br from-rose-50 via-white to-rose-100 flex items-center justify-center">
           <div class="text-center px-3">
             <div class="text-xl font-bold accent">ADCMOplus</div>
@@ -494,18 +517,62 @@
 
     </div>
 
-    <!-- thesis hero callout -->
-    <a href="thesis.html" class="project-card block bg-gradient-to-br from-rose-50 via-white to-rose-100 border border-neutral-200 rounded-xl p-6 mt-4 md:flex md:items-center md:gap-6">
-      <div class="flex-1">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">research · 74 pages</div>
-        <h3 class="text-xl font-bold mb-1">ADCMOplus — Full Thesis (PM-framed)</h3>
-        <p class="text-sm text-neutral-700 leading-snug">
-          NPU undergrad thesis re-framed for PM and AI applications. Friedman rank 1.25 vs 5 SOTA · Wilcoxon-significant on
-          constraint preservation + diversity across every benchmark · Bonferroni-Dunn post-hoc confirmed. Maps onto LLM serving, RLHF, agent orchestration.
-        </p>
+  </div>
+</section>
+
+<!-- THESIS INLINE -->
+<section id="thesis" class="py-12 md:py-16 bg-gradient-to-b from-rose-50/40 via-white to-white border-y border-neutral-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-6">
+      <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 我的研究是什么?</div>
+      <h2 class="text-2xl md:text-4xl font-bold tracking-tight">My undergrad thesis — ADCMOplus.</h2>
+      <p class="mt-2 text-base text-neutral-700">
+        <strong class="text-neutral-900">74 pages. Rank #1 of 6 algorithms tested.</strong>
+        A novel evolutionary algorithm that <em>classifies</em> the type of environmental change (objective / constraint / combined) before adapting — built for problems where targets and constraints both move over time.
+        Maps onto LLM serving, RLHF, agent orchestration.
+      </p>
+    </div>
+
+    <!-- Quick stats strip -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+      <div class="bg-white border border-neutral-200 rounded-lg p-3 text-center">
+        <div class="text-xl font-bold accent num">1.25</div>
+        <div class="text-[10px] text-neutral-600 mt-0.5">Friedman rank · best of 5 SOTA</div>
       </div>
-      <div class="mt-3 md:mt-0 text-sm mono accent whitespace-nowrap">Read full thesis →</div>
-    </a>
+      <div class="bg-white border border-neutral-200 rounded-lg p-3 text-center">
+        <div class="text-xl font-bold accent num">12 / 12</div>
+        <div class="text-[10px] text-neutral-600 mt-0.5">benchmarks won on diversity (Wilcoxon p&lt;0.05)</div>
+      </div>
+      <div class="bg-white border border-neutral-200 rounded-lg p-3 text-center">
+        <div class="text-xl font-bold accent num">10 / 12</div>
+        <div class="text-[10px] text-neutral-600 mt-0.5">benchmarks won on DeltaP</div>
+      </div>
+      <div class="bg-white border border-neutral-200 rounded-lg p-3 text-center">
+        <div class="text-xl font-bold accent num">74</div>
+        <div class="text-[10px] text-neutral-600 mt-0.5">pages · MATLAB R2024B</div>
+      </div>
+      <div class="bg-white border border-neutral-200 rounded-lg p-3 text-center">
+        <div class="text-xl font-bold accent num">May 2025</div>
+        <div class="text-[10px] text-neutral-600 mt-0.5">defended · NPU · Li Lin</div>
+      </div>
+    </div>
+
+    <!-- Expandable full content -->
+    <details class="group bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-sm">
+      <summary class="cursor-pointer list-none p-5 flex items-center justify-between gap-4 hover:bg-neutral-50 transition">
+        <div>
+          <div class="font-bold">Read the full thesis write-up (PM-framed)</div>
+          <div class="text-xs text-neutral-500 mt-0.5">Contributions · architecture · benchmark results · applications to LLM serving, RLHF, agent orchestration · ~6,000 words</div>
+        </div>
+        <div class="text-sm mono accent whitespace-nowrap group-open:hidden">Expand ↓</div>
+        <div class="text-sm mono accent whitespace-nowrap hidden group-open:block">Collapse ↑</div>
+      </summary>
+      <div id="thesis-content" class="md px-6 md:px-10 pb-8 pt-2 border-t border-neutral-200"></div>
+    </details>
+
+    <p class="text-xs text-neutral-500 mt-3 text-center">
+      Underlying MATLAB code + the 74-page PDF stay private — email <a href="mailto:elakkadsami00@gmail.com" class="accent underline">elakkadsami00@gmail.com</a> for access.
+    </p>
   </div>
 </section>
 
@@ -644,10 +711,10 @@
         <div class="flex-1 h-px bg-neutral-200"></div>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <a href="thesis.html" class="project-card block bg-white border border-neutral-200 rounded-lg p-4">
+        <a href="#thesis" class="project-card block bg-white border border-neutral-200 rounded-lg p-4">
           <div class="font-bold text-[13px] mb-0.5">thesis-adcmoplus</div>
-          <div class="text-[11px] text-neutral-500 mb-2 mono">MATLAB · public README</div>
-          <p class="text-[11px] text-neutral-700 leading-snug">NPU undergrad thesis — 74 pages, Friedman rank 1.25. Full README hosted here.</p>
+          <div class="text-[11px] text-neutral-500 mb-2 mono">MATLAB · inline write-up</div>
+          <p class="text-[11px] text-neutral-700 leading-snug">NPU undergrad thesis — 74 pages, Friedman rank 1.25. Full write-up on this page.</p>
         </a>
         <a href="https://github.com/Samielakkad/darija-nlp-resources" class="project-card block bg-white border border-neutral-200 rounded-lg p-4">
           <div class="font-bold text-[13px] mb-0.5">darija-nlp-resources</div>
@@ -880,5 +947,28 @@
   </div>
 </footer>
 
+<script>
+  // Lazy-load thesis markdown when the details element is first opened
+  (function() {
+    const details = document.querySelector('#thesis details');
+    const target = document.getElementById('thesis-content');
+    if (!details || !target) return;
+    let loaded = false;
+    const load = () => {
+      if (loaded) return;
+      loaded = true;
+      fetch('thesis.md')
+        .then(r => r.text())
+        .then(md => {
+          const stripped = md.replace(/^#\s+ADCMOplus\s*\n+/, '').replace(/^\*\*Machine Learning-Based[^*]*\*\*\s*\n+/, '');
+          target.innerHTML = marked.parse(stripped);
+        })
+        .catch(err => { target.innerHTML = '<p class="text-sm text-neutral-500">Failed to load thesis content. Try refreshing.</p>'; });
+    };
+    details.addEventListener('toggle', () => { if (details.open) load(); });
+    // If page is loaded with #thesis-content hash, auto-open
+    if (location.hash === '#thesis' || location.hash === '#thesis-content') { details.open = true; load(); }
+  })();
+</script>
 </body>
 </html>
