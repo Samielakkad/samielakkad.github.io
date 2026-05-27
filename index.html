@@ -59,7 +59,9 @@
       <a href="#pillars" class="hover:tsinghua transition">Tsinghua + Baidu</a>
       <a href="#story" class="hover:text-neutral-900">Featured In</a>
       <a href="#projects" class="hover:text-neutral-900">Projects</a>
+      <a href="#writing" class="hover:text-neutral-900">Writing</a>
       <a href="#experience" class="hover:text-neutral-900">Experience</a>
+      <a href="#reading" class="hover:text-neutral-900">Reading</a>
       <a href="#contact" class="hover:text-neutral-900">Contact</a>
     </div>
     <a href="mailto:elakkadsami00@gmail.com" class="px-3 py-1.5 bg-neutral-900 text-white rounded text-xs hover:bg-neutral-700">Get in touch</a>
@@ -289,10 +291,10 @@
           </div>
           <h3 class="text-xl font-bold mb-2">jak.ma · Moroccan home-services marketplace</h3>
           <p class="text-sm text-neutral-700 leading-relaxed">
-            Zero-commission, anti-<em>shnaq</em>, Darija-first. <strong>1,862 workers · 15 cities</strong>.
-            Multi-provider LLM routing, categorical Mongo retrieval (not vector RAG), two-pass grounded recommendation
-            (<strong>&lt;250ms multimodal</strong>), Grok-3-mini in production. <strong>~200 MAD/month serverless infra.</strong>
-            Pitched against the $20B FIFA 2030 Morocco market.
+            Zero-commission, anti-<em>shnaq</em>, Darija-first. <strong>1,862 workers · 15 cities · 3,400 daily queries · 1,100 DAU</strong>.
+            Two-pass grounded recommendation (<strong>p50 1.18s, p99 2.82s · $0.0008/query</strong>),
+            categorical Mongo retrieval (not vector RAG), Grok-3-mini in production with deterministic verifier (<strong>0.7% rejection rate</strong>).
+            Beats <strong>sabab.ma</strong> (the French-first incumbent) on worker count (4× more), language coverage, and zero-commission model.
           </p>
           <div class="mt-3 flex flex-wrap gap-1">
             <span class="pill pill-light">JS · Node · Mongo</span>
@@ -340,7 +342,8 @@
           <h3 class="text-base font-bold mb-1">RedFOX · ernie-evaluation-notes</h3>
           <p class="text-[11px] text-neutral-700 leading-snug">
             ERNIE-4.5 children's AI hardware · voice-first · parental-controlled.
-            <strong>Top 3 of 23 finalists · 900+ submissions.</strong> Featured by PaddlePaddle (Baidu's AI framework press).
+            <strong>Top 3 of 23 finalists · 900+ submissions.</strong> Featured by PaddlePaddle.
+            4-metric LLM-as-Judge blind A/B: <strong>SFT won 87.5% / 72.5%</strong> on Interactivity / Safety vs ERNIE-4.5-Tiny base.
           </p>
         </div>
       </a>
@@ -383,6 +386,28 @@
           </p>
         </div>
       </a>
+      <!-- Sinothrive AI -->
+      <div class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+        <div class="aspect-[16/9] bg-gradient-to-br from-violet-50 via-white to-fuchsia-100 flex items-center justify-center">
+          <div class="text-center px-3">
+            <div class="text-3xl mb-1">🎨</div>
+            <div class="text-base font-bold">Sinothrive AI</div>
+            <div class="mt-1 text-[10px] mono text-neutral-500">Best Design · Tsinghua 2025</div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="pill pill-tsinghua">🎨 Best Design</span>
+            <span class="text-[11px] text-neutral-500 mono">2025 · Tsinghua</span>
+          </div>
+          <h3 class="text-base font-bold mb-1">Sinothrive AI</h3>
+          <p class="text-[11px] text-neutral-700 leading-snug">
+            AI assistant for international students applying to study in China.
+            6-member Tsinghua course project. Won <strong>Best Design Award Dec 2025</strong>.
+          </p>
+        </div>
+      </div>
+
       <!-- pm-frameworks -->
       <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
         <div class="aspect-[16/9] bg-gradient-to-br from-blue-50 via-white to-indigo-100 flex items-center justify-center">
@@ -406,6 +431,81 @@
       </a>
 
     </div>
+  </div>
+</section>
+
+<!-- SELECTED WRITING -->
+<section id="writing" class="py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-end justify-between mb-7 flex-wrap gap-3">
+      <div>
+        <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 我写过什么?</div>
+        <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Selected writing.</h2>
+        <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">Three production essays.</strong> Case study, methodology, eval rubric — opinionated and load-bearing.</p>
+      </div>
+      <a href="https://github.com/Samielakkad?tab=repositories" class="text-sm text-neutral-600 hover:text-neutral-900 mono whitespace-nowrap">more on github →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+
+      <!-- jak-ma-case-study -->
+      <a href="https://github.com/Samielakkad/jak-ma-case-study" class="project-card block bg-white border border-neutral-200 rounded-xl p-5">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">case study · ~6,500 words</div>
+        <h3 class="text-base font-bold mb-2">jak.ma — Production Case Study</h3>
+        <p class="text-[12px] text-neutral-700 leading-snug mb-3">
+          What it actually took to ship verifier-gated retrieval into a Moroccan marketplace.
+          5 decisions, 5 things that broke, the numbers a year in.
+          <strong>p50 1.18s · p99 2.82s · $0.0008/query · 0.7% verifier rejection.</strong>
+        </p>
+        <div class="flex flex-wrap gap-1">
+          <span class="pill pill-light">decisions + tradeoffs</span>
+          <span class="pill pill-light">production metrics</span>
+        </div>
+      </a>
+
+      <!-- pm-frameworks-darija -->
+      <a href="https://github.com/Samielakkad/pm-frameworks-darija" class="project-card block bg-white border border-neutral-200 rounded-xl p-5">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">methodology · 5 files</div>
+        <h3 class="text-base font-bold mb-2">PM Frameworks Darija</h3>
+        <p class="text-[12px] text-neutral-700 leading-snug mb-3">
+          Pricing taxonomy · evaluation rubric (5-dim) · rater calibration to <strong>Krippendorff α ≥ 0.7</strong> ·
+          verifier philosophy · multimodal decision matrix. Stress-tested on 3,400 daily prod queries + Baidu ERNIE program.
+        </p>
+        <div class="flex flex-wrap gap-1">
+          <span class="pill pill-light">low-resource LLM</span>
+          <span class="pill pill-light">CC-BY-4.0</span>
+        </div>
+      </a>
+
+      <!-- ernie-evaluation-notes -->
+      <a href="https://github.com/Samielakkad/ernie-evaluation-notes" class="project-card block bg-white border border-neutral-200 rounded-xl p-5">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">eval methodology · Baidu</div>
+        <h3 class="text-base font-bold mb-2">ERNIE Evaluation Notes</h3>
+        <p class="text-[12px] text-neutral-700 leading-snug mb-3">
+          Public methodology from the Baidu ERNIE Mentor Program. 5-dim eval framework
+          (factuality · reasoning · fluency · calibration · safety), adversarial-pair pattern, cross-language calibration,
+          multi-turn drift checks. Feeds release-gating decisions.
+        </p>
+        <div class="flex flex-wrap gap-1">
+          <span class="pill pill-baidu">Baidu provenance</span>
+          <span class="pill pill-light">3rd Prize hackathon</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- thesis hero callout -->
+    <a href="thesis.html" class="project-card block bg-gradient-to-br from-rose-50 via-white to-rose-100 border border-neutral-200 rounded-xl p-6 mt-4 md:flex md:items-center md:gap-6">
+      <div class="flex-1">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">research · 74 pages</div>
+        <h3 class="text-xl font-bold mb-1">ADCMOplus — Full Thesis (PM-framed)</h3>
+        <p class="text-sm text-neutral-700 leading-snug">
+          NPU undergrad thesis re-framed for PM and AI applications. Friedman rank 1.25 vs 5 SOTA · Wilcoxon-significant on
+          constraint preservation + diversity across every benchmark · Bonferroni-Dunn post-hoc confirmed. Maps onto LLM serving, RLHF, agent orchestration.
+        </p>
+      </div>
+      <div class="mt-3 md:mt-0 text-sm mono accent whitespace-nowrap">Read full thesis →</div>
+    </a>
   </div>
 </section>
 
@@ -663,6 +763,71 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- CURRENTLY READING -->
+<section id="reading" class="py-12 md:py-16 bg-neutral-50 border-y border-neutral-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-7">
+      <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">Q · 我最近在读什么?</div>
+      <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Currently exploring.</h2>
+      <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">The frontier work shaping how I think.</strong> What I'm reading, building toward, and arguing with.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+
+      <div class="bg-white border border-neutral-200 rounded-lg p-4">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">alignment · safety</div>
+        <h3 class="font-bold text-sm">Constitutional AI · RLHF</h3>
+        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
+          Anthropic's CAI work and the broader RLHF stack — the multi-reward shaping problem in ADCMOplus's
+          change-classification framing.
+        </p>
+      </div>
+
+      <div class="bg-white border border-neutral-200 rounded-lg p-4">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">retrieval · agents</div>
+        <h3 class="font-bold text-sm">Tool-use & verifier-gated agents</h3>
+        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
+          OpenAI / Anthropic tool-use, Manus, multi-agent orchestration — directly tied to jak.ma's two-pass architecture.
+        </p>
+      </div>
+
+      <div class="bg-white border border-neutral-200 rounded-lg p-4">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">evaluation</div>
+        <h3 class="font-bold text-sm">LLM-as-Judge · HELM · LMSys</h3>
+        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
+          How major labs validate models. Extending the 5-dim rubric from Baidu ERNIE work toward
+          benchmark-grade reproducibility.
+        </p>
+      </div>
+
+      <div class="bg-white border border-neutral-200 rounded-lg p-4">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">low-resource NLP</div>
+        <h3 class="font-bold text-sm">Darija + Arabic dialect LLMs</h3>
+        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
+          Atlas Chat, Jais, Falcon, AceGPT — Maghreb dialect coverage and the gap between MSA and real spoken Arabic.
+        </p>
+      </div>
+
+      <div class="bg-white border border-neutral-200 rounded-lg p-4">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">fine-tuning</div>
+        <h3 class="font-bold text-sm">LoRA + small-model fine-tuning</h3>
+        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
+          Qwen2.5 / Llama 3.1 / ERNIE-Tiny LoRA recipes. Roadmap: 3× cost reduction on jak.ma's Pass 2 generation.
+        </p>
+      </div>
+
+      <div class="bg-white border border-neutral-200 rounded-lg p-4">
+        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">china frontier</div>
+        <h3 class="font-bold text-sm">ERNIE · DeepSeek · Qwen · Moonshot</h3>
+        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
+          The Chinese frontier-model landscape — release cadence, eval gaps, where each beats GPT/Claude on price-per-eval.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
