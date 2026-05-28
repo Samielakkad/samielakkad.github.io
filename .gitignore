@@ -1,4 +1,17 @@
 .DS_Store
 Thumbs.db
 node_modules/
-*.log
+*.loB# ─── Added by fix-gitignores.sh (security defence) ─────────────────────────
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+credentials.json
+secrets.json
+serviceAccountKey.json
+firebase-adminsdk-*.json
+HANDOFF_LOCAL_SECRETS.md
+.handoff_local*
+.vercel
