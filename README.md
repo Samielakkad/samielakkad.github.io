@@ -54,28 +54,28 @@ NetDragon Websoft — Fortune-China AI + Education leader, AIID partner. SSO was
 
 ## Featured Projects
 
-### [jak.ma / brikoul.ma](https://github.com/Samielakkad/jak-ma-engine) — *Live in production*
+### [jak.ma / brikoul.ma](https://github.com/Samielakkad/AI-LLM-Agents-JakMa-Engine) — *Live in production*
 Zero-commission anti-*shnaq* home-services marketplace, Morocco-focused, Darija-first. 1,862 workers · 12 categories · 15 cities · live on Vercel + Mongo Atlas + Google Maps. Multi-provider LLM routing under the hood. Categorical Mongo retrieval (not vector RAG), verifier-gated two-pass grounding, Grok-3-mini in production (chosen over GPT-4o / Claude on cost). Live since Apr 9 2026.
 
-### [Sovereign School OS](https://github.com/Samielakkad/SSO-final) — *AIID Yearly Competition Winner*
+### [Sovereign School OS](https://github.com/Samielakkad/AI-EdTech-Sovereign-School-OS) — *AIID Yearly Competition Winner*
 K-12 AI-native operating system. Three portals (admin / teacher / student), 64 views, driven by gemini-2.5-pro + imagen-4 + veo-3.1. localStorage-only — FERPA / GDPR compliance by construction. Built solo. Won Tsinghua AIID Yearly Competition on the NetDragon partner track.
 
-### [RedFOX · ernie-evaluation-notes](https://github.com/Samielakkad/ernie-evaluation-notes) — *Baidu ERNIE 3rd Prize*
+### [RedFOX · ernie-evaluation-notes](https://github.com/Samielakkad/AI-LLM-Evaluation-Baidu-ERNIE) — *Baidu ERNIE 3rd Prize*
 ERNIE-4.5-powered children's AI hardware device. Voice-first, age-appropriate, parental-controlled. Repo also bundles methodology notes from the Baidu ERNIE Mentor Program — 5-dim evaluation rubric, prompt calibration.
 
 ### [ADCMOplus — Adaptive DCMOP](https://github.com/Samielakkad/thesis-adcmoplus) — *NPU undergrad thesis*
 Novel evolutionary algorithm that **classifies environmental changes** (objective / constraint / combined) before responding. Friedman rank **1.25** vs 5 SOTA comparators (PBDMO 2.33, SGEA 3.08, MOEA/D-DE 3.92, DNSGA-II 4.42). Dominates on constraint preservation and diversity. Maps onto LLM serving, RLHF, agent orchestration, recsys.
 
-### [Mirath Morocco](https://github.com/Samielakkad/mirath-morocco) — *Second business*
+### [Mirath Morocco](https://github.com/Samielakkad/AI-LegalTech-Mirath-Morocco) — *Second business*
 Productized Moroccan Moudawana inheritance law + Conservation Foncière land registry. Awl & Radd, Manasakhah, Plan de Partage with GPS vertices, Soulte calculations, weighted-value engine (péréquation). ~7M households TAM, MAD 2K–8K notary capture.
 
-### [HSK Master AI](https://github.com/Samielakkad/hsk-master-ai) — *Edtech*
+### [HSK Master AI](https://github.com/Samielakkad/AI-EdTech-HSK-Master) — *Edtech*
 Productized the HSK 3.0 retake cycle into a learning loop. Personalized vocabulary spaced-repetition, level-aware error patterns, adaptive mock exams. Born from Sami's own HSK 4 prep — direct dogfooding.
 
 ### Sinothrive AI — *Best Design Award*
 AI assistant for international students applying to study in China. Tsinghua course project, 6-member team. Won **Best Design Award** Dec 2025.
 
-### [pm-frameworks-darija · 5-Dim Eval Suite](https://github.com/Samielakkad/pm-frameworks-darija) — *Methodology*
+### [pm-frameworks-darija · 5-Dim Eval Suite](https://github.com/Samielakkad/AI-Product-Management-Frameworks) — *Methodology*
 Five-file methodology brand: *pricing-taxonomy*, *evaluation-rubric*, *calibration-protocol*, *verifier-philosophy*, *multimodal-decision*. The rubric layer behind every project here — invented at DOPEDCLUB, formalised at Baidu ERNIE, runs in production at jak.ma.
 
 ---
@@ -86,32 +86,32 @@ Five-file methodology brand: *pricing-taxonomy*, *evaluation-rubric*, *calibrati
 
 | Repo | Stack | Year | What it is |
 |---|---|---|---|
-| [SSO-final](https://github.com/Samielakkad/SSO-final) | TypeScript | 2025 | Sovereign School OS — Tsinghua AIID Yearly Competition winner |
-| [jak-ma-engine](https://github.com/Samielakkad/jak-ma-engine) | JavaScript | 2026 | Public engineering mirror of jak.ma — multi-provider LLM routing |
-| [mirath-morocco](https://github.com/Samielakkad/mirath-morocco) | TypeScript | 2026 | Moudawana inheritance + Conservation Foncière solver |
-| [hsk-master-ai](https://github.com/Samielakkad/hsk-master-ai) | Web | 2025 | Productized HSK 3.0 retake cycle |
+| [SSO-final](https://github.com/Samielakkad/AI-EdTech-Sovereign-School-OS) | TypeScript | 2025 | Sovereign School OS — Tsinghua AIID Yearly Competition winner |
+| [jak-ma-engine](https://github.com/Samielakkad/AI-LLM-Agents-JakMa-Engine) | JavaScript | 2026 | Public engineering mirror of jak.ma — multi-provider LLM routing |
+| [mirath-morocco](https://github.com/Samielakkad/AI-LegalTech-Mirath-Morocco) | TypeScript | 2026 | Moudawana inheritance + Conservation Foncière solver |
+| [hsk-master-ai](https://github.com/Samielakkad/AI-EdTech-HSK-Master) | Web | 2025 | Productized HSK 3.0 retake cycle |
 
 ### 02 · Methodology & PM Frameworks
 
 | Repo | Stack | Year | What it is |
 |---|---|---|---|
-| [pm-frameworks-darija](https://github.com/Samielakkad/pm-frameworks-darija) | Markdown | 2025 | PM frameworks for low-resource LLM products |
-| [jak-ma-case-study](https://github.com/Samielakkad/jak-ma-case-study) | Markdown | 2026 | Production case study — verifier-gated retrieval |
-| [jak-ma-eval-suite](https://github.com/Samielakkad/jak-ma-eval-suite) | Python | 2026 | 5-dim evaluation rubric for two-pass grounded retrieval |
-| [ernie-evaluation-notes](https://github.com/Samielakkad/ernie-evaluation-notes) | Markdown | 2025 | Baidu ERNIE methodology notes + RedFOX |
+| [pm-frameworks-darija](https://github.com/Samielakkad/AI-Product-Management-Frameworks) | Markdown | 2025 | PM frameworks for low-resource LLM products |
+| [jak-ma-case-study](https://github.com/Samielakkad/AI-Product-JakMa-Case-Study) | Markdown | 2026 | Production case study — verifier-gated retrieval |
+| [jak-ma-eval-suite](https://github.com/Samielakkad/AI-LLM-Evaluation-JakMa) | Python | 2026 | 5-dim evaluation rubric for two-pass grounded retrieval |
+| [ernie-evaluation-notes](https://github.com/Samielakkad/AI-LLM-Evaluation-Baidu-ERNIE) | Markdown | 2025 | Baidu ERNIE methodology notes + RedFOX |
 
 ### 03 · Research & Resources
 
 | Repo | Stack | Year | What it is |
 |---|---|---|---|
 | [thesis-adcmoplus](https://github.com/Samielakkad/thesis-adcmoplus) | MATLAB | 2025 | NPU undergrad thesis (private) — 74-page algorithm + PM-framed README |
-| [darija-nlp-resources](https://github.com/Samielakkad/darija-nlp-resources) | Markdown | 2025 | Curated Moroccan Arabic NLP resources |
+| [darija-nlp-resources](https://github.com/Samielakkad/AI-NLP-Darija-Resources) | Markdown | 2025 | Curated Moroccan Arabic NLP resources |
 
 ### 04 · Public Showcases & Meta
 
 | Repo | Stack | Year | What it is |
 |---|---|---|---|
-| [tsinghua-aiid-2025-team-docs](https://github.com/Samielakkad/tsinghua-aiid-2025-team-docs) | TypeScript | 2025 | AI-Explorers team documentation site for the AIID Hackathon |
+| [tsinghua-aiid-2025-team-docs](https://github.com/Samielakkad/AI-EdTech-AIID-Team-Docs) | TypeScript | 2025 | AI-Explorers team documentation site for the AIID Hackathon |
 | [samielakkad.github.io](https://github.com/Samielakkad/samielakkad.github.io) | HTML | 2026 | This site. Single static page, Tailwind via CDN, no build step |
 | [Samielakkad](https://github.com/Samielakkad/Samielakkad) | Markdown | 2026 | GitHub profile config |
 
