@@ -321,7 +321,63 @@
     <h2 class="text-2xl md:text-4xl font-bold tracking-tight underline-tsinghua">Selected work — in pictures</h2>
     <p class="mt-2 text-base text-neutral-700">Real outputs from real projects — model detections, architecture, and proofs that actually run. Not stock art.</p>
 
+    <div id="ci-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
+        <div class="text-3xl md:text-4xl font-bold accent num leading-none" data-count="6">0</div>
+        <div class="text-[11px] text-neutral-600 mt-1">green CI builds ✓</div>
+      </div>
+      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
+        <div class="text-3xl md:text-4xl font-bold accent num leading-none" data-count="13">0</div>
+        <div class="text-[11px] text-neutral-600 mt-1">public repos</div>
+      </div>
+      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
+        <div class="text-3xl md:text-4xl font-bold tsinghua num leading-none" data-count="4">0</div>
+        <div class="text-[11px] text-neutral-600 mt-1">AI internships</div>
+      </div>
+      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
+        <div class="text-3xl md:text-4xl font-bold tsinghua num leading-none" data-count="5">0</div>
+        <div class="text-[11px] text-neutral-600 mt-1">languages spoken</div>
+      </div>
+    </div>
+    <script>
+      (function(){
+        var seen=false;
+        var box=document.getElementById('ci-stats');
+        function run(){
+          if(seen)return; seen=true;
+          document.querySelectorAll('#ci-stats [data-count]').forEach(function(el){
+            var target=+el.dataset.count, n=0, step=Math.max(1,Math.ceil(target/35));
+            var iv=setInterval(function(){ n+=step; if(n>=target){n=target;clearInterval(iv);} el.textContent=n; },28);
+          });
+        }
+        if('IntersectionObserver' in window){
+          var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)run();});},{threshold:0.4});
+          io.observe(box);
+        } else { run(); }
+      })();
+    </script>
+
     <div class="grid sm:grid-cols-2 gap-5 mt-7">
+
+      <a href="https://jak.ma" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="h-56 md:h-64 bg-neutral-100 overflow-hidden">
+          <img src="assets/jakma-live.png" alt="jak.ma live Darija marketplace" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">jak.ma — live Darija marketplace</div>
+          <div class="text-[11px] text-neutral-600 mt-0.5 mono">Shipped solo · LLM routing + agents · ✓ CI · جاك.ما</div>
+        </div>
+      </a>
+
+      <a href="https://github.com/Samielakkad/AI-EdTech-Sovereign-School-OS" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="h-56 md:h-64 bg-neutral-900 overflow-hidden">
+          <img src="assets/sso-dashboard.png" alt="Sovereign School OS teacher portal dashboard" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-4">
+          <div class="font-bold text-sm">Sovereign School OS — teacher portal</div>
+          <div class="text-[11px] text-neutral-600 mt-0.5 mono">AIID winner (NetDragon 网龙) · 50+ React views · ✓ CI</div>
+        </div>
+      </a>
 
       <a href="https://github.com/Samielakkad/AI-Computer-Vision-YOLOv8-Neusoft" target="_blank" rel="noopener" class="group block rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
         <div class="h-56 md:h-64 bg-neutral-100 overflow-hidden">
