@@ -133,12 +133,8 @@
           <span class="text-gradient">Applied AI</span> <span class="text-neutral-700">Engineer &amp; Product.</span>
         </h1>
         <p class="mt-5 text-base md:text-lg text-neutral-600 max-w-2xl leading-relaxed">
-          <strong class="text-neutral-900">Moroccan.</strong>
-          <strong class="tsinghua">MSc Artificial Intelligence</strong> at <strong class="tsinghua">Tsinghua SIGS</strong> (CSC Scholar · GPA 3.9/4.0) ·
-          B.Eng. CS from <strong class="text-neutral-900">NPU</strong> ·
-          <strong class="text-neutral-900">Baidu ERNIE Mentor</strong> (文心导师, Oct–Dec 2025) ·
-          <strong class="tsinghua">AIID Yearly Competition winner</strong> ·
-          built <strong class="text-neutral-900">jak.ma</strong> solo.
+          Moroccan. <strong class="tsinghua">MSc Artificial Intelligence at Tsinghua SIGS</strong> · ex-Baidu ERNIE · built jak.ma solo.
+          <span class="block mt-1 text-neutral-500">B.Eng. CS from NPU · CSC scholar · AIID Yearly winner.</span>
         </p>
 
         <!-- Languages line -->
@@ -199,8 +195,8 @@
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-7">
       <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">Q · 信誉从何而来?</div>
-      <h2 class="text-2xl md:text-4xl font-bold tracking-tight underline-tsinghua">Where does the credibility come from?</h2>
-      <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">Two of China's biggest names.</strong> Tsinghua and Baidu — paired, not just one.</p>
+      <h2 class="text-2xl md:text-4xl font-bold tracking-tight underline-tsinghua">Tsinghua + Baidu.</h2>
+      <p class="mt-2 text-base text-neutral-700">Where I studied, and where I worked on a frontier LLM.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-5">
@@ -337,77 +333,6 @@
   </div>
 </section>
 
-<!-- VISUAL SHOWCASE -->
-<section id="showcase" class="py-12 md:py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">Q · 数字一览</div>
-    <h2 class="text-2xl md:text-4xl font-bold tracking-tight underline-tsinghua">By the numbers</h2>
-    <p class="mt-2 text-base text-neutral-700">A quick snapshot — every project below shows its real output (detections, dashboards, proofs that run).</p>
-
-    <div id="ci-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
-      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
-        <div class="text-3xl md:text-4xl font-bold accent num leading-none" data-count="6">0</div>
-        <div class="text-[11px] text-neutral-600 mt-1">green CI builds ✓</div>
-      </div>
-      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
-        <div class="text-3xl md:text-4xl font-bold accent num leading-none" data-count="13">0</div>
-        <div class="text-[11px] text-neutral-600 mt-1">public repos</div>
-      </div>
-      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
-        <div class="text-3xl md:text-4xl font-bold tsinghua num leading-none" data-count="4">0</div>
-        <div class="text-[11px] text-neutral-600 mt-1">AI internships</div>
-      </div>
-      <div class="text-center bg-white border border-neutral-200 rounded-xl py-4 shadow-sm">
-        <div class="text-3xl md:text-4xl font-bold tsinghua num leading-none" data-count="5">0</div>
-        <div class="text-[11px] text-neutral-600 mt-1">languages spoken</div>
-      </div>
-    </div>
-    <script>
-      (function(){
-        var seen=false;
-        var box=document.getElementById('ci-stats');
-        function run(){
-          if(seen)return; seen=true;
-          document.querySelectorAll('#ci-stats [data-count]').forEach(function(el){
-            var target=+el.dataset.count, n=0, step=Math.max(1,Math.ceil(target/35));
-            var iv=setInterval(function(){ n+=step; if(n>=target){n=target;clearInterval(iv);} el.textContent=n; },28);
-          });
-        }
-        if('IntersectionObserver' in window){
-          var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)run();});},{threshold:0.4});
-          io.observe(box);
-        } else { run(); }
-      })();
-    </script>
-
-  </div>
-</section>
-
-<!-- ABOUT / MANIFESTO -->
-<section id="about" class="py-12 md:py-16">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="text-xs mono accent uppercase tracking-wider mb-3">Q · 为什么这样建?</div>
-    <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Why I build the way I do.</h2>
-    <blockquote class="mt-5 border-l-4 accent-border bg-rose-50/50 rounded-r-lg p-5 md:p-6">
-      <p class="text-base md:text-xl text-neutral-800 leading-relaxed italic">
-        "Most AI products treat low-resource languages and emerging markets as English-first with a translation layer on top.
-        <strong class="text-neutral-900 not-italic">I think that's the wrong abstraction</strong>, and the systems I build try to prove it."
-      </p>
-    </blockquote>
-    <p class="mt-5 text-base text-neutral-700 leading-relaxed">
-      My way of thinking about AI products came out of my undergrad thesis at NPU
-      (<strong class="text-neutral-900">ADCMOplus</strong> · with <strong class="text-neutral-900">Prof. Lin Li</strong>) on constrained dynamic multi-objective optimization.
-      AI products almost never come down to a single metric — you're trading latency, cost, accuracy, and fairness against each other, and
-      <strong class="text-neutral-900">the honest answer is a Pareto front, not a winner</strong>.
-      The six-check verifier in jak.ma is the same reasoning applied at runtime.
-    </p>
-    <p class="mt-4 text-base text-neutral-700 leading-relaxed">
-      Practically, this means I work in <strong class="text-neutral-900">Arabic, Darija, French, English, and functional Mandarin</strong> —
-      I can ship products into MENA, work inside a Chinese tech stack, and connect the two without the usual translation cost.
-    </p>
-  </div>
-</section>
-
 <!-- TSINGHUA SIGS STUDENT STORY -->
 <section id="story" class="py-12 md:py-16 gradient-soft-tsinghua">
   <div class="max-w-6xl mx-auto px-6">
@@ -496,100 +421,14 @@
   </div>
 </section>
 
-<!-- AI+X PROGRAM STRUCTURE -->
-<section id="aix" class="py-12 md:py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="mb-7">
-      <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">Q · 我的专业是什么?</div>
-      <h2 class="text-2xl md:text-4xl font-bold tracking-tight underline-tsinghua">What's the AI+X program I'm in?</h2>
-      <p class="mt-2 text-base text-neutral-700"><strong class="tsinghua">Tsinghua SIGS AI+X · Innovation Design.</strong> Four core domains, applied to ten verticals, with the industry partners who actually hire the graduates.</p>
-    </div>
-
-    <!-- Central diagram -->
-    <div class="rounded-2xl border border-neutral-200 bg-gradient-to-br from-white via-rose-50/30 to-white p-6 md:p-10 shadow-sm">
-
-      <!-- The 4 core domains -->
-      <div class="text-center mb-6">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">core domains · 核心方向</div>
-        <h3 class="text-lg font-bold">The four pillars of AI+X</h3>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#dc2626,#ef4444)">
-          <div class="text-xs mono opacity-80 mb-1">01</div>
-          <div class="font-bold text-sm leading-tight">Smart Network<br/>Automation</div>
-        </div>
-        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#2932e1,#4453ee)">
-          <div class="text-xs mono opacity-80 mb-1">02</div>
-          <div class="font-bold text-sm leading-tight">Core<br/>Algorithm</div>
-        </div>
-        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#0891b2,#06b6d4)">
-          <div class="text-xs mono opacity-80 mb-1">03</div>
-          <div class="font-bold text-sm leading-tight">Electronic<br/>Communication</div>
-        </div>
-        <div class="rounded-xl p-4 text-white text-center" style="background: linear-gradient(135deg,#ca8a04,#eab308)">
-          <div class="text-xs mono opacity-80 mb-1">04</div>
-          <div class="font-bold text-sm leading-tight">Computer<br/>Technology</div>
-        </div>
-      </div>
-
-      <!-- Empowered verticals -->
-      <div class="text-center mb-4">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">empowering applications · AI+X 赋能应用</div>
-        <h3 class="text-lg font-bold">Applied to ten verticals</h3>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-2 mb-8 text-center">
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🏭 Manufacturing</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">💰 Finance</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🚦 ITS / Transport</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🩺 Healthcare</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🏙️ Smart City</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">📊 Business Intelligence</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🌊 Smart Ocean</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🌐 Smart Network</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">🥽 Multi-verse</div>
-        <div class="bg-neutral-100 rounded-lg p-2 text-xs font-medium">📡 Software &amp; Hardware</div>
-      </div>
-
-      <!-- Industry partners -->
-      <div class="text-center mb-3">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-2">industry partners · 行业伙伴</div>
-        <h3 class="text-lg font-bold">Who hires AI+X graduates</h3>
-      </div>
-      <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-[13px] text-neutral-700 font-medium">
-        <span>UBTECH 优必选</span>
-        <span class="text-neutral-300">·</span>
-        <span>Huawei 华为</span>
-        <span class="text-neutral-300">·</span>
-        <span>ByteDance 字节跳动</span>
-        <span class="text-neutral-300">·</span>
-        <span>Tencent 腾讯</span>
-        <span class="text-neutral-300">·</span>
-        <span>Ping An 平安科技</span>
-        <span class="text-neutral-300">·</span>
-        <span>SenseTime 商汤</span>
-        <span class="text-neutral-300">·</span>
-        <span>Meituan 美团</span>
-        <span class="text-neutral-300">·</span>
-        <span>Alibaba Cloud 阿里云</span>
-        <span class="text-neutral-300">·</span>
-        <span>Sangfor 深信服</span>
-        <span class="text-neutral-300">·</span>
-        <span>Parametrix.ai</span>
-      </div>
-    </div>
-
-    <p class="text-xs text-neutral-500 mt-3 text-center">AI+X Innovation Design is a selective Tsinghua SIGS track combining core AI domains with industry verticals — partnered directly with the Chinese AI ecosystem.</p>
-  </div>
-</section>
-
 <!-- FEATURED PROJECTS -->
 <section id="projects" class="bg-neutral-50 border-y border-neutral-200 py-12 md:py-16">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex items-end justify-between mb-7 flex-wrap gap-3">
       <div>
         <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 我究竟做过什么?</div>
-        <h2 class="text-2xl md:text-4xl font-bold tracking-tight">What have I actually built?</h2>
-        <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">From shipped products to from-scratch models.</strong> One flagship marketplace, then everything else in four bands — products, models, evaluation, research. <strong class="text-neutral-900">16 pieces of work · 13 public repos · 6 with passing CI ✓</strong>. All rights reserved (contact to reuse).</p>
+        <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Selected work.</h2>
+        <p class="mt-2 text-base text-neutral-700">Shipped products and from-scratch models, grouped in four bands — products, models, evaluation, research. <strong class="text-neutral-900">13 public repos · 6 with passing CI ✓</strong>. All rights reserved (contact to reuse).</p>
       </div>
       <a href="https://github.com/Samielakkad" target="_blank" rel="noopener" class="text-sm text-neutral-600 hover:text-neutral-900 mono whitespace-nowrap">github.com/Samielakkad →</a>
     </div>
@@ -1015,6 +854,31 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ABOUT / MANIFESTO -->
+<section id="about" class="py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-xs mono accent uppercase tracking-wider mb-3">Q · 为什么这样建?</div>
+    <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Why I build the way I do.</h2>
+    <blockquote class="mt-5 border-l-4 accent-border bg-rose-50/50 rounded-r-lg p-5 md:p-6">
+      <p class="text-base md:text-xl text-neutral-800 leading-relaxed italic">
+        "Most AI products treat low-resource languages and emerging markets as English-first with a translation layer on top.
+        <strong class="text-neutral-900 not-italic">I think that's the wrong abstraction</strong>, and the systems I build try to prove it."
+      </p>
+    </blockquote>
+    <p class="mt-5 text-base text-neutral-700 leading-relaxed">
+      My way of thinking about AI products came out of my undergrad thesis at NPU
+      (<strong class="text-neutral-900">ADCMOplus</strong> · with <strong class="text-neutral-900">Prof. Lin Li</strong>) on constrained dynamic multi-objective optimization.
+      AI products almost never come down to a single metric — you're trading latency, cost, accuracy, and fairness against each other, and
+      <strong class="text-neutral-900">the honest answer is a Pareto front, not a winner</strong>.
+      The six-check verifier in jak.ma is the same reasoning applied at runtime.
+    </p>
+    <p class="mt-4 text-base text-neutral-700 leading-relaxed">
+      Practically, this means I work in <strong class="text-neutral-900">Arabic, Darija, French, English, and functional Mandarin</strong> —
+      I can ship products into MENA, work inside a Chinese tech stack, and connect the two without the usual translation cost.
+    </p>
   </div>
 </section>
 
