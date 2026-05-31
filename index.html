@@ -50,6 +50,8 @@
   .project-card:hover > .relative::after { transform: translateX(130%); }
   /* gradient text */
   .text-gradient { background: linear-gradient(120deg, var(--tsinghua) 0%, var(--accent) 70%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
   .pill { display:inline-flex; align-items:center; gap: 6px; padding: 4px 10px; border-radius: 9999px; font-size: 11px; line-height: 1; font-weight: 500; }
   .pill-dark { background: #171717; color: #fafafa; }
   .pill-light { background: #fafafa; color: #404040; border: 1px solid #e5e5e5; }
@@ -433,20 +435,26 @@
       <footer class="mt-3 text-xs text-neutral-500 mono">— Tsinghua SIGS (@tsinghua.sigsadm) · #MyChinaStory · Feb 2026</footer>
     </blockquote>
 
-    <div class="grid md:grid-cols-3 gap-4">
-      <a href="https://www.instagram.com/p/DU5inihEmE0/" target="_blank" rel="noopener" class="project-card block rounded-lg" title="View the #MyChinaStory post on Instagram">
-        <img src="assets/tsinghua-story-2.jpg" alt="Tsinghua SIGS Student Story — Shenzhen, modern China, tech integrated into daily life" class="rounded-lg shadow-lg w-full" loading="lazy" />
-        <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">on Shenzhen · tech integrated into daily life <span class="opacity-60">↗</span></figcaption>
-      </a>
-      <a href="https://www.instagram.com/p/DU5inihEmE0/" target="_blank" rel="noopener" class="project-card block rounded-lg" title="View the #MyChinaStory post on Instagram">
-        <img src="assets/tsinghua-story-3.jpg" alt="Tsinghua SIGS Student Story — AIID first prize, Tencent, NetDragon, Baidu" class="rounded-lg shadow-lg w-full" loading="lazy" />
-        <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">defining moment · AIID first prize · NetDragon · Tencent · Baidu <span class="opacity-60">↗</span></figcaption>
-      </a>
-      <a href="https://www.instagram.com/p/DU5inihEmE0/" target="_blank" rel="noopener" class="project-card block rounded-lg" title="View the #MyChinaStory post on Instagram">
-        <img src="assets/tsinghua-story-6.jpg" alt="Tsinghua SIGS Student Story — advice on engaging in a global environment to accelerate growth" class="rounded-lg shadow-lg w-full" loading="lazy" />
-        <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">advice · global environment accelerates growth <span class="opacity-60">↗</span></figcaption>
-      </a>
+    <!-- swipeable story carousel — drag/swipe on mobile · arrows + dots on desktop -->
+    <div class="relative">
+      <div id="story-track" class="no-scrollbar flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-1">
+        <a href="https://www.instagram.com/p/DU5inihEmE0/" target="_blank" rel="noopener" class="project-card snap-center shrink-0 w-[86%] sm:w-[47%] md:w-[31.5%] block rounded-lg" title="View the #MyChinaStory post on Instagram">
+          <img src="assets/tsinghua-story-3.jpg" alt="Tsinghua SIGS Student Story — AIID first prize, Tencent, NetDragon, Baidu" class="rounded-lg shadow-lg w-full" loading="lazy" />
+          <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">defining moment · AIID first prize · <strong>Baidu</strong> · NetDragon · Tencent <span class="opacity-60">↗</span></figcaption>
+        </a>
+        <a href="https://www.instagram.com/p/DU5inihEmE0/" target="_blank" rel="noopener" class="project-card snap-center shrink-0 w-[86%] sm:w-[47%] md:w-[31.5%] block rounded-lg" title="View the #MyChinaStory post on Instagram">
+          <img src="assets/tsinghua-story-2.jpg" alt="Tsinghua SIGS Student Story — Shenzhen, modern China, tech integrated into daily life" class="rounded-lg shadow-lg w-full" loading="lazy" />
+          <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">on Shenzhen · tech integrated into daily life <span class="opacity-60">↗</span></figcaption>
+        </a>
+        <a href="https://www.instagram.com/p/DU5inihEmE0/" target="_blank" rel="noopener" class="project-card snap-center shrink-0 w-[86%] sm:w-[47%] md:w-[31.5%] block rounded-lg" title="View the #MyChinaStory post on Instagram">
+          <img src="assets/tsinghua-story-6.jpg" alt="Tsinghua SIGS Student Story — advice on engaging in a global environment to accelerate growth" class="rounded-lg shadow-lg w-full" loading="lazy" />
+          <figcaption class="text-[11px] mono tsinghua px-1 mt-2 opacity-90">advice · global environment accelerates growth <span class="opacity-60">↗</span></figcaption>
+        </a>
+      </div>
+      <button type="button" data-story-prev aria-label="Previous" class="hidden sm:flex absolute -left-3 top-[44%] -translate-y-1/2 w-9 h-9 rounded-full bg-white shadow-md border border-neutral-200 items-center justify-center text-xl leading-none text-neutral-700 hover:text-neutral-900 hover:shadow-lg transition">‹</button>
+      <button type="button" data-story-next aria-label="Next" class="hidden sm:flex absolute -right-3 top-[44%] -translate-y-1/2 w-9 h-9 rounded-full bg-white shadow-md border border-neutral-200 items-center justify-center text-xl leading-none text-neutral-700 hover:text-neutral-900 hover:shadow-lg transition">›</button>
     </div>
+    <div id="story-dots" class="flex justify-center gap-2 mt-3"></div>
 
     <!-- Tsinghua University verified Twitter coverage -->
     <div class="mt-10 pt-8 border-t border-neutral-200">
@@ -1257,6 +1265,45 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+<!-- Story carousel — native swipe (scroll-snap) + arrows + dots -->
+<script>
+  (function(){
+    var track = document.getElementById('story-track');
+    var dotsWrap = document.getElementById('story-dots');
+    if (!track || !dotsWrap) return;
+    var cards = track.children;
+    function step(){ return cards[0] ? cards[0].getBoundingClientRect().width + 16 : track.clientWidth; }
+    for (var i = 0; i < cards.length; i++) {
+      (function(i){
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'rounded-full transition-all duration-300';
+        d.style.height = '8px'; d.style.width = '8px'; d.style.background = '#d4d4d4';
+        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        d.addEventListener('click', function(){ track.scrollTo({ left: i * step(), behavior: 'smooth' }); });
+        dotsWrap.appendChild(d);
+      })(i);
+    }
+    var dots = dotsWrap.children;
+    function update(){
+      var idx = Math.round(track.scrollLeft / step());
+      idx = Math.max(0, Math.min(dots.length - 1, idx));
+      for (var i = 0; i < dots.length; i++) {
+        var on = i === idx;
+        dots[i].style.width = on ? '22px' : '8px';
+        dots[i].style.background = on ? '#660874' : '#d4d4d4';
+      }
+    }
+    var raf;
+    track.addEventListener('scroll', function(){ cancelAnimationFrame(raf); raf = requestAnimationFrame(update); });
+    var prev = document.querySelector('[data-story-prev]'), next = document.querySelector('[data-story-next]');
+    if (prev) prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+    update();
+    window.addEventListener('resize', update);
   })();
 </script>
 </body>
