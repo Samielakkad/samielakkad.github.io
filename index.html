@@ -25,7 +25,13 @@
     radial-gradient(820px 380px at 88% -10%, rgba(196,30,58,0.07), transparent 62%),
     radial-gradient(720px 400px at -6% 8%, rgba(102,8,116,0.08), transparent 60%),
     linear-gradient(180deg, #ffffff 0%, #fafafa 100%); }
-  .gradient-dark { background: linear-gradient(180deg, #0a0a0a 0%, #171717 100%); }
+  .gradient-dark { background-color: #0f0f0f;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(900px 500px at 85% -10%, rgba(196,30,58,0.10), transparent 60%),
+      linear-gradient(180deg, #0a0a0a 0%, #171717 100%);
+    background-size: 140px 140px, cover, cover;
+    background-blend-mode: overlay, normal, normal; }
   .gradient-tsinghua { background: linear-gradient(135deg, #4a0a55 0%, #660874 50%, #7e1c8a 100%); }
   .gradient-baidu { background: linear-gradient(135deg, #1b1f9e 0%, #2932e1 50%, #4453ee 100%); }
   .fade-up { animation: fadeUp 0.7s ease-out backwards; }
@@ -37,6 +43,13 @@
   /* scroll reveal (progressive enhancement — JS adds reveal-init, observer adds reveal-in) */
   .reveal-init { opacity: 0; transform: translateY(18px); }
   .reveal-in { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .65s cubic-bezier(.2,.6,.2,1); }
+  /* glossy sheen sweep across card covers on hover (covers are the relative direct child) */
+  .project-card > .relative::after { content:''; position:absolute; inset:0; z-index:3; pointer-events:none;
+    background: linear-gradient(115deg, transparent 32%, rgba(255,255,255,0.38) 48%, rgba(255,255,255,0.05) 56%, transparent 64%);
+    transform: translateX(-130%); transition: transform .75s cubic-bezier(.2,.6,.2,1); }
+  .project-card:hover > .relative::after { transform: translateX(130%); }
+  /* gradient text */
+  .text-gradient { background: linear-gradient(120deg, var(--tsinghua) 0%, var(--accent) 70%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
   .pill { display:inline-flex; align-items:center; gap: 6px; padding: 4px 10px; border-radius: 9999px; font-size: 11px; line-height: 1; font-weight: 500; }
   .pill-dark { background: #171717; color: #fafafa; }
   .pill-light { background: #fafafa; color: #404040; border: 1px solid #e5e5e5; }
@@ -118,7 +131,7 @@
         </div>
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
           Sami El Akkad.<br/>
-          <span class="accent">Applied AI</span> <span class="text-neutral-700">Engineer &amp; Product.</span>
+          <span class="text-gradient">Applied AI</span> <span class="text-neutral-700">Engineer &amp; Product.</span>
         </h1>
         <p class="mt-5 text-base md:text-lg text-neutral-600 max-w-2xl leading-relaxed">
           <strong class="text-neutral-900">Moroccan.</strong>
@@ -741,13 +754,8 @@
         </a>
 
         <a href="https://github.com/Samielakkad/AI-LLM-Evaluation-JakMa" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-sky-400 via-sky-500 to-cyan-600 flex items-center justify-center">
-            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
-            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
-            <div class="relative text-center text-white px-3">
-              <div class="text-5xl drop-shadow-sm">🧪</div>
-              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">eval suite</div>
-            </div>
+          <div class="relative aspect-[16/9] bg-white overflow-hidden">
+            <img src="assets/eval-suite.png" alt="5-dimension evaluation radar — factuality, reasoning, fluency, calibration, safety" loading="lazy" class="w-full h-full object-cover">
           </div>
           <div class="p-4">
             <h3 class="text-sm font-bold mb-0.5">jak-ma-eval-suite</h3>
@@ -773,13 +781,8 @@
         </a>
 
         <a href="https://github.com/Samielakkad/AI-Product-JakMa-Case-Study" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-rose-400 via-rose-500 to-pink-600 flex items-center justify-center">
-            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
-            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
-            <div class="relative text-center text-white px-3">
-              <div class="text-5xl drop-shadow-sm">📊</div>
-              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">case study</div>
-            </div>
+          <div class="relative aspect-[16/9] bg-white overflow-hidden">
+            <img src="assets/case-study.png" alt="jak.ma production metrics — 1,862 workers, 3,400 daily queries, p50 1.2s, $0.0008/query, <1% verifier rejection" loading="lazy" class="w-full h-full object-cover">
           </div>
           <div class="p-4">
             <h3 class="text-sm font-bold mb-0.5">jak-ma-case-study</h3>
@@ -816,14 +819,8 @@
         </a>
 
         <a href="https://github.com/Samielakkad/AI-EdTech-AIID-Team-Docs" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-teal-400 via-teal-500 to-cyan-600 flex items-center justify-center">
-            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
-            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
-            <div class="relative text-center text-white px-3">
-              <div class="text-5xl drop-shadow-sm">📚</div>
-              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">award</div>
-            </div>
-            <span class="absolute top-2 left-2 pill pill-tsinghua shadow-sm">🏅 Best Docs</span>
+          <div class="relative aspect-[16/9] bg-white overflow-hidden">
+            <img src="assets/aiid-docs.png" alt="aiid-team-docs — interactive documentation site, Best Documentation Award" loading="lazy" class="w-full h-full object-cover">
           </div>
           <div class="p-4">
             <h3 class="text-sm font-bold mb-0.5">aiid-team-docs</h3>
