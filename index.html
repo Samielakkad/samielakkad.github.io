@@ -540,7 +540,7 @@
       <div>
         <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 我究竟做过什么?</div>
         <h2 class="text-2xl md:text-4xl font-bold tracking-tight">What have I actually built?</h2>
-        <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">From shipped products to from-scratch models.</strong> A live marketplace · a from-scratch computer-vision detector (Neusoft) · a Tsinghua AIID winner · a Baidu 3rd-prize device · a Tsinghua Best-Design winner · a 74-page algorithm thesis · a <strong>🤗 Hugging Face Space (live demo)</strong>. Highlights first — then the full catalog below: <strong class="text-neutral-900">12 public repos · 6 with passing CI ✓</strong>.</p>
+        <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">From shipped products to from-scratch models.</strong> One flagship marketplace, then everything else in four bands — products, models, evaluation, research. <strong class="text-neutral-900">16 pieces of work · 12 public repos · 6 with passing CI ✓</strong>. All rights reserved (contact to reuse).</p>
       </div>
       <a href="https://github.com/Samielakkad?tab=repositories" class="text-sm text-neutral-600 hover:text-neutral-900 mono whitespace-nowrap">all on github →</a>
     </div>
@@ -575,295 +575,273 @@
       </div>
     </a>
 
-    <div class="grid md:grid-cols-3 gap-4">
+    <!-- ══ unified grid · products · models · evaluation · research ══ -->
 
-      <!-- YOLOv8 -->
-      <a href="https://github.com/Samielakkad/AI-Computer-Vision-YOLOv8-Neusoft" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-neutral-100 overflow-hidden">
-          <img src="https://raw.githubusercontent.com/Samielakkad/AI-Computer-Vision-YOLOv8-Neusoft/main/figures/detection_sample.png" alt="YOLOv8 detecting vehicles on a street" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-4">
-          <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="pill pill-light">Computer Vision</span>
-            <span class="text-[11px] text-neutral-500 mono">Neusoft · 2024</span>
-          </div>
-          <h3 class="text-base font-bold mb-1">YOLOv8 from scratch · @ Neusoft 东软</h3>
-          <p class="text-[11px] text-neutral-700 leading-snug">
-            Autonomous-driving road-object detector built from zero in PyTorch — CSPDarknet · PANet · DFL head. Tests + Dockerfile + <strong>✓ CI</strong>.
-          </p>
-        </div>
-      </a>
-
-      <!-- SSO -->
-      <a href="https://github.com/Samielakkad/AI-EdTech-Sovereign-School-OS" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-neutral-100 overflow-hidden">
-          <img src="assets/sso-dashboard.png" alt="Sovereign School OS teacher dashboard" class="w-full h-full object-cover object-top" loading="lazy" />
-        </div>
-        <div class="p-4">
-          <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="pill pill-tsinghua">🥇 AIID Winner</span>
-            <span class="text-[11px] text-neutral-500 mono">2025</span>
-          </div>
-          <h3 class="text-base font-bold mb-1">Sovereign School OS · with NetDragon</h3>
-          <p class="text-[11px] text-neutral-700 leading-snug">
-            K-12 edu platform — auth · real-time chat · AI tutoring on <strong>Wenxin (ERNIE)</strong> · parent dashboard.
-            On-prem + sovereign-cloud — <strong>schools own their data by design, not by policy</strong>.
-          </p>
-        </div>
-      </a>
-
-      <!-- RedFOX -->
-      <a href="https://www.youtube.com/watch?v=a1nKWAfaAKI" target="_blank" rel="noopener" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-neutral-900 overflow-hidden">
-          <img src="assets/redfox.jpg" alt="RedFox AI hardware companion device" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-4">
-          <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="pill pill-baidu">🥉 Baidu · 3rd Prize</span>
-            <span class="text-[11px] text-neutral-500 mono">2025</span>
-          </div>
-          <h3 class="text-base font-bold mb-1">RedFox · Baidu ERNIE Hackathon</h3>
-          <p class="text-[11px] text-neutral-700 leading-snug">
-            AI hardware companion on <strong>Wenxin (ERNIE) running on a Jetson AGX Xavier</strong>.
-            <strong>Top 3 / 23 finalists · 170+ submissions · ~5,900 registered developers.</strong>
-            Featured in the official Hardware Track recap.
-            LLM-as-Judge blind A/B: <strong>SFT won 87.5% / 72.5%</strong> on Interactivity / Safety vs ERNIE-4.5-Tiny base.
-          </p>
-        </div>
-      </a>
-
-      <!-- ADCMOplus thesis -->
-      <a href="#thesis" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-white overflow-hidden">
-          <img src="https://raw.githubusercontent.com/Samielakkad/AI-Optimization-ADCMOplus-NWPU/main/figures/hedge_regret_demo.png" alt="ADCMOplus Theorem 1 regret stays under the bound" class="w-full h-full object-cover object-left" loading="lazy" />
-        </div>
-        <div class="p-4">
-          <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="pill pill-accent">thesis · NPU</span>
-            <span class="text-[11px] text-neutral-500 mono">2025</span>
-          </div>
-          <h3 class="text-base font-bold mb-1">ADCMOplus — Adaptive DCMOP</h3>
-          <p class="text-[11px] text-neutral-700 leading-snug">
-            Novel algorithm that <strong>classifies environmental changes</strong> before responding.
-            Rank 1.25 vs 5 SOTA. Maps onto LLM serving, RLHF.
-          </p>
-        </div>
-      </a>
-
-      <!-- HF Space — jakma-darija-chat -->
-      <a href="https://huggingface.co/spaces/samielakkad1/jakma-darija-chat" target="_blank" rel="noopener" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-gradient-to-br from-yellow-50 via-white to-orange-100 flex items-center justify-center">
-          <div class="text-center px-3">
-            <div class="text-3xl mb-1">🤗</div>
-            <div class="text-base font-bold">jakma-darija-chat</div>
-            <div class="mt-1 text-[10px] mono text-neutral-500">live on Hugging Face Spaces</div>
-          </div>
-        </div>
-        <div class="p-4">
-          <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="pill pill-accent">🤗 live demo</span>
-            <span class="text-[11px] text-neutral-500 mono">2026</span>
-          </div>
-          <h3 class="text-base font-bold mb-1">Darija Chat — HF Space</h3>
-          <p class="text-[11px] text-neutral-700 leading-snug">
-            Interactive Darija chat demo for jak.ma — production retrieval architecture in a public, browser-runnable space. <strong>Public, deployed, reproducible.</strong>
-            Paired with the published <strong>jakma-darija-classifier</strong> model repo.
-          </p>
-        </div>
-      </a>
-
-      <!-- Sinothrive AI -->
-      <div class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-white overflow-hidden">
-          <img src="assets/sinothrive.png" alt="Sinothrive AI — university matching interface" class="w-full h-full object-cover object-top" loading="lazy" />
-        </div>
-        <div class="p-4">
-          <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="pill pill-tsinghua">🎨 Best Design</span>
-            <span class="text-[11px] text-neutral-500 mono">2025 · Tsinghua</span>
-          </div>
-          <h3 class="text-base font-bold mb-1">Sinothrive AI</h3>
-          <p class="text-[11px] text-neutral-700 leading-snug">
-            AI assistant for international students applying to study in China.
-            6-member Tsinghua course project. Won <strong>Best Design Award Dec 2025</strong>.
-          </p>
-        </div>
-      </div>
-
-      <!-- pm-frameworks -->
-      <a href="https://github.com/Samielakkad/AI-Product-Management-Frameworks" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        <div class="aspect-[16/9] bg-white overflow-hidden flex items-center justify-center p-2">
-          <img src="assets/pm-frameworks.png" alt="5-dimension LLM evaluation rubric" class="w-full h-full object-contain" loading="lazy" />
-        </div>
-        <div class="p-4">
-          <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="pill pill-accent">methodology</span>
-            <span class="text-[11px] text-neutral-500 mono">2025</span>
-          </div>
-          <h3 class="text-base font-bold mb-1">pm-frameworks-darija</h3>
-          <p class="text-[11px] text-neutral-700 leading-snug">
-            5-file rubric: pricing · eval · calibration · verifier · multimodal.
-            The rubric layer behind every project here.
-          </p>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- ── THE FULL CATALOG (merged from former "full body of work") ── -->
-    <div class="flex items-center gap-3 mt-12 mb-5">
-      <div class="text-[11px] mono tsinghua uppercase tracking-wider whitespace-nowrap">The full catalog · 全部工作</div>
-      <div class="flex-1 h-px bg-neutral-200"></div>
-      <div class="text-[11px] mono text-neutral-500 whitespace-nowrap">12 public repos · 6 ✓ CI · all rights reserved</div>
-    </div>
-
-    <!-- 01 -->
-    <div class="mb-6">
-      <div class="flex items-center gap-3 mb-3">
-        <div class="text-[11px] mono accent uppercase tracking-wider">01 · Applied AI · Computer Vision &amp; Research</div>
+    <!-- 01 · LIVE PRODUCTS & APPS -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-[11px] mono accent uppercase tracking-wider whitespace-nowrap">01 · Live products &amp; apps</div>
         <div class="flex-1 h-px bg-neutral-200"></div>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <a href="https://github.com/Samielakkad/AI-Computer-Vision-YOLOv8-Neusoft" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-neutral-100 overflow-hidden"><img src="https://raw.githubusercontent.com/Samielakkad/AI-Computer-Vision-YOLOv8-Neusoft/main/figures/detection_sample.png" alt="YOLOv8 detection" loading="lazy" class="w-full h-full object-cover"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <a href="https://github.com/Samielakkad/AI-EdTech-Sovereign-School-OS" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] bg-neutral-900 overflow-hidden">
+            <img src="assets/sso-dashboard.png" alt="Sovereign School OS teacher dashboard" loading="lazy" class="w-full h-full object-cover object-top">
+            <span class="absolute top-2 left-2 pill pill-tsinghua shadow-sm">🥇 AIID Winner</span>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">YOLOv8 from scratch</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Python · ✓ CI · @ Neusoft 东软</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">Autonomous-driving road-object detector built from zero in PyTorch — backbone, PANet, DFL head, tests + Dockerfile.</p>
+            <h3 class="text-sm font-bold mb-0.5">Sovereign School OS</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">TypeScript · ✓ CI · NetDragon 网龙</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">AI-native K-12 platform — auth · real-time chat · AI tutoring on <strong>Wenxin (ERNIE)</strong> · parent dashboard. 50+ React/TS components.</p>
           </div>
         </a>
-        <a href="https://github.com/Samielakkad/AI-Optimization-ADCMOplus-NWPU" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-white overflow-hidden flex items-center justify-center"><img src="https://raw.githubusercontent.com/Samielakkad/AI-Optimization-ADCMOplus-NWPU/main/figures/hedge_regret_demo.png" alt="ADCMOplus regret plot" loading="lazy" class="w-full h-full object-cover object-left"></div>
+
+        <div class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] bg-white overflow-hidden">
+            <img src="assets/sinothrive.png" alt="Sinothrive AI — university matching interface" loading="lazy" class="w-full h-full object-cover object-top">
+            <span class="absolute top-2 left-2 pill pill-tsinghua shadow-sm">🎨 Best Design</span>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">ADCMOplus</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Python · ✓ CI · @ NWPU 西北工大</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">Online-learning evolutionary algorithm for dynamic constrained optimization. Runnable Theorem-1 regret demo.</p>
+            <h3 class="text-sm font-bold mb-0.5">Sinothrive AI</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">2025 · Tsinghua · 6-member team</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">AI assistant matching international students to universities in China. Won <strong>Best Design Award, Dec 2025</strong>.</p>
+          </div>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=a1nKWAfaAKI" target="_blank" rel="noopener" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] bg-neutral-900 overflow-hidden">
+            <img src="assets/redfox.jpg" alt="RedFox AI hardware companion device" loading="lazy" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 pill pill-baidu shadow-sm">🥉 Baidu · 3rd Prize</span>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold mb-0.5">RedFox · ERNIE Hackathon</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">2025 · Jetson AGX Xavier</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">AI hardware companion on <strong>Wenxin (ERNIE)</strong>. Top 3 / 23 finalists · 170+ subs · ~5,900 devs. SFT won <strong>87.5% / 72.5%</strong> (Interactivity / Safety), blind A/B.</p>
           </div>
         </a>
-        <a href="https://github.com/Samielakkad/AI-NLP-Darija-Classifier" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-violet-400 to-fuchsia-600 flex items-center justify-center text-4xl">🗣️</div>
+
+        <a href="https://github.com/Samielakkad/AI-LegalTech-Mirath-Morocco" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-amber-400 via-orange-500 to-orange-600 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">⚖️</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">legal-tech</div>
+            </div>
+            <span class="absolute top-2 left-2 pill pill-light shadow-sm">✓ CI</span>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">darija-classifier</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Python · Hugging Face</div>
+            <h3 class="text-sm font-bold mb-0.5">mirath-morocco</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">TypeScript · ✓ CI</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">Moudawana inheritance + land-registry solver — Moroccan family law, productized.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- 02 · MODELS, VISION & FROM-SCRATCH ML -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-[11px] mono accent uppercase tracking-wider whitespace-nowrap">02 · Models, vision &amp; from-scratch ML</div>
+        <div class="flex-1 h-px bg-neutral-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <a href="https://github.com/Samielakkad/AI-Computer-Vision-YOLOv8-Neusoft" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] bg-neutral-100 overflow-hidden">
+            <img src="https://raw.githubusercontent.com/Samielakkad/AI-Computer-Vision-YOLOv8-Neusoft/main/figures/detection_sample.png" alt="YOLOv8 detecting vehicles on a street" loading="lazy" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 pill pill-light shadow-sm">✓ CI</span>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold mb-0.5">YOLOv8 from scratch</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Python · @ Neusoft 东软 · 2024</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">Autonomous-driving road-object detector built from zero in PyTorch — CSPDarknet · PANet · DFL head. Tests + Dockerfile + CI.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Samielakkad/AI-Optimization-ADCMOplus-NWPU" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] bg-white overflow-hidden flex items-center justify-center">
+            <img src="https://raw.githubusercontent.com/Samielakkad/AI-Optimization-ADCMOplus-NWPU/main/figures/hedge_regret_demo.png" alt="ADCMOplus Theorem 1 regret stays under the bound" loading="lazy" class="w-full h-full object-cover object-left">
+            <span class="absolute top-2 left-2 pill pill-light shadow-sm">✓ CI</span>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold mb-0.5">ADCMOplus</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Python · @ NWPU 西北工大 · 2025</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">Online-learning evolutionary algorithm for dynamic constrained optimization. Runnable Theorem-1 regret demo. <strong>Rank 1.25 vs 5 SOTA</strong>.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Samielakkad/AI-NLP-Darija-Classifier" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-600 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">🗣️</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">HF model</div>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold mb-0.5">darija-classifier</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Python · Hugging Face</div>
             <p class="text-[11px] text-neutral-700 leading-snug">Production Moroccan-Arabic intent + city classifier powering jak.ma's Pass-1.</p>
           </div>
         </a>
+
+        <a href="https://huggingface.co/spaces/samielakkad1/jakma-darija-chat" target="_blank" rel="noopener" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-500 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/20"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">🤗</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/90">live demo</div>
+            </div>
+            <span class="absolute top-2 left-2 pill pill-accent shadow-sm">🤗 live</span>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold mb-0.5">Darija Chat — HF Space</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">2026 · Hugging Face Spaces</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">Interactive Darija chat demo — production retrieval architecture, browser-runnable. <strong>Public, deployed, reproducible.</strong></p>
+          </div>
+        </a>
+
       </div>
     </div>
 
-    <!-- 02 -->
-    <div class="mb-6">
-      <div class="flex items-center gap-3 mb-3">
-        <div class="text-[11px] mono accent uppercase tracking-wider">02 · AI Products &amp; Apps</div>
+    <!-- 03 · EVALUATION & PM METHODOLOGY -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-[11px] mono accent uppercase tracking-wider whitespace-nowrap">03 · Evaluation &amp; PM methodology</div>
         <div class="flex-1 h-px bg-neutral-200"></div>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <a href="https://github.com/Samielakkad/AI-EdTech-Sovereign-School-OS" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-neutral-900 overflow-hidden"><img src="assets/sso-dashboard.png" alt="Sovereign School OS dashboard" loading="lazy" class="w-full h-full object-cover object-top"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <a href="https://github.com/Samielakkad/AI-Product-Management-Frameworks" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] bg-white overflow-hidden flex items-center justify-center p-2">
+            <img src="assets/pm-frameworks.png" alt="5-dimension LLM evaluation rubric" loading="lazy" class="w-full h-full object-contain">
+            <span class="absolute top-2 left-2 pill pill-accent shadow-sm">methodology</span>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">Sovereign School OS</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">TypeScript · ✓ CI · AIID winner</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">AI-native K-12 platform — Tsinghua AIID winner (NetDragon 网龙). 50+ React/TS components.</p>
+            <h3 class="text-sm font-bold mb-0.5">pm-frameworks-darija</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Markdown · 5 files</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">Pricing · eval · calibration · verifier · multimodal. Rater calibration to <strong>Krippendorff α ≥ 0.7</strong>. The layer behind every project here.</p>
           </div>
         </a>
-        <a href="https://github.com/Samielakkad/AI-LLM-Agents-JakMa-Engine" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-neutral-100 overflow-hidden"><img src="assets/jakma-live.png" alt="jak.ma live" loading="lazy" class="w-full h-full object-cover object-top"></div>
+
+        <a href="https://github.com/Samielakkad/AI-LLM-Evaluation-JakMa" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-sky-400 via-sky-500 to-cyan-600 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">🧪</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">eval suite</div>
+            </div>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">jak-ma-engine</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">JavaScript · ✓ CI · live</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">Engine behind jak.ma — multi-provider LLM routing + tool-calling agent.</p>
+            <h3 class="text-sm font-bold mb-0.5">jak-ma-eval-suite</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Python</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">5-dim evaluation rubric for two-pass grounded retrieval — the verifier that gates jak.ma in production.</p>
           </div>
         </a>
-        <a href="https://github.com/Samielakkad/AI-LegalTech-Mirath-Morocco" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-4xl">⚖️</div>
+
+        <a href="https://github.com/Samielakkad/AI-LLM-Evaluation-Baidu-ERNIE" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">📏</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">Baidu 百度</div>
+            </div>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">mirath-morocco</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">TypeScript · ✓ CI · legal-tech</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">Moudawana inheritance + land-registry solver.</p>
+            <h3 class="text-sm font-bold mb-0.5">ernie-evaluation-notes</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Markdown · Baidu provenance</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">5-dim eval (factuality · reasoning · fluency · calibration · safety) · adversarial pairs · cross-language calibration. Feeds release-gating.</p>
           </div>
         </a>
-        <a href="https://github.com/Samielakkad/AI-EdTech-AIID-Team-Docs" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-teal-400 to-cyan-600 flex items-center justify-center text-4xl">📚</div>
+
+        <a href="https://github.com/Samielakkad/AI-Product-JakMa-Case-Study" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-rose-400 via-rose-500 to-pink-600 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">📊</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">case study</div>
+            </div>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">aiid-team-docs</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">TypeScript · ✓ CI · award</div>
+            <h3 class="text-sm font-bold mb-0.5">jak-ma-case-study</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Markdown · ~6,500 words</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">Production case study — 5 decisions · 5 things that broke · the numbers a year in.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- 04 · RESEARCH, DOCS & RESOURCES -->
+    <div class="mb-2">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="text-[11px] mono accent uppercase tracking-wider whitespace-nowrap">04 · Research, docs &amp; resources</div>
+        <div class="flex-1 h-px bg-neutral-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <a href="#thesis" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-slate-500 via-slate-600 to-slate-800 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/10"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/15"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">🧬</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">thesis · NPU</div>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold mb-0.5">thesis-adcmoplus</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">MATLAB · inline write-up</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">74-page NPU undergrad thesis · Friedman rank 1.25. Full write-up on this page →</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Samielakkad/AI-EdTech-AIID-Team-Docs" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-teal-400 via-teal-500 to-cyan-600 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">📚</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">award</div>
+            </div>
+            <span class="absolute top-2 left-2 pill pill-tsinghua shadow-sm">🏅 Best Docs</span>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold mb-0.5">aiid-team-docs</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">TypeScript · ✓ CI</div>
             <p class="text-[11px] text-neutral-700 leading-snug">Interactive docs site — Best Documentation Award, Tsinghua AIID Hackathon 2025.</p>
           </div>
         </a>
-      </div>
-    </div>
 
-    <!-- 03 -->
-    <div class="mb-6">
-      <div class="flex items-center gap-3 mb-3">
-        <div class="text-[11px] mono accent uppercase tracking-wider">03 · Methodology & PM Frameworks</div>
-        <div class="flex-1 h-px bg-neutral-200"></div>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <a href="https://github.com/Samielakkad/AI-Product-Management-Frameworks" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center text-4xl">🧰</div>
+        <a href="https://github.com/Samielakkad/AI-NLP-Darija-Resources" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-emerald-400 via-emerald-500 to-green-600 flex items-center justify-center">
+            <div class="absolute -right-5 -top-6 w-24 h-24 rounded-full bg-white/15"></div>
+            <div class="absolute -left-7 -bottom-7 w-28 h-28 rounded-full bg-black/10"></div>
+            <div class="relative text-center text-white px-3">
+              <div class="text-5xl drop-shadow-sm">🗂️</div>
+              <div class="mt-1.5 text-[10px] mono uppercase tracking-[0.2em] text-white/85">resources</div>
+            </div>
+          </div>
           <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">pm-frameworks-darija</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown · methodology</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">5 files — pricing · eval rubric · calibration · verifier · multimodal. Rater calibration to <strong>Krippendorff α ≥ 0.7</strong>.</p>
+            <h3 class="text-sm font-bold mb-0.5">darija-nlp-resources</h3>
+            <div class="text-[11px] text-neutral-500 mb-1.5 mono">Markdown</div>
+            <p class="text-[11px] text-neutral-700 leading-snug">Curated Moroccan-Arabic NLP resources — datasets, papers, tooling.</p>
           </div>
         </a>
-        <a href="https://github.com/Samielakkad/AI-Product-JakMa-Case-Study" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center text-4xl">📊</div>
-          <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">jak-ma-case-study</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown · ~6,500 words</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">Production case study — 5 decisions · 5 things that broke · the numbers a year in. Verifier-gated retrieval.</p>
-          </div>
-        </a>
-        <a href="https://github.com/Samielakkad/AI-LLM-Evaluation-JakMa" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-4xl">🧪</div>
-          <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">jak-ma-eval-suite</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Python</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">5-dim evaluation rubric for two-pass grounded retrieval.</p>
-          </div>
-        </a>
-        <a href="https://github.com/Samielakkad/AI-LLM-Evaluation-Baidu-ERNIE" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-4xl">📏</div>
-          <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">ernie-evaluation-notes</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown · Baidu 百度 provenance</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">5-dim eval (factuality · reasoning · fluency · calibration · safety) · adversarial-pair pattern · cross-language calibration · multi-turn drift checks. Feeds release-gating.</p>
-          </div>
-        </a>
-      </div>
-    </div>
 
-    <!-- 04 -->
-    <div class="mb-2">
-      <div class="flex items-center gap-3 mb-3">
-        <div class="text-[11px] mono accent uppercase tracking-wider">04 · Research & Resources</div>
-        <div class="flex-1 h-px bg-neutral-200"></div>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <a href="#thesis" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-slate-500 to-slate-700 flex items-center justify-center text-4xl">🧬</div>
-          <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">thesis-adcmoplus</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">MATLAB · inline write-up</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">NPU undergrad thesis — 74 pages, Friedman rank 1.25. Full write-up on this page.</p>
-          </div>
-        </a>
-        <a href="https://github.com/Samielakkad/AI-NLP-Darija-Resources" class="project-card block bg-white border border-neutral-200 rounded-lg overflow-hidden">
-          <div class="h-24 bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-4xl">🗂️</div>
-          <div class="p-4">
-            <div class="font-bold text-[13px] mb-0.5">darija-nlp-resources</div>
-            <div class="text-[11px] text-neutral-500 mb-2 mono">Markdown</div>
-            <p class="text-[11px] text-neutral-700 leading-snug">Curated Moroccan Arabic NLP resources.</p>
-          </div>
-        </a>
       </div>
     </div>
 
   </div>
 </section>
-
 <!-- THESIS INLINE -->
 <section id="thesis" class="py-12 md:py-16 bg-gradient-to-b from-rose-50/40 via-white to-white border-y border-neutral-200">
   <div class="max-w-6xl mx-auto px-6">
