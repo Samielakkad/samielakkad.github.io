@@ -105,13 +105,10 @@
     <a href="#top" class="font-semibold">Sami El Akkad</a>
     <div class="hidden md:flex gap-6 text-neutral-600">
       <a href="#pillars" class="hover:tsinghua transition">Tsinghua + Baidu</a>
-      <a href="#showcase" class="hover:text-neutral-900">Work</a>
-      <a href="#about" class="hover:text-neutral-900">About</a>
-      <a href="#story" class="hover:text-neutral-900">Featured In</a>
       <a href="#projects" class="hover:text-neutral-900">Projects</a>
-      <a href="#thesis" class="hover:text-neutral-900">Thesis</a>
       <a href="#experience" class="hover:text-neutral-900">Experience</a>
-      <a href="#reading" class="hover:text-neutral-900">Reading</a>
+      <a href="#thesis" class="hover:text-neutral-900">Thesis</a>
+      <a href="#story" class="hover:text-neutral-900">Featured In</a>
       <a href="#contact" class="hover:text-neutral-900">Contact</a>
     </div>
     <div class="flex items-center gap-3">
@@ -141,7 +138,7 @@
           B.Eng. CS from <strong class="text-neutral-900">NPU</strong> ·
           <strong class="text-neutral-900">Baidu ERNIE Mentor</strong> (文心导师, Oct–Dec 2025) ·
           <strong class="tsinghua">AIID Yearly Competition winner</strong> ·
-          founder of <strong class="text-neutral-900">jak.ma</strong>.
+          built <strong class="text-neutral-900">jak.ma</strong> solo.
         </p>
 
         <!-- Languages line -->
@@ -175,8 +172,8 @@
 <section class="border-b border-neutral-200 bg-white">
   <div class="max-w-6xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
     <div>
-      <div class="text-2xl md:text-3xl font-bold tsinghua num leading-none">#1</div>
-      <div class="text-[11px] text-neutral-600 mt-1">Tsinghua AIID Yearly</div>
+      <div class="text-2xl md:text-3xl font-bold tsinghua num leading-none">1st</div>
+      <div class="text-[11px] text-neutral-600 mt-1">place · Tsinghua AIID Yearly</div>
     </div>
     <div>
       <div class="text-2xl md:text-3xl font-bold num leading-none" style="color:var(--baidu)">3rd Prize</div>
@@ -592,7 +589,7 @@
       <div>
         <div class="text-xs mono accent uppercase tracking-wider mb-1">Q · 我究竟做过什么?</div>
         <h2 class="text-2xl md:text-4xl font-bold tracking-tight">What have I actually built?</h2>
-        <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">From shipped products to from-scratch models.</strong> One flagship marketplace, then everything else in four bands — products, models, evaluation, research. <strong class="text-neutral-900">16 pieces of work · 12 public repos · 6 with passing CI ✓</strong>. All rights reserved (contact to reuse).</p>
+        <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">From shipped products to from-scratch models.</strong> One flagship marketplace, then everything else in four bands — products, models, evaluation, research. <strong class="text-neutral-900">16 pieces of work · 13 public repos · 6 with passing CI ✓</strong>. All rights reserved (contact to reuse).</p>
       </div>
       <a href="https://github.com/Samielakkad" target="_blank" rel="noopener" class="text-sm text-neutral-600 hover:text-neutral-900 mono whitespace-nowrap">github.com/Samielakkad →</a>
     </div>
@@ -606,17 +603,17 @@
         <div class="p-5">
           <div class="flex items-center gap-2 mb-2 flex-wrap">
             <span class="pill pill-accent">live in production</span>
-            <span class="pill pill-light">founder</span>
+            <span class="pill pill-light">built &amp; shipped solo</span>
           </div>
           <h3 class="text-xl font-bold mb-2">jak.ma · Moroccan home-services marketplace</h3>
           <p class="text-sm text-neutral-700 leading-relaxed">
             Zero-commission, anti-<em>shnaq</em>, Darija-first chat marketplace for skilled-trade workers (plumbers, electricians, tilers).
-            <strong>1,862 workers · 15 cities · 3,400 daily queries · 1,100 DAU.</strong>
+            <strong>1,862 workers · 15 cities · 3,400 daily queries · 1,100 DAU</strong> <span class="text-neutral-500">(self-reported, early 2026 — live at <a href="https://jak.ma" target="_blank" rel="noopener" class="underline">jak.ma</a>)</span>.
             Two-pass architecture: Pass 1 classifies intent + city, Pass 2 generates a constrained response that must clear a
             <strong>six-check verifier</strong> before reaching the user.
-            <strong>p50 ≈ 1.2s · ≈$0.0008 per query · &lt;1% verifier rejection in production.</strong>
+            <strong>p50 ≈ 1.2s · ≈$0.0008 per query · &lt;1% verifier rejection.</strong>
             The price-band check is built from a <strong>200-worker field survey</strong> — there's no published price reference for Moroccan trades,
-            and an LLM-as-judge would just rubber-stamp the model's biased prior. Beats <strong>sabab.ma</strong> (French-first incumbent) on worker count (4× more).
+            and an LLM-as-judge would just rubber-stamp the model's biased prior. More skilled-trade workers listed than the French-first incumbent, <strong>sabab.ma</strong>.
           </p>
           <div class="mt-3 flex flex-wrap gap-1">
             <span class="pill pill-light">JS · Node · Mongo</span>
@@ -790,7 +787,7 @@
 
         <a href="https://github.com/Samielakkad/AI-LLM-Evaluation-JakMa" class="project-card block bg-white border border-neutral-200 rounded-xl overflow-hidden">
           <div class="relative aspect-[16/9] bg-white overflow-hidden">
-            <img src="assets/eval-suite.png" alt="5-dimension evaluation radar — factuality, reasoning, fluency, calibration, safety" loading="lazy" class="w-full h-full object-cover">
+            <img src="assets/eval-suite.png" alt="5-dimension evaluation rubric — factuality, reasoning, fluency, calibration, safety (illustrative weights)" loading="lazy" class="w-full h-full object-cover">
           </div>
           <div class="p-4">
             <h3 class="text-sm font-bold mb-0.5">jak-ma-eval-suite</h3>
@@ -1066,14 +1063,9 @@
       <h2 class="text-2xl md:text-4xl font-bold tracking-tight">How do I think about AI products?</h2>
       <p class="mt-2 mb-5 text-base text-neutral-700"><strong class="text-neutral-900">The honest answer is a Pareto front, not a winner.</strong> Classify the failure mode first, then pick the right tool.</p>
 
-      <p class="text-neutral-700 leading-relaxed mb-4">
-        AI products almost never come down to a single metric — you're trading latency, cost, accuracy, and fairness against each other.
-        That's the through-line from my undergrad thesis (<strong>ADCMOplus · constrained dynamic multi-objective optimization</strong>) to the runtime architecture of jak.ma.
-      </p>
       <p class="text-neutral-700 leading-relaxed mb-6">
-        My signature methodology — <strong>5-dim evaluation rubric + verifier-gated retrieval</strong> —
-        started at DOPEDCLUB (Casablanca), got formalised at Baidu ERNIE (Shenzhen), and now runs in
-        production at jak.ma (Morocco) as a <strong>six-check verifier</strong>.
+        The same idea runs from my thesis to production: a <strong>5-dimension evaluation rubric</strong> feeding a <strong>verifier-gated</strong> pipeline.
+        It started at DOPEDCLUB (Casablanca), was formalised evaluating ERNIE at Baidu (Shenzhen), and now gates jak.ma in production. The five files below are that framework.
       </p>
       <div class="grid grid-cols-2 gap-2">
         <div class="bg-white border border-neutral-200 rounded p-3">
@@ -1099,71 +1091,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- CURRENTLY READING -->
-<section id="reading" class="py-12 md:py-16 bg-neutral-50 border-y border-neutral-200">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="mb-7">
-      <div class="text-xs mono tsinghua uppercase tracking-wider mb-1">Q · 我最近在读什么?</div>
-      <h2 class="text-2xl md:text-4xl font-bold tracking-tight">Currently exploring.</h2>
-      <p class="mt-2 text-base text-neutral-700"><strong class="text-neutral-900">The frontier work shaping how I think.</strong> What I'm reading, building toward, and arguing with.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-4">
-
-      <div class="bg-white border border-neutral-200 rounded-lg p-4">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">alignment · safety</div>
-        <h3 class="font-bold text-sm">Constitutional AI · RLHF</h3>
-        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
-          Anthropic's CAI work and the broader RLHF stack — the multi-reward shaping problem in ADCMOplus's
-          change-classification framing.
-        </p>
-      </div>
-
-      <div class="bg-white border border-neutral-200 rounded-lg p-4">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">retrieval · agents</div>
-        <h3 class="font-bold text-sm">Tool-use & verifier-gated agents</h3>
-        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
-          OpenAI / Anthropic tool-use, Manus, multi-agent orchestration — directly tied to jak.ma's two-pass architecture.
-        </p>
-      </div>
-
-      <div class="bg-white border border-neutral-200 rounded-lg p-4">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">evaluation</div>
-        <h3 class="font-bold text-sm">LLM-as-Judge · HELM · LMSys</h3>
-        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
-          How major labs validate models. Extending the 5-dim rubric from Baidu ERNIE work toward
-          benchmark-grade reproducibility.
-        </p>
-      </div>
-
-      <div class="bg-white border border-neutral-200 rounded-lg p-4">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">low-resource NLP</div>
-        <h3 class="font-bold text-sm">Darija + Arabic dialect LLMs</h3>
-        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
-          Atlas Chat, Jais, Falcon, AceGPT — Maghreb dialect coverage and the gap between MSA and real spoken Arabic.
-        </p>
-      </div>
-
-      <div class="bg-white border border-neutral-200 rounded-lg p-4">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">fine-tuning</div>
-        <h3 class="font-bold text-sm">LoRA + small-model fine-tuning</h3>
-        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
-          Qwen2.5 / Llama 3.1 / ERNIE-Tiny LoRA recipes. Roadmap: 3× cost reduction on jak.ma's Pass 2 generation.
-        </p>
-      </div>
-
-      <div class="bg-white border border-neutral-200 rounded-lg p-4">
-        <div class="text-[10px] mono accent uppercase tracking-wider mb-1">china frontier</div>
-        <h3 class="font-bold text-sm">ERNIE · DeepSeek · Qwen · Moonshot</h3>
-        <p class="text-[11px] text-neutral-700 leading-snug mt-1">
-          The Chinese frontier-model landscape — release cadence, eval gaps, where each beats GPT/Claude on price-per-eval.
-        </p>
-      </div>
-
-    </div>
   </div>
 </section>
 
