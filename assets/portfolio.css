@@ -155,3 +155,22 @@ html[dir=rtl] .journey-intro h2,html[dir=rtl] .path-entry h3{letter-spacing:0;li
 @media(max-width:1000px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.award-card h3{font-size:28px}}
 @media(max-width:767px){.awards-section{padding-block:36px}.awards-section h2{margin-bottom:22px}.award-card{padding:22px}.award-top{margin-bottom:18px}.path-entry.is-current,.path-entry.is-current:target{padding:17px 16px 20px}.path-entry.is-current .path-date{padding-inline-end:76px}.present-status{font-size:10px;padding:5px 8px;gap:5px}.path-entry.is-current .career-heading h3{font-size:16px}.award-scholarships{font-size:12px}}
 @media(max-width:540px){.awards-grid{grid-template-columns:1fr}.award-card{display:grid;grid-template-columns:1fr auto;column-gap:18px}.award-top{grid-column:1/-1;flex-direction:row-reverse;margin-bottom:12px}.award-card h3,.award-title,.award-context,.award-contribution,.award-note{grid-column:1/-1}.award-project-link{grid-column:1/-1;padding-top:9px}.award-context{margin-bottom:12px}}
+
+/* Compact browsing; contribution details expand without stretching adjacent cards. */
+.build-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.build-content,.build-lead .build-content,#project-mirath .build-content,#project-parksense .build-content{padding:20px;justify-content:flex-start}
+.build-media img{height:150px;aspect-ratio:auto;object-fit:cover;object-position:top}
+.build-card h4,#project-mirath h4,#project-parksense h4,#build-tools .build-card h4{font-size:21px;line-height:1.25;margin-bottom:10px}
+.build-scope{font-size:10px;margin-bottom:8px}.build-summary{font-size:13px;line-height:1.75;color:#504456;margin:0 0 10px}
+.build-award{display:flex;align-items:flex-start;gap:6px;width:fit-content;border:1px solid #ecd9a6;border-radius:5px;background:#fff8e7;color:#805b15;font-size:10px;font-weight:700;line-height:1.6;margin:0 0 12px;padding:5px 7px}.build-award svg{flex:none;margin-top:1px}
+.build-more{font-size:12px;margin:0 0 12px}.build-more>summary{cursor:pointer;display:list-item;list-style:disclosure-closed inside;color:#660874;font-weight:650;line-height:1.6;padding:6px 0;width:fit-content}.build-more[open]>summary{list-style-type:disclosure-open}.build-more-content{padding-top:10px}
+.build-more .build-description,.build-more .build-detail{font-size:12px;line-height:1.8;margin:0 0 12px}
+.build-more .build-stack,#project-mirath .build-more .build-stack,#project-parksense .build-more .build-stack{margin:0;padding:0;font-size:10px;line-height:1.8}
+.build-actions{padding-top:12px;gap:6px 12px;margin:0}.build-action{font-size:11px;min-height:36px}.main-build-action{padding:8px 10px}
+.build-lead{grid-column:1/-1;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr)}
+.build-lead .build-media{align-self:start;padding:16px;border:0;border-radius:13px 0 0 13px;height:100%;min-height:230px}
+.build-lead .build-media img{height:200px;max-height:200px;width:100%;object-fit:contain}.build-lead h4{font-size:28px}.build-lead .build-content{align-self:center}
+#build-research .build-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+#build-tools .build-card:last-child:nth-child(odd){grid-column:auto}
+@media(max-width:1050px){.build-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.build-media img{height:160px}}
+@media(max-width:650px){.build-grid,#build-research .build-grid{grid-template-columns:1fr}.build-lead{display:flex}.build-lead .build-media{width:100%;height:auto;min-height:0;max-height:175px;padding:12px;border-radius:13px 13px 0 0}.build-lead .build-media img{height:150px;max-height:150px;object-fit:cover;object-position:top}.build-lead .build-content{align-self:stretch}.build-media img{height:155px}.build-content,.build-lead .build-content,#project-mirath .build-content,#project-parksense .build-content{padding:18px}.build-action{font-size:12px;min-height:44px}.build-more>summary{min-height:40px;display:flex;align-items:center;gap:6px}.build-more>summary:before{content:'+';font-size:16px}.build-more[open]>summary:before{content:'−'}.build-award{font-size:11px}}
