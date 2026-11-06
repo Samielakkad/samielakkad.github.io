@@ -134,3 +134,24 @@ html[dir=rtl] .journey-intro h2,html[dir=rtl] .path-entry h3{letter-spacing:0;li
 .build-catalog{scroll-margin-top:0}.build-group,.build-card{scroll-margin-top:16px}
 #build-tools .build-card:last-child:nth-child(odd){grid-column:1/-1}
 #build-tools .build-card:last-child:nth-child(odd) .build-description,#build-tools .build-card:last-child:nth-child(odd) .build-detail{max-width:760px}
+
+/* Recognition belongs before the career timeline; active entries stay visibly distinct. */
+.awards-section{padding-block:48px 50px;background:#fff;border-top:1px solid #ece9ef;scroll-margin-top:16px;color:#24212b}
+.awards-section h2{font-size:clamp(28px,3.2vw,40px);font-weight:800;letter-spacing:-.04em;line-height:1.2;margin:0 0 28px}
+.awards-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.award-card{display:flex;flex-direction:column;padding:24px 21px;border:1px solid #e5dfeb;border-radius:12px;background:#fbfafc;color:inherit;text-decoration:none;transition:border-color .18s}
+.award-card:hover{border-color:#a88bb7}.award-card:focus-visible{outline:3px solid #660874;outline-offset:4px}
+.award-redfox{background:#edf3fd;border-color:#d8e3f5}.award-sso{background:#f4eff8;border-color:#e4d8ed}
+.award-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.award-top img{width:36px;height:36px;object-fit:contain;border-radius:50%;mix-blend-mode:multiply}.award-top span{font-size:11px;color:#807486}
+.award-card h3{font-size:25px;font-weight:800;letter-spacing:-.04em;line-height:1.15;margin:0 0 13px;color:#4f205f}.award-redfox h3{color:#274d89}
+.award-title{font-size:13px;font-weight:700;line-height:1.55;margin:0 0 8px}.award-context{font-size:11px;line-height:1.7;color:#6c5e77;margin:0 0 20px}
+.award-contribution{font-size:13px;line-height:1.8;color:#61546b;margin:0 0 10px}.award-note{font-size:11px;line-height:1.7;color:#625e74;margin:0 0 12px}
+.award-project-link{padding-top:17px;margin-top:auto;font-size:12px;font-weight:700;color:#660874;text-decoration:underline;text-underline-offset:4px}.award-scholarships{font-size:12px;line-height:1.8;color:#766a80;margin:22px 0 0;max-width:850px}
+.path-entry.is-current,.path-entry.is-current:target{padding:22px 24px 24px;background:#f1f8f3;border:1px solid #cfe4d6;border-radius:12px;margin-block:8px 18px;box-shadow:none}
+.path-entry.is-current:before,.path-entry.is-current:target:before{background:#187145}
+.path-entry.is-current .path-date{position:relative;padding-inline-end:90px;min-height:27px}
+.present-status{position:absolute;inset-inline-end:0;top:0;display:inline-flex;align-items:center;gap:7px;background:#e0f1e6;color:#17623d;padding:5px 9px;border:1px solid #bcdcc8;border-radius:20px;font-size:11px;font-weight:750;line-height:1.4;white-space:nowrap}
+.present-dot{height:7px;width:7px;flex:none;border-radius:50%;background:#178149}
+@media(max-width:1000px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.award-card h3{font-size:28px}}
+@media(max-width:767px){.awards-section{padding-block:36px}.awards-section h2{margin-bottom:22px}.award-card{padding:22px}.award-top{margin-bottom:18px}.path-entry.is-current,.path-entry.is-current:target{padding:17px 16px 20px}.path-entry.is-current .path-date{padding-inline-end:76px}.present-status{font-size:10px;padding:5px 8px;gap:5px}.path-entry.is-current .career-heading h3{font-size:16px}.award-scholarships{font-size:12px}}
+@media(max-width:540px){.awards-grid{grid-template-columns:1fr}.award-card{display:grid;grid-template-columns:1fr auto;column-gap:18px}.award-top{grid-column:1/-1;flex-direction:row-reverse;margin-bottom:12px}.award-card h3,.award-title,.award-context,.award-contribution,.award-note{grid-column:1/-1}.award-project-link{grid-column:1/-1;padding-top:9px}.award-context{margin-bottom:12px}}
