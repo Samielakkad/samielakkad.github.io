@@ -25,9 +25,9 @@ html[lang=en] body{font-family:Manrope,-apple-system,BlinkMacSystemFont,'Segoe U
 .company-strip-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
 .brand-item{position:relative;min-height:91px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border-radius:8px;padding:9px 8px;transition:background .2s}
 .brand-item:hover{background:#f0ecf5}.brand-item>span:not(.company-link-symbol){font-size:11px;color:#514a5e;font-weight:600;text-align:center}.company-link-symbol{position:absolute;top:3px;inset-inline-end:5px;color:#84798e;font-size:13px}
-.brand-logo{width:106px;height:35px;object-fit:contain;display:block}.brand-logo.logo-atoms{width:36px}.brand-logo.logo-baidu{width:48px}.brand-logo.logo-chinaust{width:112px}.brand-logo.logo-dopedclub{width:38px;height:38px}.brand-logo.logo-neusoft{width:106px}
+.brand-logo{width:106px;height:35px;object-fit:contain;display:block}.brand-logo.logo-metagpt{width:36px}.brand-logo.logo-baidu{width:48px}.brand-logo.logo-chinaust{width:112px}.brand-logo.logo-dopedclub{width:38px;height:38px}.brand-logo.logo-neusoft{width:106px}
 .recent-work{padding-block:80px;color:var(--career-ink);background:#fff}.section-intro{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:34px}.section-kicker{font-size:14px;font-weight:650;color:#660874;margin:0 0 16px}.section-intro h2{font-size:clamp(27px,3.2vw,41px);font-weight:750;line-height:1.2;letter-spacing:-.035em}.section-intro>p{max-width:320px;flex-shrink:0;font-size:14px;line-height:1.8;color:var(--career-muted);margin:0 0 2px}
-.recent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.recent-card{border-radius:20px;padding:32px;display:flex;flex-direction:column;overflow:hidden}.meitu-feature{background:#fff0f4}.atoms-feature{background:#eff2ff}.feature-brand{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:45px;margin-bottom:36px}.feature-logo-link{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:800}.feature-logo-link small{display:block;font-size:12px;font-weight:500;color:var(--career-muted)}.feature-logo-link .logo-meitu{width:121px;height:35px}.feature-logo-link .logo-atoms{width:42px;height:42px}.role-status{font-size:11px;font-weight:700;border:1px solid #d4c8d0;border-radius:20px;padding:6px 10px;white-space:nowrap}.feature-role{font-size:12px;color:#5c4e60;font-weight:650;margin-bottom:12px}.recent-card h3{font-size:clamp(27px,2.8vw,36px);line-height:1.2;letter-spacing:-.035em;font-weight:750;margin-bottom:18px}.recent-card>p:not(.feature-role){font-size:14px;line-height:1.8;color:#585361;max-width:440px}
+.recent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.recent-card{border-radius:20px;padding:32px;display:flex;flex-direction:column;overflow:hidden}.meitu-feature{background:#fff0f4}.atoms-feature{background:#eff2ff}.feature-brand{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:45px;margin-bottom:36px}.feature-logo-link{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:800}.feature-logo-link small{display:block;font-size:12px;font-weight:500;color:var(--career-muted)}.feature-logo-link .logo-meitu{width:121px;height:35px}.feature-logo-link .logo-metagpt{width:42px;height:42px}.role-status{font-size:11px;font-weight:700;border:1px solid #d4c8d0;border-radius:20px;padding:6px 10px;white-space:nowrap}.feature-role{font-size:12px;color:#5c4e60;font-weight:650;margin-bottom:12px}.recent-card h3{font-size:clamp(27px,2.8vw,36px);line-height:1.2;letter-spacing:-.035em;font-weight:750;margin-bottom:18px}.recent-card>p:not(.feature-role){font-size:14px;line-height:1.8;color:#585361;max-width:440px}
 .language-art{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-block:28px 24px}.language-art span{border:1px solid #efcbd8;background:#fff8fa;border-radius:8px;padding:13px 15px;font-size:25px;font-weight:600;color:#ba1941;text-align:center;line-height:1.5}
 .workflow-art{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-block:28px 24px}.workflow-art span{border:1px solid #cdd5ff;background:#f8f9ff;border-radius:8px;padding:20px 10px;font-size:14px;font-weight:700;color:#354ecc;text-align:center;line-height:1.5}
 .feature-tags{display:flex;gap:8px;flex-wrap:wrap;font-size:11px;color:#5e5667;margin-bottom:26px}.feature-tags span+span{border-inline-start:1px solid #ccc4d4;padding-inline-start:8px}.feature-footer{display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap;border-top:1px solid #d8cfdc;padding-top:20px;margin-top:auto;font-size:12px;font-weight:700}.company-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:650;min-height:32px}.company-link:hover,.career-company:hover{text-decoration:underline;text-underline-offset:4px}
@@ -37,3 +37,40 @@ html[dir=rtl] .hero-copy h1,html[dir=rtl] .section-intro h2,html[dir=rtl] .recen
 @media(max-width:767px){.hero-layout{grid-template-columns:1fr;gap:30px;padding-block:38px}.hero-copy h1{font-size:43px}.hero-location{margin-bottom:22px}.hero-portrait{justify-self:center;max-width:330px}.hero-portrait>img{height:360px;border-radius:70px 12px 12px 12px}.hero-chinese{display:inline;font-size:16px;margin-inline-start:12px;white-space:nowrap}.hero-role{font-size:22px;margin-top:15px}.hero-intro{font-size:17px}.company-strip-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 4px}.company-strip p{line-height:1.7}.recent-work,.career-section{padding-block:48px}.section-intro{display:block;margin-bottom:26px}.section-intro>p{max-width:100%;margin-top:20px}.section-intro h2{font-size:29px}.recent-grid{grid-template-columns:1fr;gap:18px}.recent-card{padding:25px}.feature-brand{margin-bottom:28px}.career-row{grid-template-columns:1fr;gap:19px;padding-block:28px}.career-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 15px}.career-meta>span:not(.current-label){margin:0}.career-meta .current-label{margin:0}.career-heading{gap:14px}.career-heading h3{font-size:19px}.career-logo{flex-basis:70px;height:64px}.hero-languages{font-size:11px}.feature-footer{gap:10px}html[dir=rtl] .hero-copy h1{font-size:38px}}
 @media(max-width:370px){.portfolio-wrap{padding-inline:18px}.hero-copy h1{font-size:37px}.hero-chinese{display:block;margin-inline-start:0}.recent-card{padding:21px}.feature-logo-link{font-size:19px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Priority brands in the opening view; one restrained site palette. */
+:root{--accent:#660874;--accent-deep:#4a0a55;--meitu:#df2475;--atoms:#24212b}
+.top-accent{height:3px;background:#660874;animation:none}
+.hero-brand-wrap{padding-top:25px}
+.hero-brands{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid #e6e3eb;padding-bottom:22px;gap:24px;direction:ltr}
+.hero-brand{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-width:0;border-radius:8px;padding:6px;transition:background .2s}
+.hero-brand:hover{background:#f6f5f8}
+.hero-brand-mark{display:flex;align-items:center;justify-content:center;gap:10px;height:46px;direction:ltr}
+.hero-brand-mark img{height:44px;width:44px;object-fit:contain;flex-shrink:0}
+.hero-brand-mark>span{font-size:22px;line-height:1.15;font-weight:800;color:#24212b;letter-spacing:-.03em}
+.hero-brand-mark small{display:block;font-size:11px;line-height:1.5;letter-spacing:.02em;font-weight:500;margin-top:2px}
+.hero-brand-tsinghua .hero-brand-mark>span{color:#660874;font-size:19px}
+.hero-brand-meitu .hero-brand-mark img{width:158px;height:38px}
+.hero-brand-metagpt .hero-brand-mark img{width:47px;height:47px}
+.hero-brand-baidu .hero-brand-mark>span{color:#2932e1}
+.hero-brand-context{font-size:11px;color:#66616f;line-height:1.4;text-align:center}
+.hero-layout{padding-block:36px 42px;gap:54px}
+.hero-location{margin-bottom:20px}.hero-intro{font-size:18px;line-height:1.65}.hero-copy h1{font-size:clamp(38px,4.2vw,60px)}
+.hero-portrait>img{height:400px}
+.company-strip{background:#fff;padding-block:18px}.company-strip p{margin-bottom:12px}.company-strip-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:700px;margin-inline:auto}.brand-item{min-height:72px}
+.meitu-feature{background:#fff8fb;border:1px solid #f1dce5;border-top:3px solid #df2475}
+.atoms-feature{background:#f7f7f9;border:1px solid #e2e1e8;border-top:3px solid #24212b}
+.feature-logo-link .logo-meitu{width:175px;height:36px}.brand-logo.logo-meitu{width:125px}.career-logo .logo-meitu{width:100%}
+.meitu-feature .workflow-art span{color:#982453;background:#fff;border-color:#ebd5df}
+.atoms-feature .workflow-art span{color:#393440;background:#fff;border-color:#dfdce4}
+.role-status{border-color:#d9d4de}.career-company{color:#42394c}
+.gradient-tsinghua{background:#660874}.gradient-baidu{background:#25359b}
+.gradient-soft-tsinghua{background:#f7f5f9}.gradient-hero{background:#fff}.gradient-dark{background:#24212b;background-image:none}
+.text-gradient{background:none;-webkit-background-clip:initial;background-clip:initial;-webkit-text-fill-color:#660874;color:#660874}
+@media(max-width:767px){
+.hero-brand-wrap{padding-top:18px}.hero-brands{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 10px;padding-bottom:18px}
+.hero-brand{gap:6px;padding:3px}.hero-brand-mark{height:37px;gap:7px}.hero-brand-mark img{width:35px;height:35px}.hero-brand-mark>span{font-size:18px}.hero-brand-tsinghua .hero-brand-mark>span{font-size:16px}.hero-brand-mark small{font-size:10px}
+.hero-brand-meitu .hero-brand-mark img{width:133px;height:30px}.hero-brand-metagpt .hero-brand-mark img{width:38px;height:38px}.hero-brand-context{font-size:10px}
+.hero-layout{padding-block:26px 34px;gap:28px}.hero-copy h1{font-size:40px}.hero-intro{font-size:16px;line-height:1.7}.hero-role{font-size:21px}.hero-portrait>img{height:360px}.company-strip-grid{gap:4px}.brand-logo.logo-chinaust{max-width:95px}.feature-logo-link .logo-meitu{width:155px}
+}
+@media(max-width:370px){.hero-brand-meitu .hero-brand-mark img{width:116px}.hero-brand-mark>span{font-size:16px}.hero-brand-tsinghua .hero-brand-mark>span{font-size:14px}.hero-brands{gap:12px 5px}}
