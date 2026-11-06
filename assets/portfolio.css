@@ -179,3 +179,8 @@ html[dir=rtl] .journey-intro h2,html[dir=rtl] .path-entry h3{letter-spacing:0;li
 .path-output{font-size:12px;line-height:1.75;color:#716278;margin:7px 0 0;max-width:710px}.path-output strong{font-weight:650;color:#4d4059}
 .ownership-detail{margin:0;display:grid;gap:15px}.ownership-detail>div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px}.ownership-detail dt,.ownership-label{font-size:11px;font-weight:750;line-height:1.7;color:#574060}.ownership-detail dd{margin:0;font-size:13px;line-height:1.85;color:#62596c}.ownership-label{margin:0 0 5px}.build-more-content .ownership-label:not(:first-child){margin-top:16px}
 @media(max-width:650px){.ownership-detail>div{grid-template-columns:1fr;gap:4px}.ownership-detail{gap:13px}.path-output{font-size:11px}.ownership-detail dd{font-size:12px}}
+
+/* Separate contributions and traceable numbers without expanding the closed cards. */
+.contribution-list{list-style:disc;padding-inline-start:17px;margin:0;font-size:12px;line-height:1.85;color:#62596c}.contribution-list li+li{margin-top:9px}.contribution-list strong{font-weight:700;color:#4d4059}.ownership-detail .contribution-list{font-size:13px}
+.project-metric{display:block;font-size:11px;font-weight:650;line-height:1.65;color:#5e426f;margin:0 0 7px;text-decoration:underline;text-decoration-color:#d3c5dc;text-underline-offset:3px}.project-metric:hover{color:#660874;text-decoration-color:#660874}.build-more-content .contribution-list{margin-bottom:14px}.path-output strong{font-weight:750}
+@media(max-width:650px){.ownership-detail .contribution-list{font-size:12px}.project-metric{font-size:11px;line-height:1.7}}
