@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T11:05:50.578096+00:00",
+  "title": "Design System: Sami El Akkad Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep ink"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper"
+      },
+      "sand": {
+        "role": "primary",
+        "displayName": "Sand"
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Sage"
+      },
+      "current-status": {
+        "role": "semantic",
+        "displayName": "Current role indicator"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Section headings with fluid scale."
+      },
+      "arabic-body": {
+        "displayName": "Arabic text",
+        "purpose": "Arabic reading and interface content; local WOFF2."
+      },
+      "reading-title": {
+        "displayName": "Reading title",
+        "purpose": "Supporting project and thesis pages."
+      }
+    },
+    "shadows": [
+      {
+        "name": "featured-product",
+        "value": "0 20px 32px -16px #131d2066",
+        "purpose": "Separate the primary product screenshot from its stage."
+      },
+      {
+        "name": "secondary-product",
+        "value": "0 16px 35px -20px #131d2070",
+        "purpose": "Separate School OS screenshot from its sage stage."
+      },
+      {
+        "name": "photo-signature",
+        "value": "0 2px 10px #131d2080",
+        "purpose": "Signature text legibility over portrait photography."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.23,1,.32,1)",
+        "purpose": "Shared responsive ease-out."
+      },
+      {
+        "name": "button",
+        "value": "160ms",
+        "purpose": "Hover and press feedback."
+      },
+      {
+        "name": "disclosure-icon",
+        "value": "200ms",
+        "purpose": "Rotate plus SVG on native disclosure state."
+      },
+      {
+        "name": "image-hover",
+        "value": "600ms",
+        "purpose": "Subtle contained image scale, fine pointers only."
+      },
+      {
+        "name": "hero-copy",
+        "value": "700ms",
+        "purpose": "Single entrance from 18px lower and 0.45 opacity."
+      },
+      {
+        "name": "hero-photo",
+        "value": "900ms",
+        "purpose": "Single portrait settle from scale 1.035."
+      },
+      {
+        "name": "keyboard-focus",
+        "value": "none",
+        "purpose": "Transitions disabled on keyboard-focused summary icons, buttons, and link arrows."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "800px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "600px"
+      },
+      {
+        "name": "wide-min",
+        "value": "1500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Direct navigation or contact action with immediate press feedback.",
+      "html": "<a class=\"sample-button\" href=\"#work\">Explore my work <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></a>",
+      "css": ".sample-button{display:inline-flex;align-items:center;justify-content:space-between;gap:38px;min-height:54px;box-sizing:border-box;padding:14px 22px;border:1px solid transparent;border-radius:3px;background:var(--sand,#d9ac6d);color:var(--ink,#131d20);font:500 15px Archivo,Arial,sans-serif;text-decoration:none;transition:transform 160ms var(--ease,cubic-bezier(.23,1,.32,1)),background-color 160ms ease}.sample-button:focus-visible{outline:3px solid var(--sand,#d9ac6d);outline-offset:6px}.sample-button:active{transform:scale(.975)}@media(hover:hover) and (pointer:fine){.sample-button:hover{transform:translateY(-2px);background:#e6bb7e}}@media(prefers-reduced-motion:reduce){.sample-button{transition:none}.sample-button:active,.sample-button:hover{transform:none}}"
+    },
+    {
+      "name": "Native project disclosure",
+      "kind": "custom",
+      "description": "Keyboard-operable disclosure preserving details without JavaScript.",
+      "html": "<details class=\"sample-detail\"><summary><span>Project contribution</span><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><p>Explain ownership, the work performed, and evidence that the visitor can inspect.</p></details>",
+      "css": ".sample-detail{color:var(--ink,#131d20);background:var(--paper,#f0eee7);font:16px/1.6 Archivo,Arial,sans-serif;border-top:1px solid var(--paper-line,#cccfc7);border-bottom:1px solid var(--paper-line,#cccfc7)}.sample-detail summary{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;list-style:none;cursor:pointer}.sample-detail summary::-webkit-details-marker{display:none}.sample-detail summary:focus-visible{outline:3px solid #876029;outline-offset:6px}.sample-detail summary svg{transition:transform 200ms var(--ease,cubic-bezier(.23,1,.32,1))}.sample-detail[open] summary svg{transform:rotate(45deg)}.sample-detail p{margin:0;padding:0 0 24px;max-width:68ch;color:#45564f}@media(hover:hover) and (pointer:fine){.sample-detail summary:hover{color:#876029}}@media(prefers-reduced-motion:reduce){.sample-detail summary svg{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Editorial product portfolio",
+    "overview": "Real work leads through large typography and authentic product imagery. Dark portfolio sections contrast with light reading surfaces, while native disclosures let visitors inspect contribution and evidence at their own pace. English and Arabic remain complete static pages.",
+    "keyCharacteristics": [
+      "Real screenshots and portraits",
+      "Dark editorial sections and light reading surfaces",
+      "Native expandable detail",
+      "Progressive project filtering",
+      "Restrained hero entrance"
+    ],
+    "rules": [
+      {
+        "name": "Surface rule",
+        "body": "Use whole-section ground changes to distinguish reading modes, rather than arbitrary colored cards.",
+        "section": "colors"
+      },
+      {
+        "name": "Content rule",
+        "body": "Keep title, role, date, evidence, and body copy visually distinct.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve real imagery and explicit evidence scope.",
+      "Do keep content available without JavaScript.",
+      "Do preserve keyboard focus, RTL composition, and reduced motion.",
+      "Do use 16px mobile search-input text to avoid iOS zoom."
+    ],
+    "donts": [
+      "Don’t fabricate metrics or interfaces.",
+      "Don’t imply private company source is public.",
+      "Don’t add repeated scroll reveals or hover-only actions."
+    ]
+  }
+}

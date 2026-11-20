@@ -1,118 +1,537 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ADCMOplus — Sami El Akkad's Undergrad Thesis</title>
-<meta name="description" content="ADCMOplus — a novel evolutionary algorithm that classifies environmental changes (objective / constraint / combined) before adapting. Friedman rank 1.25 vs 5 SOTA. Maps onto LLM serving, RLHF, agent orchestration." />
-<meta property="og:title" content="ADCMOplus — Sami El Akkad's Undergrad Thesis" />
-<meta property="og:description" content="Novel evolutionary algorithm for dynamic constrained multi-objective optimization. Friedman rank 1.25 vs 5 SOTA. PM-framed for applications to modern AI." />
-<meta property="og:image" content="https://samielakkad.github.io/assets/me.jpg" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<style>
-  :root { --accent: #c41e3a; --tsinghua: #660874; --baidu: #2932e1; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-  .accent { color: var(--accent); }
-  .accent-bg { background-color: var(--accent); }
-  .tsinghua { color: var(--tsinghua); }
-  .top-accent { height: 4px; background: linear-gradient(90deg, var(--tsinghua) 0%, var(--accent) 100%); }
-  ::selection { background: rgba(102,8,116,0.22); color: #0a0a0a; }
-
-  /* Markdown rendering */
-  .md { color: #1f2937; line-height: 1.7; font-size: 16px; }
-  .md h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin-top: 0; margin-bottom: 1rem; line-height: 1.1; }
-  .md h2 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.01em; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e5e7eb; }
-  .md h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.5rem; }
-  .md h4 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-  .md p { margin-bottom: 1rem; }
-  .md ul, .md ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-  .md li { margin-bottom: 0.25rem; }
-  .md blockquote { border-left: 4px solid var(--tsinghua); padding: 0.5rem 1rem; margin: 1.5rem 0; background: #faf8fb; color: #4b5563; font-style: italic; border-radius: 0 6px 6px 0; }
-  .md code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.92em; color: #c41e3a; }
-  .md pre { background: #171717; color: #f3f4f6; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
-  .md pre code { background: transparent; color: inherit; padding: 0; font-size: 0.85em; }
-  .md a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-  .md a:hover { color: var(--tsinghua); }
-  .md table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92em; }
-  .md th, .md td { border: 1px solid #e5e7eb; padding: 0.5rem 0.75rem; text-align: left; }
-  .md th { background: #fafafa; font-weight: 600; }
-  .md hr { border: 0; border-top: 1px solid #e5e7eb; margin: 2.5rem 0; }
-  .md strong { font-weight: 700; color: #0a0a0a; }
-  .md em { font-style: italic; }
-
-  /* Long-form readable width */
-  .reader { max-width: 760px; }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#131d20">
+<title>ADCMOplus — Sami El Akkad’s undergraduate thesis</title>
+<meta name="description" content="My undergraduate research on change detection and adaptive responses for dynamic constrained multi-objective optimization.">
+<meta property="og:title" content="ADCMOplus — Sami El Akkad’s undergraduate thesis">
+<meta property="og:description" content="My undergraduate research on change detection and adaptive responses for dynamic constrained multi-objective optimization.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://samielakkad.github.io/assets/cover.jpg">
+<link rel="stylesheet" href="assets/portfolio.css?v=20261120">
 </head>
-<body class="bg-white text-neutral-900 antialiased">
-
-<div class="top-accent"></div>
-
-<!-- NAV -->
-<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between text-sm">
-    <a href="/" class="font-semibold">← Sami El Akkad</a>
-    <div class="hidden md:flex gap-6 text-neutral-600">
-      <a href="/#pillars" class="hover:text-neutral-900">Tsinghua + Baidu</a>
-      <a href="/#projects" class="hover:text-neutral-900">Projects</a>
-      <a href="/#experience" class="hover:text-neutral-900">Experience</a>
-      <a href="/#contact" class="hover:text-neutral-900">Contact</a>
-    </div>
-    <a href="mailto:sam25@mails.tsinghua.edu.cn" class="px-3 py-1.5 bg-neutral-900 text-white rounded text-xs hover:bg-neutral-700">Get in touch</a>
-  </div>
-</nav>
-
-<!-- PAPER HEADER -->
-<header class="bg-neutral-50 border-b border-neutral-200">
-  <div class="max-w-3xl mx-auto px-6 py-10">
-    <div class="text-xs mono accent uppercase tracking-wider mb-2">thesis · 本科毕业论文 · NPU · 2025</div>
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05] mb-3">ADCMOplus</h1>
-    <p class="text-lg text-neutral-700">
-      Machine Learning-Based Evolutionary Algorithm for Constrained Dynamic Multi-Objective Optimization.
-    </p>
-    <div class="mt-5 flex flex-wrap gap-2 text-xs">
-      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">EL AKKAD SAMI</span>
-      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">Northwestern Polytechnical University</span>
-      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">Supervisor: Li Lin (李琳)</span>
-      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">Defended May 26, 2025</span>
-      <span class="px-3 py-1 rounded-full bg-white border border-neutral-300">74 pages · MATLAB R2024B</span>
-    </div>
-  </div>
+<body class="reading-body">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation"><div class="wrap nav-inner"><a class="nav-name" href="index.html">Sami El Akkad</a><div class="nav-links"><a href="index.html#projects">Work</a><a href="index.html#timeline">Experience</a><a href="index.html#contact">Contact</a></div></div></nav>
+<main id="main" class="reading-page wrap">
+<header class="reading-header">
+<h1>ADCMOplus</h1>
+<p class="reading-lead">I built an algorithm that adapts when an optimization problem’s goals or constraints change.</p>
+<p class="reading-meta">Bachelor’s thesis · Northwestern Polytechnical University · Defended May 2025</p>
+<p>Machine Learning-Based Evolutionary Algorithm for Constrained Dynamic Multi-Objective Optimization.</p>
 </header>
+<aside class="research-note" aria-label="Scope of this write-up"><p>This is a public overview of my thesis and its reported experiments. Full source and experimental data remain private. The applications to AI systems below are proposals for future evaluation.</p></aside>
+<nav class="reading-index" aria-label="On this page"><h2>In this write-up</h2><div class="toc">
+<ul>
+<li><a href="#in-plain-english">In Plain English</a></li>
+<li><a href="#1-executive-summary">1. Executive Summary</a></li>
+<li><a href="#2-the-problem-in-plain-terms">2. The Problem in Plain Terms</a></li>
+<li><a href="#3-why-existing-methods-fall-short">3. Why Existing Methods Fall Short</a></li>
+<li><a href="#4-what-adcmoplus-does-differently">4. What ADCMOplus Does Differently</a></li>
+<li><a href="#5-architecture">5. Architecture</a></li>
+<li><a href="#6-experimental-results">6. Experimental Results</a><ul>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#headline-friedman-overall-ranking">Headline: Friedman Overall Ranking</a></li>
+<li><a href="#per-metric-wilcoxon-findings-p-005">Per-Metric Wilcoxon Findings (p &lt; 0.05)</a></li>
+<li><a href="#honest-read">Honest Read</a></li>
+</ul>
+</li>
+<li><a href="#7-possible-applications-modern-ai-real-systems">7. Possible Applications — Modern AI &amp; Real Systems</a><ul>
+<li><a href="#71-llm-inference-serving">7.1 LLM Inference Serving</a></li>
+<li><a href="#72-rlhf-reward-shaping">7.2 RLHF / Reward Shaping</a></li>
+<li><a href="#73-ai-agent-orchestration">7.3 AI Agent Orchestration</a></li>
+<li><a href="#74-recommendation-systems">7.4 Recommendation Systems</a></li>
+<li><a href="#75-automl-hyperparameter-tuning">7.5 AutoML &amp; Hyperparameter Tuning</a></li>
+<li><a href="#76-real-time-bidding-ad-auctions">7.6 Real-time Bidding &amp; Ad Auctions</a></li>
+<li><a href="#77-smart-grid-energy-dispatch">7.7 Smart Grid / Energy Dispatch</a></li>
+<li><a href="#78-marketplace-matching-uber-brikoul-instacart-etc">7.8 Marketplace Matching (Uber, brikoul, Instacart, etc.)</a></li>
+</ul>
+</li>
+<li><a href="#8-application-briefs">8. Application Briefs</a><ul>
+<li><a href="#brief-a-llm-inference-router">Brief A — LLM Inference Router</a></li>
+<li><a href="#brief-b-rlhf-multi-reward-optimiser">Brief B — RLHF Multi-Reward Optimiser</a></li>
+<li><a href="#brief-c-marketplace-matcher">Brief C — Marketplace Matcher</a></li>
+</ul>
+</li>
+<li><a href="#9-limitations-roadmap">9. Limitations &amp; Roadmap</a><ul>
+<li><a href="#acknowledged-in-the-thesis">Acknowledged in the thesis</a></li>
+<li><a href="#natural-next-steps-with-current-ai">Natural next steps with current AI</a></li>
+</ul>
+</li>
+<li><a href="#10-thesis-structure">10. Thesis Structure</a></li>
+<li><a href="#keywords">Keywords</a></li>
+</ul>
+</div>
+</nav>
+<article class="reading-content"><blockquote>
+<p>A novel evolutionary algorithm that <em>classifies</em> the type of environmental change a system is facing — objective shift, constraint shift, or both — and adapts its search strategy accordingly. Built for problems where targets and constraints both move over time. Validated on the FDA benchmark suite against five state-of-the-art methods.</p>
+</blockquote>
+<p><a href="https://github.com/Samielakkad/AI-Optimization-ADCMOplus-NWPU" rel="noopener noreferrer">Read the public research overview</a>. Full source and experimental data are not included in this public write-up.</p>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Author</strong></td>
+<td>EL AKKAD SAMI</td>
+</tr>
+<tr>
+<td><strong>Institution</strong></td>
+<td>Northwestern Polytechnical University (NPU) — Faculty of Computer Science and Technology</td>
+</tr>
+<tr>
+<td><strong>Supervisor</strong></td>
+<td>Li Lin (李琳)</td>
+</tr>
+<tr>
+<td><strong>Defended</strong></td>
+<td>May 26, 2025</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="in-plain-english">In Plain English</h2>
+<p>Real systems are not static. You're usually trying to do <strong>multiple things at once</strong> (cheap AND fast AND high-quality) while obeying <strong>multiple rules</strong> (memory, budget, regulations), AND <strong>both the goals and the rules keep changing</strong>. Academics call this a <strong>DCMOP</strong>.</p>
+<p>The thesis compares ADCMOplus with DNSGA-II, SGEA, PBDMO, MOEA/D-DE, and CMOEA/D, focusing on whether a change-specific response can improve results. They reacted the same way to two very different events:</p>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Event</th>
+<th>What you should do</th>
+<th>What old algos do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The <strong>goal</strong> moved (customer wants faster delivery)</td>
+<td>Explore — find new optima</td>
+<td>Hypermutate / re-explore ✓</td>
+</tr>
+<tr>
+<td>A <strong>rule</strong> changed (a bridge closed)</td>
+<td>Repair — fix existing solutions to obey the new rule</td>
+<td>Hypermutate / re-explore ✗ wastes effort</td>
+</tr>
+</tbody>
+</table></div>
+<p>Second problem: they treated <strong>constraint handling as an add-on</strong> — a penalty wrapper around the main search. So when rules tightened, most candidates ended up infeasible.</p>
+<p><strong>ADCMOplus changes three things:</strong></p>
+<ol>
+<li><strong>Classifies</strong> the change first — <em>goal moved (A)</em>, <em>rule moved (B)</em>, or <em>both (C)</em>.</li>
+<li><strong>Picks the right tool</strong> for the type — explore for A, repair for B, predict for C.</li>
+<li><strong>Constraint handling lives inside the main loop</strong>, not as a wrapper.</li>
+</ol>
+<p>Think of it like a GPS that asks <em>"why are we re-routing?"</em> before recalculating: user wants a faster route → search new routes; road closed → detour around it; both → predict where the best route is heading. Old GPSes just hit "re-route" the same way every time.</p>
+<p><strong>How I interpret the reported Friedman ranking (1.25 vs 2.33 for the next listed method):</strong> the thesis attributes the result to improvements in constraint preservation and diversity from classifying changes and integrating feasibility into the response. It loses on raw runtime against DNSGA-II — a deliberate trade of compute for solution quality.</p>
+<hr/>
+<h2 id="1-executive-summary">1. Executive Summary</h2>
+<p>Most real-world optimization problems are not static. A delivery fleet doesn't optimize one route once — it re-optimizes constantly as orders arrive, traffic shifts, and drivers go offline. A trading portfolio rebalances as volatility, regulation, and capital limits change. A cloud autoscaler reallocates compute as request mix, GPU prices, and SLA targets drift.</p>
+<p>These are <strong>Dynamic Constrained Multi-Objective Optimization Problems (DCMOPs)</strong>: multiple conflicting goals, multiple hard limits, and both the goals <em>and</em> the limits change over time.</p>
+<p>The dominant academic algorithms in this space (DNSGA-II, SGEA, PBDMO) treat every detected change the same way. ADCMOplus's central thesis is that <strong>the type of change should determine the response</strong>. A new traffic jam (constraint change) demands repair of infeasible routes; a new delivery deadline (objective change) demands exploration of new optima. Mixing the two costs you on both fronts.</p>
+<p>The contribution is threefold:</p>
+<ol>
+<li><strong>A change classifier</strong> (objective / constraint / combined) that runs cheaply at every detection cycle.</li>
+<li><strong>Three specialised response strategies</strong>, dispatched by the classifier.</li>
+<li><strong>Integrated constraint handling</strong> — feasibility logic lives inside the main loop, not as a wrapper.</li>
+</ol>
+<p>The result, on the FDA1–FDA5 benchmarks with dynamic constraints:</p>
+<ul>
+<li><strong>Best overall</strong> (Friedman avg rank <strong>1.25</strong> vs 5 comparators).</li>
+<li><strong>Significantly best at constraint preservation (CPF)</strong> on every problem.</li>
+<li><strong>Significantly best at diversity (DM)</strong> on every problem.</li>
+<li>Slower than DNSGA-II but faster than PBDMO — a deliberate quality-vs-cost trade.</li>
+</ul>
+<hr/>
+<h2 id="2-the-problem-in-plain-terms">2. The Problem in Plain Terms</h2>
+<p>Pick any of these and you have a DCMOP:</p>
+<ul>
+<li><strong>Cloud inference serving:</strong> Minimise <em>cost per token</em> and <em>p95 latency</em>, subject to GPU memory caps, model availability, and SLA tiers — all of which shift hour by hour.</li>
+<li><strong>Real-time bidding:</strong> Maximise <em>conversion rate</em> and <em>brand safety</em>, subject to <em>budget pacing</em> and <em>frequency caps</em>, while the auction landscape changes every millisecond.</li>
+<li><strong>Smart grid dispatch:</strong> Minimise <em>cost</em> and <em>carbon intensity</em>, subject to <em>demand</em> and <em>transmission limits</em>, both varying minute to minute as weather and load shift.</li>
+<li><strong>On-demand marketplaces (Uber, brikoul, Instacart):</strong> Match <em>workers to jobs</em> maximising <em>fill rate</em> and <em>worker earnings</em>, subject to <em>geographic feasibility</em> and <em>time windows</em> — all dynamic.</li>
+<li><strong>Portfolio rebalancing:</strong> Maximise <em>return</em>, minimise <em>variance</em>, subject to <em>regulatory</em> and <em>liquidity</em> constraints, all time-varying.</li>
+</ul>
+<p>Each problem has the same structure:</p>
+<pre tabindex="0"><code>minimise   F(x) = [f₁(x, t), f₂(x, t), …, fₘ(x, t)]ᵀ
+subject to gᵢ(x, t) ≤ 0,  i = 1..q   (inequality constraints, change over time)
+           hⱼ(x, t) = 0,  j = 1..p   (equality constraints, change over time)
+           x ∈ Ω
+</code></pre>
+<p>The world hands you both <code>f(·, t)</code> and <code>g(·, t)</code> that move. You need to keep approximating a <em>set</em> of trade-off solutions — the Pareto front — even as the front itself moves.</p>
+<hr/>
+<h2 id="3-why-existing-methods-fall-short">3. Why Existing Methods Fall Short</h2>
+<p>The mainstream DCMOP algorithms share three weaknesses:</p>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Weakness</th>
+<th>Concrete failure mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Uniform change response</strong></td>
+<td>A constraint shift triggers exploration — wasting evaluations in newly-infeasible regions.</td>
+</tr>
+<tr>
+<td><strong>Bolt-on constraint handling</strong></td>
+<td>Feasibility is enforced via penalty wrappers, which lag the main search and produce many infeasible candidates near constraint boundaries.</td>
+</tr>
+<tr>
+<td><strong>No change typing</strong></td>
+<td>Algorithms have no signal to distinguish "the goalposts moved" from "the field shrunk" — different problems, treated identically.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Algorithm-by-algorithm:</p>
+<ul>
+<li><strong>DNSGA-II</strong> — fast, but its hypermutation-on-detection burns budget regardless of change type.</li>
+<li><strong>SGEA</strong> — strong on convergence, weak on constraints; its steady-state replacement doesn't model feasibility shifts.</li>
+<li><strong>PBDMO</strong> — predictive, but its single forecast model degrades when objective and constraint dynamics decouple.</li>
+<li><strong>MOEA/D-DE</strong> — decomposition is elegant but rigid; weight vectors drift out of usefulness as the front moves.</li>
+<li><strong>CMOEA/D</strong> — extends decomposition to constraints, but loses diversity under combined changes.</li>
+</ul>
+<hr/>
+<h2 id="4-what-adcmoplus-does-differently">4. What ADCMOplus Does Differently</h2>
+<pre tabindex="0"><code>┌──────────────────────────────────────────────────────────────────────┐
+│                  ADCMOplus Decision Loop (per generation)            │
+└──────────────────────────────────────────────────────────────────────┘
 
-<!-- README MARKDOWN -->
-<main class="px-6 py-12">
-  <article id="content" class="md reader mx-auto"></article>
+   ┌────────────────────┐
+   │  Sentinel probes   │  ← cheap statistical checks on
+   │  detect a change?  │    fitness variance + constraint violations
+   └─────────┬──────────┘
+             │ yes
+             ▼
+   ┌────────────────────┐
+   │   CLASSIFY change  │
+   │  A / B / C / none  │
+   └─────────┬──────────┘
+             │
+   ┌─────────┼─────────┬─────────────────┐
+   ▼         ▼         ▼                 ▼
+ type A    type B    type C            none
+(obj)    (constr.) (combined)        (steady)
+   │         │         │                 │
+   ▼         ▼         ▼                 ▼
+ SGEA-     Gradient   Prediction-      Continue
+ style     repair +   based            normal
+ explore   boundary   response         evolution
+           explore
+   │         │         │                 │
+   └─────────┴─────────┴─────────────────┘
+                       │
+                       ▼
+            ┌─────────────────────┐
+            │  Selection + Archive │
+            │  (Fast non-dom sort, │
+            │   crowding distance) │
+            └─────────────────────┘
+</code></pre>
+<p>The three response strategies, summarised:</p>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Change type</th>
+<th>Response strategy</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A — Objective</strong></td>
+<td>SGEA-style exploration; reseed part of population with diversity bias</td>
+<td>The front moved; you need to find where it went.</td>
+</tr>
+<tr>
+<td><strong>B — Constraint</strong></td>
+<td>Gradient-based repair + boundary exploration</td>
+<td>The feasible region moved; existing solutions need to be repaired toward it.</td>
+</tr>
+<tr>
+<td><strong>C — Combined</strong></td>
+<td>Prediction-based response; use historical trajectory to forecast new optima</td>
+<td>Both shifted; you need to extrapolate rather than search blindly.</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="5-architecture">5. Architecture</h2>
+<p>ADCMOplus is organised into <strong>five functional areas</strong>, each with a clean interface so components can be replaced or extended independently.</p>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Functional Area</th>
+<th>Components</th>
+<th>PM Analogue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Main Algorithm Control</strong></td>
+<td><code>ADCMOMain</code>, <code>UpdateArchive</code>, <code>FitnessCalculation</code></td>
+<td>Orchestrator / scheduler</td>
+</tr>
+<tr>
+<td><strong>Change Detection</strong></td>
+<td><code>EnhancedChangeDetection</code> (sentinel-based, classifies into A/B/C)</td>
+<td>Monitoring + anomaly detection layer</td>
+</tr>
+<tr>
+<td><strong>Change Response</strong></td>
+<td><code>SGEAStyleResponse</code>, <code>ConstraintFocusedResponse</code>, <code>PredictionResponse</code></td>
+<td>Strategy pattern with three policies</td>
+</tr>
+<tr>
+<td><strong>Selection Mechanisms</strong></td>
+<td><code>FastSelection</code>, <code>CrowdingDistance</code>, <code>FastNonDominatedSort</code></td>
+<td>Ranking + diversity service</td>
+</tr>
+<tr>
+<td><strong>Utility Functions</strong></td>
+<td>Numerical stability, error handling, parallelisation helpers</td>
+<td>Shared infra layer</td>
+</tr>
+</tbody>
+</table></div>
+<p>The modular split matters because in production deployments you usually want to swap one piece — e.g. replace the change classifier with a learned model — without rewriting the rest. The architecture is built for that.</p>
+<hr/>
+<h2 id="6-experimental-results">6. Experimental Results</h2>
+<h3 id="setup">Setup</h3>
+<ul>
+<li><strong>Benchmarks:</strong> FDA1–FDA5 adapted with dynamic constraints (the original write-up reports 12 benchmark instances; see the reporting note below).</li>
+<li><strong>Comparators:</strong> DNSGA-II, SGEA, PBDMO, MOEA/D-DE, CMOEA/D.</li>
+<li><strong>Common settings:</strong> population 100, 10,000 function evaluations per change, 20 changes per run, change frequency τ = 20 generations, severity n_t = 10, 30 independent runs per configuration.</li>
+<li><strong>Hardware:</strong> Intel Core i7-11800H @ 2.30 GHz, 16 GB DDR4, Windows 11 (Katana GF76), MATLAB R2024B.</li>
+<li><strong>Metrics:</strong> IGD, HVD, DeltaP (Δp), Diversity Metric (DM), Constraint Violation Ratio (CVR), Constraint Preservation Factor (CPF), Runtime.</li>
+<li><strong>Statistical tests:</strong> Wilcoxon signed-rank (pairwise), Friedman (overall ranking), Bonferroni-Dunn (post-hoc).</li>
+</ul>
+<h3 id="headline-friedman-overall-ranking">Headline: Friedman Overall Ranking</h3>
+<p><strong>Reporting note.</strong> These numbers are reproduced from the existing thesis write-up and have not been independently reproduced here. The source description combines FDA1–FDA5 and three change types with a total of 12 instances; that count needs reconciliation against the original experimental records. Its ranking table also lists five methods although the setup names ADCMOplus plus five comparators. I have retained the listed numbers rather than inventing the missing row.</p>
+<p>Across all 7 metrics and all 12 benchmark instances:</p>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Algorithm</th>
+<th style="text-align: right;">Avg Rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td><strong>ADCMOplus</strong></td>
+<td style="text-align: right;"><strong>1.25</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>PBDMO</td>
+<td style="text-align: right;">2.33</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>SGEA</td>
+<td style="text-align: right;">3.08</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>MOEA/D-DE</td>
+<td style="text-align: right;">3.92</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>DNSGA-II</td>
+<td style="text-align: right;">4.42</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="per-metric-wilcoxon-findings-p-005">Per-Metric Wilcoxon Findings (p &lt; 0.05)</h3>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>ADCMOplus result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPF — constraint preservation</strong></td>
+<td>Significantly best on <strong>every</strong> benchmark vs <strong>every</strong> comparator.</td>
+</tr>
+<tr>
+<td><strong>DM — diversity</strong></td>
+<td>Significantly best on <strong>all 12</strong> instances.</td>
+</tr>
+<tr>
+<td><strong>DeltaP — convergence + diversity</strong></td>
+<td>Significantly best on <strong>10 of 12</strong> instances; tied with PBDMO on FDA5 variants.</td>
+</tr>
+<tr>
+<td><strong>Runtime</strong></td>
+<td>Slower than DNSGA-II; faster than PBDMO.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="honest-read">Honest Read</h3>
+<p>ADCMOplus is not best at every individual DeltaP score — leaner methods (SGEA, PBDMO) sometimes score lower on raw DeltaP for pure-objective problems with simple fronts. But aggregated across all metrics ADCMOplus wins decisively, with the biggest wins in:</p>
+<ul>
+<li><strong>Constraint preservation</strong> — the practical bottleneck in real deployments.</li>
+<li><strong>Diversity</strong> — coverage of the trade-off frontier, which is what stakeholders actually use to pick operating points.</li>
+</ul>
+<p>The runtime is a deliberate trade: more compute spent on classification and tailored response in exchange for materially better feasibility and front coverage.</p>
+<hr/>
+<h2 id="7-possible-applications-modern-ai-real-systems">7. Possible Applications — Modern AI &amp; Real Systems</h2>
+<p>These are proposed connections, not systems implemented or evaluated in this thesis.</p>
+<p>This thesis is from a classical evolutionary-computation lineage, but the framing is directly relevant to systems being built today. A non-exhaustive map:</p>
+<h3 id="71-llm-inference-serving">7.1 LLM Inference Serving</h3>
+<p>Optimise <strong>latency</strong>, <strong>cost</strong>, <strong>quality</strong> under <strong>GPU memory</strong>, <strong>model availability</strong>, and <strong>SLA-tier</strong> constraints. All shift hourly with traffic mix and provider pricing.</p>
+<ul>
+<li><em>Objective changes:</em> new model released, new quality target.</li>
+<li><em>Constraint changes:</em> GPU pool reshape, a node drains, a tier's price changes.</li>
+<li><em>Combined:</em> peak traffic + provider pricing surge.</li>
+</ul>
+<p>The ADCMOplus pattern (classify → dispatch) maps cleanly onto router/scheduler design.</p>
+<h3 id="72-rlhf-reward-shaping">7.2 RLHF / Reward Shaping</h3>
+<p>Modern LLM post-training balances multiple reward signals (helpfulness, harmlessness, honesty, brevity, style adherence) under compute and dataset-size constraints. Reward weights drift between iterations as policy and dataset change.</p>
+<ul>
+<li>This is a <strong>continual</strong> multi-objective optimisation under shifting constraints — a textbook DCMOP, even if the field doesn't usually name it that way.</li>
+</ul>
+<h3 id="73-ai-agent-orchestration">7.3 AI Agent Orchestration</h3>
+<p>Agent frameworks route a request across multiple models/tools optimising for <strong>success rate</strong>, <strong>cost</strong>, and <strong>latency</strong> under <strong>rate-limit</strong>, <strong>context-window</strong>, and <strong>tool-availability</strong> constraints. Routes degrade or improve as upstream providers change.</p>
+<ul>
+<li>The change-typing idea translates: rate-limit hits are constraint changes; new tool capability is an objective change; provider outage is combined.</li>
+</ul>
+<h3 id="74-recommendation-systems">7.4 Recommendation Systems</h3>
+<p>Recommenders optimise <strong>engagement</strong>, <strong>revenue</strong>, and <strong>diversity</strong> under <strong>inventory</strong>, <strong>fairness</strong>, and <strong>cold-start</strong> constraints. Catalogue and audience shift constantly.</p>
+<ul>
+<li>Preserving diverse candidate solutions may be relevant to recommender design. Applicability would require recommender-specific implementation and evaluation.</li>
+</ul>
+<h3 id="75-automl-hyperparameter-tuning">7.5 AutoML &amp; Hyperparameter Tuning</h3>
+<p>Multi-objective AutoML (accuracy vs latency vs memory vs energy) under compute-budget and data-availability constraints, with constraints tightening as a sweep progresses.</p>
+<h3 id="76-real-time-bidding-ad-auctions">7.6 Real-time Bidding &amp; Ad Auctions</h3>
+<p>Maximise <strong>CVR/CTR</strong> and <strong>brand safety</strong> under <strong>budget pacing</strong> and <strong>frequency caps</strong>. Auction dynamics drift millisecond-by-millisecond — change-typing helps separate auction-rule shifts (constraint) from inventory drift (objective).</p>
+<h3 id="77-smart-grid-energy-dispatch">7.7 Smart Grid / Energy Dispatch</h3>
+<p>Minimise <strong>cost</strong> and <strong>carbon intensity</strong> under <strong>demand</strong> and <strong>transmission</strong> constraints, both highly time-varying with weather and load.</p>
+<h3 id="78-marketplace-matching-uber-brikoul-instacart-etc">7.8 Marketplace Matching (Uber, brikoul, Instacart, etc.)</h3>
+<p>Match <strong>workers to jobs</strong> optimising <strong>fill rate</strong>, <strong>earnings equity</strong>, and <strong>ETA</strong>, subject to <strong>geographic feasibility</strong> and <strong>time-window</strong> constraints. New workers arrive, others log off, traffic changes — a constant DCMOP.</p>
+<blockquote>
+<p>Personal note: this is directly relevant to the worker–job matching layer of <a href="https://brikoul.ma" rel="noopener noreferrer">brikoul.ma</a> / jak.ma. The change-typing idea would let the matcher react differently to "worker just went offline" (constraint shift) vs "new high-value job posted" (objective shift), instead of recomputing the whole matching from scratch every time.</p>
+</blockquote>
+<hr/>
+<h2 id="8-application-briefs">8. Application Briefs</h2>
+<p>Three more detailed sketches of how ADCMOplus's ideas would land in production.</p>
+<h3 id="brief-a-llm-inference-router">Brief A — LLM Inference Router</h3>
+<p><strong>Problem.</strong> Route incoming requests across N model endpoints. Minimise <em>cost-per-request</em> and <em>p95-latency</em> while maximising <em>quality</em> (eval score). Constraints: GPU memory, model availability, customer SLA tier.</p>
+<p><strong>Why static optimisers fail.</strong> Traffic mix changes hourly; a provider can throttle without warning; a new model release shifts the quality Pareto front. Re-tuning a fixed policy by hand can't keep up.</p>
+<p><strong>ADCMOplus mapping.</strong>
+- Sentinels = sampled requests against each endpoint, monitoring latency variance and timeout rate.
+- Change classifier = is the front moving (quality shifted: new model) or is the feasible region shrinking (constraint: a GPU pool drained)?
+- Response policies = (A) re-explore routing weights on quality; (B) repair routes away from drained pool with gradient-style updates; (C) predictive response when both move (e.g. peak traffic + provider price surge).</p>
+<h3 id="brief-b-rlhf-multi-reward-optimiser">Brief B — RLHF Multi-Reward Optimiser</h3>
+<p><strong>Problem.</strong> Balance helpfulness, harmlessness, brevity, and style rewards. Constraint: compute budget per training iteration, dataset coverage.</p>
+<p><strong>Why static optimisers fail.</strong> Reward weights drift between iterations as policy improves; over-optimising one reward (e.g. brevity) collapses diversity of outputs.</p>
+<p><strong>ADCMOplus mapping.</strong>
+- Preserving diverse candidate solutions suggests a possible analogy to output diversity in RLHF. This thesis did not evaluate RLHF or establish a transfer of benchmark results.
+- The constraint-classification idea suggests separating "we're out of compute" (constraint shift) from "we got a new preference dataset" (objective shift) — currently most pipelines react identically.</p>
+<h3 id="brief-c-marketplace-matcher">Brief C — Marketplace Matcher</h3>
+<p><strong>Problem.</strong> Match workers to jobs in a home-services marketplace. Maximise fill rate and worker earnings; minimise customer ETA. Constraints: geographic radius, worker availability, skill match.</p>
+<p><strong>Why static optimisers fail.</strong> Workers go online/offline minute by minute; new jobs arrive continuously; surge events shift the entire feasibility region.</p>
+<p><strong>ADCMOplus mapping.</strong>
+- Lightweight per-zone sentinels detect when fill-rate degrades.
+- Classifier distinguishes "drop in worker supply" (B — constraint) from "spike in job volume" (A — objective).
+- Constraint-focused response reallocates supply; objective response triggers new outreach/discovery.</p>
+<hr/>
+<h2 id="9-limitations-roadmap">9. Limitations &amp; Roadmap</h2>
+<h3 id="acknowledged-in-the-thesis">Acknowledged in the thesis</h3>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Future work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Highly multimodal Pareto fronts</td>
+<td>Hybrid global+local search; niching strategies.</td>
+</tr>
+<tr>
+<td>Scaling to many-objective problems (M &gt; 5)</td>
+<td>Reference-point and decomposition hybrids.</td>
+</tr>
+<tr>
+<td>Robustness to noisy / uncertain objectives &amp; constraints</td>
+<td>Stochastic sentinels; expected-value formulations.</td>
+</tr>
+<tr>
+<td>Limited theoretical convergence guarantees</td>
+<td>Formal proofs under specific change models.</td>
+</tr>
+<tr>
+<td>Mostly synthetic benchmark validation</td>
+<td>Real-world case studies (engineering, finance, logistics).</td>
+</tr>
+<tr>
+<td>Hand-crafted classifier</td>
+<td>Learned classifier — train a model to predict change type from sentinel statistics.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="natural-next-steps-with-current-ai">Natural next steps with current AI</h3>
+<ol>
+<li><strong>Replace the classifier with a small ML model.</strong> Train on labelled sentinel sequences from production traces. The thesis flags this as future work; its effort and effectiveness would need to be evaluated.</li>
+<li><strong>Add a reinforcement-learning meta-controller</strong> over the three response strategies, learning when to switch.</li>
+<li><strong>Port the algorithm out of MATLAB.</strong> A Python (NumPy + Numba) or Rust port would unlock real production deployment.</li>
+<li><strong>Build a streaming-first variant</strong> that operates on a sliding window rather than fixed change intervals — relevant to all online-serving applications above.</li>
+</ol>
+<hr/>
+<h2 id="10-thesis-structure">10. Thesis Structure</h2>
+<div aria-label="Thesis data table" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Introduction</strong></td>
+<td>Background, problem statement, research objectives, contributions, thesis structure.</td>
+</tr>
+<tr>
+<td><strong>2. Literature Review</strong></td>
+<td>MOO fundamentals, Pareto optimality, classical &amp; evolutionary methods, DCMOO formulation, classification of environmental changes, existing diversity / prediction / memory / hybrid approaches, constraint-handling mechanisms, benchmarks, research gaps.</td>
+</tr>
+<tr>
+<td><strong>3. Overall Architecture</strong></td>
+<td>Five functional areas, sentinel-based change detection &amp; classification, adaptive sampling, severity estimation, three response strategies, parameters, data structures, complexity analysis, parallelisation, deployment notes.</td>
+</tr>
+<tr>
+<td><strong>4. Experimental Procedure</strong></td>
+<td>Benchmarks, comparators, parameter settings, metrics, platform, statistical analysis, comparative results, discussion of strengths, limitations, and real-world implications.</td>
+</tr>
+<tr>
+<td><strong>5. Conclusion</strong></td>
+<td>Summary of contributions, limitations, future work, broader implications.</td>
+</tr>
+<tr>
+<td>Acknowledgements + Graduation Project Summary</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="keywords">Keywords</h2>
+<p><code>dynamic optimization</code> · <code>multi-objective optimization</code> · <code>constraint handling</code> · <code>adaptive algorithms</code> · <code>evolutionary algorithms</code> · <code>Pareto front</code> · <code>DCMOP</code> · <code>change detection</code> · <code>change classification</code> · <code>LLM serving</code> · <code>recommender systems</code> · <code>marketplace matching</code> · <code>RLHF</code> · <code>agent orchestration</code></p>
+<hr/>
+<p><em>Public overview of my undergraduate thesis, defended at NPU in May 2025. Full experimental data remains private.</em></p></article>
 </main>
-
-<footer class="border-t border-neutral-200 bg-neutral-50">
-  <div class="top-accent"></div>
-  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap justify-between gap-4 text-xs mono text-neutral-500">
-    <span>© sami el akkad · shenzhen 深圳 · 2026</span>
-    <div class="flex gap-4">
-      <a href="https://github.com/Samielakkad" class="hover:text-neutral-900">github</a>
-      <a href="https://www.linkedin.com/in/samielakkad" class="hover:text-neutral-900">linkedin</a>
-      <a href="/" class="hover:text-neutral-900">back to portfolio</a>
-      <a href="mailto:sam25@mails.tsinghua.edu.cn" class="hover:text-neutral-900">email</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  fetch('thesis.md')
-    .then(r => r.text())
-    .then(md => {
-      // Strip the first H1 since we already render it in the header
-      const stripped = md.replace(/^#\s+ADCMOplus\s*\n+/, '').replace(/^\*\*Machine Learning-Based[^*]*\*\*\s*\n+/, '');
-      document.getElementById('content').innerHTML = marked.parse(stripped);
-    })
-    .catch(err => {
-      document.getElementById('content').innerHTML = '<p>Failed to load thesis content: ' + err + '</p>';
-    });
-</script>
-
+<footer class="simple-footer wrap"><a href="index.html">Back to portfolio <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><p>Sami El Akkad · Shenzhen · 2026</p><a href="mailto:sam25@mails.tsinghua.edu.cn">sam25@mails.tsinghua.edu.cn</a></footer>
 </body>
 </html>
